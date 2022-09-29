@@ -46,4 +46,4 @@ defaults:
 collections:
   portfolio:
     output: true
-    permalink: :collections/:title
+    # permalink: :collection/:title/
