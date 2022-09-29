@@ -7,14 +7,14 @@ layout: default
 {% render "header", metadata: site.metadata %}
 
 <section class="resume">
-    <div class="container max-w-[720px] mx-auto pb-16">
-        <h1 class="font-sora font-bold leading-snug text-titles-4 text-brand-purple-600 mb-12">👋 Olá!<br>
+    <div class="container max-w-[720px] mx-auto px-4 md:px-6 pb-16">
+        <h1 class="font-sora font-bold leading-snug text-title-1 md:text-title-4 text-brand-purple-600 mb-6 md:mb-12">👋 Olá!<br>
             Sou Gustavo Luciano, UX & UI Designer
         </h1>
-        <p class="font-merriweather leading-tight text-titles-1 text-brand-gray-600 p-2 rounded-lg bg-brand-gray-50 mb-6">
+        <p class="font-merriweather leading-tight text-body-4 md:text-title-1 text-brand-gray-600 p-2 rounded-lg bg-brand-gray-50 mb-6">
             Sou um designer exercendo a função multidisciplinar do processo de design de experiência do usuário para
             criação de interfaces.</p>
-        <p class="font-sora font-normal text-brand-gray-400 text-body-3 leading-normal">Minha experiência vem principalmente de agências digitais, trabalhando em projetos de diversos nichos. Me
+        <p class="font-sora font-normal text-brand-gray-400 text-body-2 md:text-body-3 leading-normal">Minha experiência vem principalmente de agências digitais, trabalhando em projetos de diversos nichos. Me
             graduei em Design Digital(2021) pela UNIARA e atualmente faço um MBA em UX Research, Operações de Pesquisa e
             Liderança em Design (2022) pela Faculdade de Tecnologia de Curitiba em parceria com Toronto School of
             Management. Procuro oportunidade de pivotar minha carreira para um ponto de vista mais alinhado carreia de
@@ -25,25 +25,24 @@ layout: default
 <section class="bg-brand-yellow-200">
     <div class="container max-w-[1200px] mx-auto px-3 md:px-6 lg:px-0 py-16">
         <div class="text-center">
-            <h2 class="font-sora font-bold leading-snug text-titles-3 text-brand-purple-600 mb-8">Portifolio</h2>
-            <p class="max-w-[720px] mx-auto font-merriweather leading-tight text-titles-1 text-brand-gray-600 p-2 rounded-lg bg-brand-gray-0 mb-12">Alguns projetos que tenho orgulho de ter participado.</p>
+            <h2 class="font-sora font-bold leading-snug text-title-1 md:text-title-3 text-brand-purple-600 mb-6 md:mb-8">Portifolio</h2>
+            <p class="max-w-[720px] mx-auto font-merriweather leading-tight text-body-4 md:text-title-1 text-brand-gray-600 p-2 rounded-lg bg-brand-gray-0 mb-12">Alguns projetos que tenho orgulho de ter participado.</p>
         </div>
-        <div class="container">
-            <div class="grid grid-cols-2 gap-6">
-                {% for item in site.data.portfolio %}
-                {% assign portifolioItem = item[1] %}                    
-                    <div class="flex flex-col gap-2 p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg">
-                        <div class="flex gap-4 mb-6">
-                            <img src="/images/portfolio/{{ portifolioItem.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
-                            <img src="/images/portfolio/{{ portifolioItem.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
-                        </div>
-                        <div>
-                            <h2 class="font-sora font-normal leading-tight text-body-5 text-brand-purple-600 mb-2">{{ portifolioItem.name }}</h2>
-                            <span class="font-sora font-normal leading-none py-1 px-2 inline-block bg-brand-ocean-400 rounded-full text-body-2 text-brand-gray-50">{{ portifolioItem.year }}</span>
-                        </div>
+        {{ collections.portfolio }} 
+        <div class="grid md:grid-cols-2 gap-6">
+            {% for item in site.data.portfolio %}
+            {% assign portifolioItem = item[1] %}                    
+                <div class="flex flex-col gap-2 p-3 md:p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg">
+                    <div class="flex gap-4 mb-3 md:mb-6">
+                        <img src="/images/portfolio/{{ portifolioItem.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
+                        <img src="/images/portfolio/{{ portifolioItem.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
                     </div>
-                {% endfor %}
-            </div>
+                    <div>
+                        <h2 class="font-sora font-normal leading-tight text-body-4 md:text-title-1 text-brand-purple-600 mb-2">{{ portifolioItem.name }}</h2>
+                        <span class="font-sora font-normal leading-none py-1 px-2 inline-block bg-brand-ocean-400 rounded-full text-body-2 text-brand-gray-50">{{ portifolioItem.year }}</span>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

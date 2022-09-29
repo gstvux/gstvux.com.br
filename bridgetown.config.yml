@@ -42,3 +42,8 @@ defaults:
       path: "images/portfolio"
     values:
       img_portfolio: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: :collections/:title
