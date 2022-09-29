@@ -4,8 +4,8 @@
 layout: default
 ---
 
-{% render "header", metadata: site.metadata %}
-
+{% render "header", metadata: site.metadata, home: true %}
+  
 <section class="resume">
     <div class="container max-w-[720px] mx-auto px-4 md:px-6 pb-16">
         <h1 class="font-sora font-bold leading-snug text-title-1 md:text-title-4 text-brand-purple-600 mb-6 md:mb-12">👋 Olá!<br>
@@ -28,20 +28,20 @@ layout: default
             <h2 class="font-sora font-bold leading-snug text-title-1 md:text-title-3 text-brand-purple-600 mb-6 md:mb-8">Portifolio</h2>
             <p class="max-w-[720px] mx-auto font-merriweather leading-tight text-body-4 md:text-title-1 text-brand-gray-600 p-2 rounded-lg bg-brand-gray-0 mb-12">Alguns projetos que tenho orgulho de ter participado.</p>
         </div>
-        {{ collections.portfolio }} 
         <div class="grid md:grid-cols-2 gap-6">
-            {% for item in site.data.portfolio %}
-            {% assign portifolioItem = item[1] %}                    
-                <div class="flex flex-col gap-2 p-3 md:p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg">
-                    <div class="flex gap-4 mb-3 md:mb-6">
-                        <img src="/images/portfolio/{{ portifolioItem.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
-                        <img src="/images/portfolio/{{ portifolioItem.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
+            {% for item in collections.portfolio.resources %}
+                <a href="{{ item.relative_url }}">
+                    <div class="flex flex-col gap-2 p-3 md:p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg">
+                            <div class="flex gap-4 mb-3 md:mb-6">
+                                <img src="/images/portfolio/{{ item.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
+                                <img src="/images/portfolio/{{ item.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
+                            </div>
+                            <div>
+                                <h2 class="font-sora font-normal leading-tight text-body-4 md:text-title-1 text-brand-purple-600 mb-2">{{ item.name }}</h2>
+                                <span class="font-sora font-normal leading-none py-1 px-2 inline-block bg-brand-ocean-400 rounded-full text-body-2 text-brand-gray-50">{{ item.year }}</span>
+                            </div>
                     </div>
-                    <div>
-                        <h2 class="font-sora font-normal leading-tight text-body-4 md:text-title-1 text-brand-purple-600 mb-2">{{ portifolioItem.name }}</h2>
-                        <span class="font-sora font-normal leading-none py-1 px-2 inline-block bg-brand-ocean-400 rounded-full text-body-2 text-brand-gray-50">{{ portifolioItem.year }}</span>
-                    </div>
-                </div>
+                </a>
             {% endfor %}
         </div>
     </div>

@@ -1,0 +1,95 @@
+---
+name: VMWare VCPP
+year: 2021
+
+context: Ingram possui várias campanhas  com diversos parceiros e precisava de mão de obra qualificada para essas demandas.
+objectives: Aumentar a captação de revendedores qualificados para programa de parceria Ingram + Arcserve
+solution: Criamos uma landing page responsiva, focada em conversão e aliada as estratégias de performance.
+my_roles: Totalmente responsável pela interação, experiência e interface. Também codifiquei o front end.
+
+imgs:
+  desktop: vmware-vcpp.png
+  mobile: vmware-vcpp-mobile.png
+
+tags:
+  concepts:
+    - Otimização de conversão
+    - Portal institucional
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - Gulp
+    - NodeJS
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  VMWare VCPP é um portal informativo focado em fornecer insumos para parceiros e
+  revendedores da VMWare.'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui o branding styles da VMWare.
+  - Estudei o coprywriting enviado pelo cliente.
+  - Rascunhei wireframes/sitemap para chegar em uma boa solução de arquitetura de informação.
+  - Codiquei o html/css do portal e fiz o handoff com Dev parceiro.    
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads, 
+    bem como as tags de performances.
+---
+{% render "header", metadata: site.metadata %}
+
+<section id="about-case" class="">
+  <div class="container max-w-[1200px] mx-auto px-4 md:px-6 pb-16">
+      <h1 class="font-sora font-bold leading-snug text-title-1 md:text-title-4 text-brand-purple-600 mb-6 md:mb-8">
+        {{ page.name }}
+      </h1>
+      <p class="font-merriweather leading-normal text-body-3 md:text-body-4 text-brand-gray-600 mb-6 max-w-[720px]">
+          {{ page.desc }}
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/context-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Contexto</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.context }}</p>
+        </div>
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/objectives-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Objetivos</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.objectives }}</p>
+        </div>
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/solution-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Solução</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.solution }}</p>
+        </div>
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/roles-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Responsabilidades</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.my_roles }}</p>
+        </div>
+      </div>
+  </div>
+
+</section>
+
+<section id="presentation" class="bg-brand-yellow-300 py-16">
+  <div class="container max-w-[1200px] mx-auto px-4 md:px-6 pb-16">
+    <div class="flex gap-4 mb-3 md:mb-6">
+      <img src="/images/portfolio/{{ page.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[left_top] overflow-auto" alt="">
+      <img src="/images/portfolio/{{ page.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] overflow-auto" alt="">
+    </div>
+  </div>
+</section>

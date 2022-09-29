@@ -14,13 +14,3 @@ development:
   title: (DEV) GSTV.UX | Portifolio & Site pessoal de Gustavo Luciano
 production:
   title: GSTV.UX | Portifolio & Site pessoal de Gustavo Luciano
-
-home:
-  hero:
-    E ai! 🤙 sou o<br/>Gustavo Luciano
-  about:
-    title: Sobre Gustavo Luciano
-    desc:
-      UX Designer com 10 anos de experiência em Interfaces com background em Front-End, Marketing Digital e Negócios.
-    temp:
-      - Designer de experiência em expansão.

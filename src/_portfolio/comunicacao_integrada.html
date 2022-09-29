@@ -1,0 +1,99 @@
+---
+name: 'Comunicação integrada'
+year: 2021
+
+context: Ingram possui várias campanhas  com diversos parceiros e precisava de mão de obra qualificada para essas demandas.
+objectives: Aumentar a captação de revendedores qualificados para programa de parceria Ingram + Arcserve
+solution: Criamos uma landing page responsiva, focada em conversão e aliada as estratégias de performance.
+my_roles: Totalmente responsável pela interação, experiência e interface. Também codifiquei o front end.
+
+imgs:
+  desktop: comunicacao-integrada.png
+  mobile: comunicacao-integrada-mobile.png
+
+tags:
+  concepts:   
+    - Otimização de conversão
+    - Portal institucional      
+    - Responsivo
+    - Static site
+    - Real life project
+    - SEO
+  tech:
+    - html
+    - sass
+    - js
+    - gulp
+    - NodeJS      
+    - Figma
+    - Gatsby
+    - Wordpress
+
+desc:
+  'Projeto criado pela agência Integra.md.
+  Comunicação Integrada é uma renomada empresa de consultoria de planejamento de comunicação.
+  O site era mal estruturado e pesado. Tinhamos o desafio de reestruturar o site com conteúdo legado denso
+  e muito mal otimizado, que punia a empresa em termos de estratégias de SEO(E consequentemente negócios).
+  Resolvemos servir o site de forma estática, que resolveu o problema de peso do site e reetruturamos a navegação, tags
+  e links para uma melhor solução de Arquitetura da informação baseada em encontrabilidade.
+  O cliente adorou o resultado e, em poucos meses, colheu o resultado de melhores posicionalmento organico em buscadores'    
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Criei novo styleguide para o site seguindo o estilo do branding prévio.
+  - Estudei o coprywriting enviado pelo cliente.
+  - Rascunhei wireframes/sitemap para chegar em uma boa solução de arquitetura de informação.
+  - Criei mockups da UI para cada página.
+  - Codiquei o html/css do site e fiz o handoff com Dev parceiro.
+---
+{% render "header", metadata: site.metadata %}
+
+<section id="about-case" class="">
+  <div class="container max-w-[1200px] mx-auto px-4 md:px-6 pb-16">
+      <h1 class="font-sora font-bold leading-snug text-title-1 md:text-title-4 text-brand-purple-600 mb-6 md:mb-8">
+        {{ page.name }}
+      </h1>
+      <p class="font-merriweather leading-normal text-body-3 md:text-body-4 text-brand-gray-600 mb-6 max-w-[720px]">
+          {{ page.desc }}
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/context-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Contexto</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.context }}</p>
+        </div>
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/objectives-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Objetivos</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.objectives }}</p>
+        </div>
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/solution-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Solução</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.solution }}</p>
+        </div>
+        <div class="">
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/images/roles-icon.svg" alt="">
+            <h2 class="font-sora text-title-1 text-brand-orange-600">Responsabilidades</h2>
+          </div>
+          <p class="font-sora leading-normal text-body-2">{{ page.my_roles }}</p>
+        </div>
+      </div>
+  </div>
+
+</section>
+
+<section id="presentation" class="bg-brand-yellow-300 py-16">
+  <div class="container max-w-[1200px] mx-auto px-4 md:px-6 pb-16">
+    <div class="flex gap-4 mb-3 md:mb-6">
+      <img src="/images/portfolio/{{ page.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[left_top] overflow-auto" alt="">
+      <img src="/images/portfolio/{{ page.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] overflow-auto" alt="">
+    </div>
+  </div>
+</section>

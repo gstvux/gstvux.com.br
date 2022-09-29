@@ -1,8 +1,17 @@
 <header class="
     bg-hero bg-no-repeat bg-center bg-cover
-    h-[240px] mb-40
-    flex justify-center items-end relative
-    after:content-[' '] after:w-full after:h-full
-    after:bg-brand-purple-400 after:mix-blend-multiply">    
-    <img src="images/gustavo-luciano-gstv-ux-designer-brisbane.png" alt="GSTV.UX  Gustavo Luciano, Brisbane based UX Designer" class="mb-[-110px] absolute z-10">
+    flex 
+    {% if home %}
+    h-[240px] mb-40 justify-center items-end
+    {% else %}
+    h-[100px] mb-12 justify-between items-center
+    {% endif %}
+    relative after:absolute after:top-0 after:left-0 after:content-[' '] after:w-full after:h-full
+    after:bg-brand-purple-400 after:mix-blend-multiply">
+    {% if home %}
+        <img src="/images/gustavo-luciano-gstv-ux-designer-brisbane.png" alt="GSTV.UX  Gustavo Luciano, Brisbane based UX Designer" class="mb-[-110px] z-10">  
+    {% else %}
+        <span class="z-10 ml-12"><a href="/" class="text-white">← Página inicial</a></span>
+        <img src="/images/logo-gstv-ux.svg" alt="GSTV.UX  Gustavo Luciano, Brisbane based UX Designer" class="z-10 mr-12">
+    {% endif %}
 </header>  
