@@ -1,0 +1,35 @@
+name: Bundle Lenovo | Ingram + Veritas + Lenovo 
+year: 2021
+imgs:
+  desktop: veritas-lenovo.png
+  mobile: veritas-lenovo-mobile.png
+
+tags:
+  concepts:
+    - Otimização de conversão
+    - Portal institucional
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - Gulp
+    - NodeJS
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  Bundle Lenovo foi uma campanha de parceria entre Ingram + Veritas + Lenovo que reunia produtos
+  de segurança da informação.'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui o branding styles da Veritas.
+  - Criei wireframe/sitemap alinhado com coprywrite enviado pelo cliente.
+  - Criei UI da Landing Page no Figma.
+  - Codiquei o html/css da landing page e fiz o handoff com Dev parceiro.
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads,
+    bem como as tags de performances.

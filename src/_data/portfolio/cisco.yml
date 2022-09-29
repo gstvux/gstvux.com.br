@@ -1,0 +1,36 @@
+name: 'Cisco #sou_connect'
+year: 2021
+imgs:
+  desktop: cisco-souconnect.png
+  mobile: cisco-souconnect-mobile.png
+
+tags:
+  concepts:   
+    - Otimização de conversão
+    - Portal institucional
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - gulp
+    - NodeJS      
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  #sou_connect é um portal informativo que colabora com parceiros e revendedores da Cisco,
+  fornecendo insumos para auxiliar atender e clientes finais.'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui os branding styles da Cisco.
+  - Estudei o coprywriting enviado pelo cliente.
+  - Rascunhei wireframes/sitemap para chegar em uma boa solução de arquitetura de informação.
+  - Codiquei o html/css da Landing page e fiz o handoff com Dev parceiro.
+  - Coordenei a criação de centenas de ícones customizados para enriquecimento do coprywriting.
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads,
+    bem como as tags de performances.

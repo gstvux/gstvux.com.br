@@ -1,0 +1,37 @@
+
+name: Engage Verticais de negócios
+year: 2020
+imgs:
+  desktop: engage-verticais.png
+  mobile: engage-verticais-mobile.png
+
+tags:
+  concepts:
+    - Otimização de conversão
+    - Landing Page
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - Gulp
+    - NodeJS
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  Engage Verticais foi um evento B2B sobre Inovação e Tecnologia focado nas verticais: Educação, Setor público, Indústrias, Varejo e Saúde'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui o branding styles da Ingram.
+  - Criei wireframe/sitemap alinhado com coprywrite enviado pelo cliente.
+  - Criei UI da landing page.
+  - Criei uma estrutura de dados estruturados para suportar a inserção de novas datas e eventos.
+  - Criei uma estrutura de dados estruturados para suportar a inserção de novos patrocinadores.
+  - Codiquei o html/css da landing page e fiz o handoff com Dev parceiro.
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads,
+    bem como as tags de performances.      

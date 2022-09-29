@@ -1,0 +1,34 @@
+name: Engage
+year: 2019
+imgs:
+  desktop: engage.png
+  mobile: engage-mobile.png
+
+tags:
+  concepts:
+    - Otimização de conversão
+    - Landing Page
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - Gulp
+    - NodeJS
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  Engage foi um evento sobre Inovação e Tecnologia organizado pela Ingram Micro'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui o branding styles da Ingram.
+  - Criei wireframe/sitemap alinhado com coprywrite enviado pelo cliente.
+  - Criei UI da landing page.    
+  - Codiquei o html/css da landing page e fiz o handoff com Dev parceiro.
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads,
+    bem como as tags de performances.

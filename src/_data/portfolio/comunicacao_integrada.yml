@@ -1,0 +1,39 @@
+name: 'Comunicação integrada'
+year: 2021
+imgs:
+  desktop: comunicacao-integrada.png
+  mobile: comunicacao-integrada-mobile.png
+
+tags:
+  concepts:   
+    - Otimização de conversão
+    - Portal institucional      
+    - Responsivo
+    - Static site
+    - Real life project
+    - SEO
+  tech:
+    - html
+    - sass
+    - js
+    - gulp
+    - NodeJS      
+    - Figma
+    - Gatsby
+    - Wordpress
+
+desc:
+  'Projeto criado pela agência Integra.md.
+  Comunicação Integrada é uma renomada empresa de consultoria de planejamento de comunicação.
+  O site era mal estruturado e pesado. Tinhamos o desafio de reestruturar o site com conteúdo legado denso
+  e muito mal otimizado, que punia a empresa em termos de estratégias de SEO(E consequentemente negócios).
+  Resolvemos servir o site de forma estática, que resolveu o problema de peso do site e reetruturamos a navegação, tags
+  e links para uma melhor solução de Arquitetura da informação baseada em encontrabilidade.
+  O cliente adorou o resultado e, em poucos meses, colheu o resultado de melhores posicionalmento organico em buscadores'    
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Criei novo styleguide para o site seguindo o estilo do branding prévio.
+  - Estudei o coprywriting enviado pelo cliente.
+  - Rascunhei wireframes/sitemap para chegar em uma boa solução de arquitetura de informação.
+  - Criei mockups da UI para cada página.
+  - Codiquei o html/css do site e fiz o handoff com Dev parceiro.    

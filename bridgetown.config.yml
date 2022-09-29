@@ -32,3 +32,13 @@ template_engine: liquid
 # timezone: America/Los_Angeles
 # pagination:
 #   enabled: true
+
+production:
+  url: "https://gstvux.com.br" # the base hostname & protocol for your site, e.g. https://example.com
+  base_path: /
+
+defaults:
+  - scope:
+      path: "images/portfolio"
+    values:
+      img_portfolio: true

@@ -1,0 +1,34 @@
+name: Genesys
+year: 2020
+imgs:
+  desktop: genesys.png
+  mobile: genesys-mobile.png
+
+tags:
+  concepts:
+    - Otimização de conversão
+    - Landing Page
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - Gulp
+    - NodeJS
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  Campanha Omnichannel Genesys focada em captação de leads para parceiros/revendedores'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui o branding styles da Genesys.
+  - Criei wireframe/sitemap alinhado com coprywrite enviado pelo cliente.
+  - Criei UI da landing page.    
+  - Codiquei o html/css da landing page e fiz o handoff com Dev parceiro.
+  - Coordenei a criação de criativos para campanha de media display Google e Facebook Ads,
+    bem como as tags de performances.

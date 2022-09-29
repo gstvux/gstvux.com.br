@@ -1,0 +1,35 @@
+name: VMWare VCPP
+year: 2021
+imgs:
+  desktop: vmware-vcpp.png
+  mobile: vmware-vcpp-mobile.png
+
+tags:
+  concepts:
+    - Otimização de conversão
+    - Portal institucional
+    - Performance
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - Gulp
+    - NodeJS
+    - Figma
+
+desc:
+  'Projeto criado pela agência Integra.md para atender o cliente Ingram Micro.
+  VMWare VCPP é um portal informativo focado em fornecer insumos para parceiros e
+  revendedores da VMWare.'
+  
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui o branding styles da VMWare.
+  - Estudei o coprywriting enviado pelo cliente.
+  - Rascunhei wireframes/sitemap para chegar em uma boa solução de arquitetura de informação.
+  - Codiquei o html/css do portal e fiz o handoff com Dev parceiro.    
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads, 
+    bem como as tags de performances.

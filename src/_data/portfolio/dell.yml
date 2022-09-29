@@ -1,0 +1,34 @@
+name: Dell Technologies
+year: 2018
+imgs:
+  desktop: dell-technologies.png
+  mobile: dell-technologies-mobile.png
+
+tags:
+  concepts:   
+    - Otimização de conversão
+    - Landing Page
+    - Performance 
+    - Responsivo
+    - Static site
+    - Real life project
+  tech:
+    - html
+    - sass
+    - js
+    - gulp
+    - NodeJS
+    - GScript
+    - Figma
+
+desc:
+  Projeto criado em parceria entre as agências Integra.md e Raccoon para atender uma
+  campanha de parceria entre Ingram Micro + Dell Technologies, responsável pela captação
+  de leads para distribuir entre revendedores Dell Technologies.
+my_resp:        
+  - Nesse projeto, intermediei soluções entre os times de Marketing, Design e Devs.
+  - Segui os branding styles da Dell Technologies.
+  - Estudei o coprywriting enviado pelo cliente e criei a UI da Landing Page
+  - Codiquei o html/css da Landing page e fiz o handoff com Dev parceiro.
+  - Coordenei a criação de criativos de campanha de media display Google e Facebook Ads,
+    bem como as tags de performances.

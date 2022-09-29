@@ -4,8 +4,23 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: Your awesome title
+title: gstv ux portifolio
 tagline: This site is totally awesome
-email: your-email@example.com
+email: hello@gstvux.com.br
 description: >-
   Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+
+development:
+  title: (DEV) GSTV.UX | Portifolio & Site pessoal de Gustavo Luciano
+production:
+  title: GSTV.UX | Portifolio & Site pessoal de Gustavo Luciano
+
+home:
+  hero:
+    E ai! 🤙 sou o<br/>Gustavo Luciano
+  about:
+    title: Sobre Gustavo Luciano
+    desc:
+      UX Designer com 10 anos de experiência em Interfaces com background em Front-End, Marketing Digital e Negócios.
+    temp:
+      - Designer de experiência em expansão.
