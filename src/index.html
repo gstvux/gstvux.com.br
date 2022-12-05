@@ -28,14 +28,21 @@ layout: default
     </div>
 </section>
 
-<section class="bg-brand-yellow-200">
+<section class="bg-brand-yellow-300">
     <div class="container max-w-[1200px] mx-auto px-3 md:px-6 lg:px-0 py-16">
         <div class="text-center">
             <h2 class="font-sora font-bold leading-snug text-title-1 md:text-title-3 text-brand-purple-600 mb-6 md:mb-8">Portifolio</h2>
             <p class="max-w-[720px] mx-auto font-merriweather leading-tight text-body-4 md:text-title-1 text-brand-gray-600 p-2 rounded-lg bg-brand-gray-0 mb-12">Alguns projetos que tenho orgulho de ter participado.</p>
-        </div>
+        </div>       
+        
+        {% assign sortetPortfolioItem = collections.portfolio.resources | sort: "year" | reverse %}
+        {% comment %} <div class="bg-red-500">
+            {{ sortetPortfolioItem[1].year }}
+        </div> {% endcomment %}
+
         <div class="grid md:grid-cols-2 gap-6">
-            {% for item in collections.portfolio.resources %}
+            {% for item in sortetPortfolioItem%}
+                {% comment %} {{ item.year }} {% endcomment %}
                 <a href="{{ item.relative_url }}">
                     <div class="flex flex-col gap-2 p-3 md:p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg">
                             <div class="flex gap-4 mb-3 md:mb-6">
