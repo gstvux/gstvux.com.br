@@ -3,14 +3,14 @@
     {% if home %}
     h-[240px] mb-40 justify-center items-end
     {% else %}
-    h-[100px] mb-12 justify-between items-center
+    sticky top-0 left-0 z-20 h-[100px] mb-12 justify-between items-center
     {% endif %}
     relative after:absolute after:top-0 after:left-0 after:content-[' '] after:w-full after:h-full
     after:bg-brand-purple-400 after:mix-blend-multiply">
     {% if home %}
         <img src="/images/gustavo-luciano-gstv-ux-designer-brisbane.png" alt="GSTV.UX  Gustavo Luciano, Brisbane based UX Designer" class="mb-[-110px] z-10">  
     {% else %}
-        <span class="z-10 ml-6 lg:ml-12"><a href="/" class="text-white">← Página inicial</a></span>
+        <span class="z-10 ml-6 rounded-md bg-brand-purple-500 px-4 py-2 ease-in duration-300 lg:ml-12 hover:bg-white/10"><a href="/" class="text-white">← Voltar a home</a></span>
         <img src="/images/logo-gstv-ux.svg" alt="GSTV.UX  Gustavo Luciano, Brisbane based UX Designer" class="z-10 mr-6 lg:mr-12">
     {% endif %}
 </header>  

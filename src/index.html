@@ -47,7 +47,7 @@ layout: default
             {% for item in sortetPortfolioItem%}
                 {% comment %} {{ item.year }} {% endcomment %}
                 <a href="{{ item.relative_url }}">
-                    <div class="flex flex-col gap-2 p-3 md:p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg">
+                    <div class="flex flex-col gap-2 p-3 md:p-6 bg-brand-gray-0/70 rounded-lg hover:bg-brand-gray-0/90 hover:drop-shadow-lg ease-in duration-300">
                             <div class="flex gap-4 mb-3 md:mb-6">
                                 <img src="/images/portfolio/{{ item.imgs.desktop }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
                                 <img src="/images/portfolio/{{ item.imgs.mobile }}" class="grow object-cover drop-shadow-md object-[center_top] h-[320px] overflow-auto" alt="">
