@@ -1,0 +1,88 @@
+:root {
+  /* font family */
+  --font-family-primary: "Sofia Sans";
+  --font-family-secondary: "IBM Plex Sans";
+  --font-family-utils: "IBM Plex Mono";
+
+  /* font size */
+  --font-size-min: 12px;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+  --font-size-body: var(--font-size-medium);
+
+  /* font weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* neutral colors */
+  --color-polar: #F3F5F8;
+  --color-mist: #E2E7EE;
+  --color-lightgray: #6B7280;
+  --color-gray: #4B5563;
+  --color-deepblue: #111827;
+
+  /* font color */
+  --font-color-default: var(--color-deepblue);
+
+  /* bluepetro */
+  --color-bluepetro-50: #EEF2F7;
+  --color-bluepetro-100: #D9E1EC;
+  --color-bluepetro-200: #B8C6D9;
+  --color-bluepetro-300: #8FA6C4;
+  --color-bluepetro-400: #627FA9;
+  --color-bluepetro-500: #1F3A5F;
+  --color-bluepetro-600: #1A3252;
+  --color-bluepetro-700: #162A46;
+  --color-bluepetro-800: #111F34;
+  --color-bluepetro-900: #0C1625;
+
+  /* ember */
+  --color-ember-50: #FFF4E6;
+  --color-ember-100: #FFE9C8;
+  --color-ember-200: #FFD29A;
+  --color-ember-300: #E8B466;
+  --color-ember-400: #D0943A;
+  --color-ember-500: #B8791A;
+  --color-ember-600: #9E6616;
+  --color-ember-700: #825313;
+  --color-ember-800: #66400F;
+  --color-ember-900: #4D300B;
+
+  /* wine */
+  --color-wine-50: #F8EDF1;
+  --color-wine-100: #F0DCE5;
+  --color-wine-200: #DDB3C6;
+  --color-wine-300: #C484A2;
+  --color-wine-400: #A6577C;
+  --color-wine-500: #7A2E4D;
+  --color-wine-600: #682642;
+  --color-wine-700: #561F36;
+  --color-wine-800: #45182B;
+  --color-wine-900: #341220;
+
+  /* brand */
+  --color-brand-primary: var(--color-bluepetro-500);
+  --color-brand-secondary: var(--color-wine-500);
+  --color-brand-accent: var(--color-ember-500);
+
+  /* space */
+  --space-0: 0px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-112: 112px;
+}

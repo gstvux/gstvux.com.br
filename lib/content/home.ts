@@ -1,0 +1,52 @@
+import type { HomePageData } from "./types";
+
+export const homeData: HomePageData = {
+  hero: {
+    eyebrow: "UI Engineer + Product Thinking",
+    title: "Interfaces que reduzem carga cognitiva e elevam a percepção de valor.",
+    subtitle:
+      "Eu projeto e construo experiências digitais com craft visual, estrutura sistêmica e proximidade real com engenharia.",
+    primaryCtaLabel: "Ver cases",
+    primaryCtaHref: "/cases",
+    secondaryCtaLabel: "Entrar em contato",
+    secondaryCtaHref: "/contact",
+  },
+  intro: {
+    kicker: "Produto. Serviço. Interface.",
+    headline:
+      "Meu trabalho acontece onde estratégia, design visual e implementação se encontram.",
+    body:
+      "Não entrego apenas telas. Estruturo sistemas, reduzo atrito decisório e transformo interface em ativo de negócio.",
+  },
+  featuredCases: [
+    {
+      slug: "ortocenter",
+      title: "Ortocenter",
+      summary:
+        "Complex enterprise healthcare workflows, autosave logic and multi-API integration.",
+      tag: "Healthcare",
+    },
+    {
+      slug: "design-system",
+      title: "Design System Practice",
+      summary:
+        "Tokenização, consistência visual e governança para escalar qualidade.",
+      tag: "Systems",
+    },
+    {
+      slug: "portfolio-as-a-product",
+      title: "Portfolio as a Product",
+      summary:
+        "Brand, narrative and front-end execution treated as one operating system.",
+      tag: "Brand/Product",
+    },
+  ],
+  cta: {
+    title:
+      "Quer um designer que fala a língua da interface até o nível de implementação?",
+    body:
+      "Vamos conversar sobre produto, sistema e execução visual de alto nível.",
+    buttonLabel: "Falar comigo",
+    buttonHref: "/contact",
+  },
+};
