@@ -1,0 +1,31 @@
+.media-frame {
+  --media-frame-width: clamp(16rem, 42vw, 22rem);
+
+  position: relative;
+  width: var(--media-frame-width);
+  aspect-ratio: 1;
+  isolation: isolate;
+}
+
+.media-frame__polygon-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform-origin: center;
+}
+
+.media-frame__polygon {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.media-frame__image-layer {
+  aspect-ratio: 1;
+}
+
+.media-frame__image {
+  z-index: 20;
+  transform: scale(0.83);
+  object-fit: contain;
+}

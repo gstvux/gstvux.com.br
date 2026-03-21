@@ -1,0 +1,21 @@
+<svg viewBox="0 0 579 579" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#media-frame-glow)">
+    <path
+      d="M279.838 49.8269C285.719 47.391 292.326 47.391 298.207 49.8269L451.665 113.391C457.546 115.827 462.218 120.499 464.654 126.38L528.218 279.838C530.654 285.719 530.654 292.326 528.218 298.207L464.654 451.665C462.218 457.546 457.546 462.218 451.665 464.654L298.207 528.218C292.326 530.654 285.719 530.654 279.838 528.218L126.38 464.654C120.499 462.218 115.827 457.546 113.391 451.665L49.827 298.207C47.3912 292.326 47.3912 285.719 49.827 279.838L113.391 126.38C115.827 120.499 120.499 115.827 126.38 113.391L279.838 49.8269Z"
+      fill="url(#media-frame-gradient)"
+    />
+  </g>
+
+  <defs>
+    <filter id="media-frame-glow" x="-20%" y="-20%" width="140%" height="140%"
+      color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="24" flood-color="#1A3252" flood-opacity="1" />
+    </filter>
+
+    <linearGradient id="media-frame-gradient" x1="532.023" y1="289.023" x2="46.0227" y2="289.023"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A6577C" />
+      <stop offset="1" stop-color="#627FA9" />
+    </linearGradient>
+  </defs>
+</svg>

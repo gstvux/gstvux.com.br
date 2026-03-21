@@ -1,16 +1,37 @@
 {
-  "seo": {
-    "title": "gstvux — Portfolio as a Product",
-    "description": "UI, product thinking and front-end craft for complex products."
-  },
   "hero": {
-    "eyebrow": "UI Engineer + Product Thinking",
-    "title": "Interfaces que reduzem carga cognitiva e elevam a percepção de valor.",
-    "subtitle": "Eu projeto e construo experiências digitais com craft visual, estrutura sistêmica e proximidade real com engenharia.",
+    "eyebrow": {
+      "icon": "👋",
+      "text": "Prazer,"
+    },
+    "title": "Gustavo Luciano",
+    "subtitle": "UX Designer - Product Designer - Front-end Dev",
+    "description": "Transformo regras, fluxos e restrições em interfaces mais claras, consistentes e escaláveis — com foco em produtos complexos, design systems e redução de ambiguidade.",
+    "bullets": [
+      "Eu transformo regras, fluxos e “telas demais” em uma experiência clara e consistente — com craft visual, método e um toque humano.",
+      "Governança de UI: desenho design systems, tokens e componentes para acelerar delivery e manter consistência (menos “cada tela é um mundo”).",
+      "Da descoberta ao impacto: conecto pesquisa, conteúdo e UI a métricas (fricção, adoção, tempo de tarefa, conversão)."
+    ],
     "primaryCtaLabel": "Ver cases",
     "primaryCtaHref": "/cases",
+    "primaryCtaSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.775 8.825C14.475 8.525 14.025 8.525 13.725 8.825L11.55 11V5C11.55 3.35 10.2 2 8.55 2H0.75C0.3 2 0 2.3 0 2.75C0 3.2 0.3 3.5 0.75 3.5H8.55C9.375 3.5 10.05 4.175 10.05 5V11L7.875 8.825C7.575 8.525 7.125 8.525 6.825 8.825C6.525 9.125 6.525 9.575 6.825 9.875L10.275 13.325C10.425 13.475 10.575 13.55 10.8 13.55C11.025 13.55 11.175 13.475 11.325 13.325L14.775 9.875C15.075 9.575 15.075 9.05 14.775 8.825Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
+    "primaryCtaIconPosition": "trailing",
     "secondaryCtaLabel": "Entrar em contato",
-    "secondaryCtaHref": "/contact"
+    "secondaryCtaHref": "/contact",
+    "secondaryCtaSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.8333 5.25H10.3889C9.95555 5.25 9.66667 5.55 9.66667 6C9.66667 6.45 9.95555 6.75 10.3889 6.75H11.8333C12.2667 6.75 12.5556 7.05 12.5556 7.5V12.75C12.5556 13.2 12.2667 13.5 11.8333 13.5H3.16667C2.73333 13.5 2.44444 13.2 2.44444 12.75V7.5C2.44444 7.05 2.73333 6.75 3.16667 6.75H4.61111C5.04444 6.75 5.33333 6.45 5.33333 6C5.33333 5.55 5.04444 5.25 4.61111 5.25H3.16667C1.93889 5.25 1 6.225 1 7.5V12.75C1 14.025 1.93889 15 3.16667 15H11.8333C13.0611 15 14 14.025 14 12.75V7.5C14 6.225 13.0611 5.25 11.8333 5.25ZM4.82778 9.525L6.99444 11.775C7.13889 11.925 7.28333 12 7.5 12C7.71667 12 7.86111 11.925 8.00556 11.775L10.1722 9.525C10.4611 9.225 10.4611 8.775 10.1722 8.475C9.88333 8.175 9.45 8.175 9.16111 8.475L8.22222 9.45V0.75C8.22222 0.3 7.93333 0 7.5 0C7.06667 0 6.77778 0.3 6.77778 0.75V9.45L5.83889 8.475C5.55 8.175 5.11667 8.175 4.82778 8.475C4.53889 8.775 4.53889 9.225 4.82778 9.525Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
+    "whatsappLabel": "Me chame no WhatsApp",
+    "whatsappHref": "https://wa.me/5516991298810?text=Ol%C3%A1%2C%20Gustavo",
+    "whatsappSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.0667 9.33333C10.9333 9.26666 10.0667 8.86666 9.93334 8.8C9.80001 8.73333 9.66668 8.73333 9.53334 8.86666C9.40001 9 9.13334 9.4 9.00001 9.53333C8.93334 9.66667 8.80001 9.66667 8.66668 9.6C8.20001 9.4 7.73334 9.13333 7.33334 8.8C7.00001 8.46666 6.66668 8.06667 6.40001 7.66667C6.33334 7.53333 6.40001 7.4 6.46668 7.33333C6.53334 7.26666 6.60001 7.13333 6.73334 7.06667C6.80001 7 6.86668 6.86666 6.86668 6.8C6.93334 6.73333 6.93334 6.6 6.86668 6.53333C6.80001 6.46667 6.46668 5.66667 6.33334 5.33333C6.26668 4.86667 6.13334 4.86667 6.00001 4.86667H5.66668C5.53334 4.86667 5.33334 5 5.26668 5.06667C4.86668 5.46667 4.66668 5.93333 4.66668 6.46667C4.73334 7.06667 4.93334 7.66667 5.33334 8.2C6.06668 9.26666 7.00001 10.1333 8.13334 10.6667C8.46668 10.8 8.73334 10.9333 9.06668 11C9.40001 11.1333 9.73334 11.1333 10.1333 11.0667C10.6 11 11 10.6667 11.2667 10.2667C11.4 10 11.4 9.73333 11.3333 9.46666L11.0667 9.33333ZM12.7333 3.26667C10.1333 0.666666 5.93334 0.666666 3.33334 3.26667C1.20001 5.4 0.80001 8.66666 2.26668 11.2667L1.33334 14.6667L4.86668 13.7333C5.86668 14.2667 6.93334 14.5333 8.00001 14.5333C11.6667 14.5333 14.6 11.6 14.6 7.93333C14.6667 6.2 13.9333 4.53333 12.7333 3.26667ZM10.9333 12.6C10.0667 13.1333 9.06668 13.4667 8.00001 13.4667C7.00001 13.4667 6.06668 13.2 5.20001 12.7333L5.00001 12.6L2.93334 13.1333L3.46668 11.1333L3.33334 10.9333C1.73334 8.26666 2.53334 4.93333 5.13334 3.26667C7.73334 1.6 11.0667 2.46667 12.6667 5C14.2667 7.6 13.5333 11 10.9333 12.6Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
+    "contactBar": {
+      "locationText": "São Carlos/SP, BR",
+      "workmodeText": "Remote-first",
+      "linkedinText": "LinkedIn",
+      "linkedinHref": "https://www.linkedin.com/in/SEU-USUARIO",
+      "email": "gstv.ux@gmail.com",
+      "showTimezone": true,
+      "timezoneLabel": "GMT-3",
+      "timezoneId": "America/Sao_Paulo"
+    }
   },
   "intro": {
     "kicker": "Produto. Serviço. Interface.",

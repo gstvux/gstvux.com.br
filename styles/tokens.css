@@ -1,5 +1,6 @@
 :root {
-  /* font family */
+  /* primitive tokens */
+
   --font-family-primary: "Sofia Sans";
   --font-family-secondary: "IBM Plex Sans";
   --font-family-utils: "IBM Plex Mono";
@@ -66,23 +67,77 @@
   --color-brand-secondary: var(--color-wine-500);
   --color-brand-accent: var(--color-ember-500);
 
-  /* space */
-  --space-0: 0px;
-  --space-4: 4px;
-  --space-8: 8px;
-  --space-12: 12px;
-  --space-14: 14px;
-  --space-16: 16px;
-  --space-18: 18px;
-  --space-20: 20px;
-  --space-24: 24px;
-  --space-28: 28px;
-  --space-32: 32px;
-  --space-40: 40px;
-  --space-48: 48px;
-  --space-56: 56px;
-  --space-64: 64px;
-  --space-80: 80px;
-  --space-96: 96px;
-  --space-112: 112px;
+  /* size */
+  --size-0: 0rem;
+  --size-1: 0.0625rem;
+  --size-2: 0.125rem;
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-28: 1.75rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-56: 3.5rem;
+  --size-64: 4rem;
+  --size-80: 5rem;
+  --size-96: 6rem;
+  --size-112: 7rem;
+
+  /* semantic tokens */
+
+  --hero-bg: var(--color-bluepetro-500);
+  --hero-min-h-desktop: 54rem;       /* 864px */
+  --hero-content-max-w: 45.3125rem;  /* 725px */
+  
+  --header-bg: color-mix(in oklab, var(--color-bluepetro-500) 20%, transparent);
+  --header-border-bottom-color: var(--color-bluepetro-500);
+
+  --surface-color: var(--color-bluepetro-900);
+  --surface-color-hover: var(--color-bluepetro-800);
+  --surface-color-active: var(--color-bluepetro-700);
+
+  --surface-color-inverse: var(--color-bluepetro-50);
+  --surface-color-inverse-hover: var(--color-bluepetro-100);
+  --surface-color-inverse-active: var(--color-bluepetro-200);
+
+  --bg-color-page: var(--color-bluepetro-900);
+  --bg-color-subtle: var(--color-bluepetro-800);
+
+  --button-primary-bg: var(--color-ember-400);
+  --button-primary-bg-hover: var(--color-ember-600);
+  --button-primary-text: var(--color-ember-50);
+  --button-primary-icon-color: var(--button-primary-text);
+  --button-primary-radius: var(--size-12);
+  --button-primary-height: var(--size-48);
+
+  --button-ghost-bg: transparent;
+  --button-ghost-border-color: var(--color-ember-500);
+  --button-ghost-border-color-hover: var(--color-ember-600);
+  --button-ghost-border-size: var(--size-1);
+  --button-ghost-text-color: var(--color-ember-500);
+  --button-ghost-icon-color: var(--button-ghost-text-color);
+  --button-ghost-radius: var(--size-12);
+  --button-ghost-height: calc(var(--size-48)- var(--button-ghost-border-size));
+
+  --badge-bg-color: var(--color-bluepetro-800);
+  --badge-text-color: var(--color-bluepetro-50);
+  --badge-border-color: var(--color-bluepetro-500);
+  --badge-icon-color: var(--badge-text-color);
+
+  --badge-secondary-bg-color: var(--color-bluepetro-800);
+  --badge-secondary-text-color: var(--color-ember-500);
+  --badge-secondary-border-color: var(--color-ember-500);
+  --badge-secondary-icon-color: var(--badge-secondary-text-color);
+
+  --sys-size-media-sm: 12rem;
+  --sys-size-media-md: 16rem;
+  --sys-size-media-lg: 20rem;
+  --sys-size-media-xl: 26rem;
+
 }

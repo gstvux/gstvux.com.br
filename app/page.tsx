@@ -1,16 +1,15 @@
-import { homeData } from "@/lib/content/home";
-import { HeroSection } from "@/components/sections/home/HeroSection";
-import { IntroSection } from "@/components/sections/home/IntroSection";
-import { FeaturedCasesSection } from "@/components/sections/home/FeaturedCasesSection";
-import { CtaSection } from "@/components/sections/home/CtaSection";
+import { client } from "@/tina/__generated__/client";
+import HomePageClient from "./home-page-client";
 
-export default function Page() {
-  return (
-    <>
-      <HeroSection hero={homeData.hero} />
-      <IntroSection intro={homeData.intro} />
-      <FeaturedCasesSection featuredCases={homeData.featuredCases} />
-      <CtaSection cta={homeData.cta} />
-    </>
+export default async function Page() {
+  const response = await client.queries.page(
+    { relativePath: "home.json" },
+    {
+      fetchOptions: {
+        next: { revalidate: 0 },
+      },
+    }
   );
+
+  return <HomePageClient {...response} />;
 }

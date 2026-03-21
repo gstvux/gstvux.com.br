@@ -1,0 +1,26 @@
+@theme  {
+
+--text-color-fg-heading: var(--color-ember-500);
+--text-color-fg-secondary: var(--text-color-fg-heading);
+--text-color-fg-heading-subtle: var(--color-ember-50);
+--text-title-sm: var(--size-24);
+--text-title: var(--size-32);
+
+--text-hero: var(--size-64);
+--text-hero--letter-spacing: -0.02em;
+--text-hero--font-weight: 700;
+
+--text-color-body: var(--color-bluepetro-50);
+--text-color-body-subtle: var(--color-bluepetro-300);
+
+--text-body-sm: var(--size-14);
+--text-body: var(--size-16);
+--text-body-lg: var(--size-20);
+--text-body--line-height: 1.6;
+--text-title--line-height: 1.1;
+--text-hero--line-height: 1;
+
+
+
+
+}

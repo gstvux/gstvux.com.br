@@ -1,4 +1,6 @@
 import { defineConfig } from "tinacms";
+import { IconSvgTextareaField } from "./fields/IconSvgTextareaField";
+
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -6,6 +8,35 @@ const branch =
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   "main";
+
+const iconSvgTextareaComponent =
+  IconSvgTextareaField as unknown as string;
+
+function createInlineSvgField(name: string, label: string) {
+  return {
+    type: "string",
+    name,
+    label,
+    ui: {
+      component: iconSvgTextareaComponent,
+    },
+  } as const;
+}
+
+function createIconPositionField(name: string, label: string) {
+  return {
+    type: "string",
+    name,
+    label,
+    options: [
+      { label: "Leading", value: "leading" },
+      { label: "Trailing", value: "trailing" },
+    ],
+    ui: {
+      component: "select",
+    },
+  } as const;
+}
 
 export default defineConfig({
   branch,
@@ -68,6 +99,10 @@ export default defineConfig({
             create: false,
             delete: false,
           },
+          router: ({ document }) => {
+            if (document._sys.filename === "home") return "/";
+            return `/${document._sys.filename}`;
+          },
         },
         fields: [
           {
@@ -94,9 +129,21 @@ export default defineConfig({
             name: "hero",
             fields: [
               {
-                type: "string",
+                type: "object",
                 label: "Eyebrow",
                 name: "eyebrow",
+                fields: [
+                  {
+                    type: "string",
+                    label: "Icon",
+                    name: "icon",
+                  },
+                  {
+                    type: "string",
+                    label: "Text",
+                    name: "text",
+                  },
+                ],
               },
               {
                 type: "string",
@@ -114,6 +161,20 @@ export default defineConfig({
               },
               {
                 type: "string",
+                label: "Description",
+                name: "description",
+                ui: {
+                  component: "textarea",
+                },
+              },
+              {
+                type: "string",
+                label: "Bullets",
+                name: "bullets",
+                list: true,
+              },
+              {
+                type: "string",
                 label: "Primary CTA Label",
                 name: "primaryCtaLabel",
               },
@@ -122,6 +183,8 @@ export default defineConfig({
                 label: "Primary CTA Href",
                 name: "primaryCtaHref",
               },
+              createInlineSvgField("primaryCtaSvg", "Primary CTA SVG"),
+              createIconPositionField("primaryCtaIconPosition", "Primary CTA Icon Position"),
               {
                 type: "string",
                 label: "Secondary CTA Label",
@@ -132,6 +195,69 @@ export default defineConfig({
                 label: "Secondary CTA Href",
                 name: "secondaryCtaHref",
               },
+              createInlineSvgField("secondaryCtaSvg", "Secondary CTA SVG"),
+              createIconPositionField("secondaryCtaIconPosition", "Secondary CTA Icon Position"),
+              {
+                type: "string",
+                label: "WhatsApp Label",
+                name: "whatsappLabel",
+              },
+              {
+                type: "string",
+                label: "WhatsApp Href",
+                name: "whatsappHref",
+              },
+              createInlineSvgField("whatsappSvg", "WhatsApp SVG"),
+              createIconPositionField("whatsappIconPosition", "WhatsApp Icon Position"),
+              {
+                type: "object",
+                name: "contactBar",
+                label: "Contact Bar",
+                fields: [
+                  {
+                    type: "string",
+                    name: "locationText",
+                    label: "Location",
+                  },
+                  {
+                    type: "string",
+                    name: "workmodeText",
+                    label: "Work Mode",
+                  },
+                  {
+                    type: "string",
+                    name: "linkedinText",
+                    label: "LinkedIn Label",
+                  },
+                  {
+                    type: "string",
+                    name: "linkedinHref",
+                    label: "LinkedIn URL",
+                  },
+                  {
+                    type: "string",
+                    name: "email",
+                    label: "Email",
+                  },
+                  {
+                    type: "boolean",
+                    name: "showTimezone",
+                    label: "Show Timezone",
+                  },
+                  {
+                    type: "string",
+                    name: "timezoneLabel",
+                    label: "Timezone Label",
+                    description: 'Ex.: "GMT-3"',
+                  },
+                  {
+                    type: "string",
+                    name: "timezoneId",
+                    label: "Timezone ID",
+                    description: 'Ex.: "America/Sao_Paulo"',
+                  }
+                ],
+              }
             ],
           },
           {
