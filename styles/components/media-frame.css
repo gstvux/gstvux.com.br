@@ -1,31 +1,40 @@
 .media-frame {
-  --media-frame-width: clamp(16rem, 42vw, 22rem);
+  --media-frame-max-width: 100%;
+  --media-frame-content-size: 83%;
+  --media-frame-polygon-scale: 1.015;
 
-  position: relative;
-  width: var(--media-frame-width);
-  aspect-ratio: 1;
-  isolation: isolate;
-}
-
-.media-frame__polygon-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  transform-origin: center;
-}
-
-.media-frame__polygon {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
+  width: min(100%, var(--media-frame-max-width));
+  flex: 0 1 auto;
 }
 
 .media-frame__image-layer {
-  aspect-ratio: 1;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+}
+
+.media-frame__image-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("/shapes/media-frame-polygon.svg") center / contain no-repeat;
+  transform: scale(var(--media-frame-polygon-scale));
+  transform-origin: center;
+}
+
+.media-frame__content-box {
+  position: relative;
+  z-index: 1;
+  width: var(--media-frame-content-size);
+  aspect-ratio: 1 / 1;
 }
 
 .media-frame__image {
-  z-index: 20;
-  transform: scale(0.83);
   object-fit: contain;
+  object-position: center;
 }

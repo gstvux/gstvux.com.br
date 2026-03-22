@@ -24,17 +24,12 @@ export function MediaFrame({
   } as CSSProperties;
 
   return (
-    <div className={["media-frame", className].filter(Boolean).join(" ")} style={style}>
-      <div className="media-frame__polygon-layer" aria-hidden="true">
-        <Image
-          className="media-frame__polygon"
-          src="/shapes/media-frame-polygon.svg"
-          alt=""
-          fill
-          priority={priority}
-        />
-
-        <div className="media-frame__image-layer">
+    <div
+      className={["media-frame", className].filter(Boolean).join(" ")}
+      style={style}
+    >
+      <div className="media-frame__image-layer">
+        <div className="media-frame__content-box">
           <Image
             className="media-frame__image"
             src={imageSrc}

@@ -98,6 +98,8 @@
   --header-bg: color-mix(in oklab, var(--color-bluepetro-500) 20%, transparent);
   --header-border-bottom-color: var(--color-bluepetro-500);
 
+  --text-color-body: var(--color-bluepetro-50);
+
   --surface-color: var(--color-bluepetro-900);
   --surface-color-hover: var(--color-bluepetro-800);
   --surface-color-active: var(--color-bluepetro-700);

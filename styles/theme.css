@@ -1,26 +1,82 @@
-@theme  {
+@theme inline {
+    /* font families */
+    --font-primary: var(--font-family-primary);
+    --font-secondary: var(--font-family-secondary);
+    --font-utils: var(--font-family-utils);
 
---text-color-fg-heading: var(--color-ember-500);
---text-color-fg-secondary: var(--text-color-fg-heading);
---text-color-fg-heading-subtle: var(--color-ember-50);
---text-title-sm: var(--size-24);
---text-title: var(--size-32);
+    /* type scale */
+    --text-size-body-xs: var(--size-12);
+    --text-size-body-sm: var(--size-14);
+    --text-size-body: var(--size-16);
+    --text-size-body-lg: var(--size-18);
+    --text-size-title-sm: var(--size-24);
+    --text-size-title: var(--size-32);
+    --text-size-hero: var(--size-64);
+    --text-size-hero-lg: var(--size-80);
 
---text-hero: var(--size-64);
---text-hero--letter-spacing: -0.02em;
---text-hero--font-weight: 700;
+    /* typography rhythm */
+    --leading-body: 1.6;
+    --leading-title: 1.1;
+    --leading-hero: 1;
+    --tracking-hero: -0.02em;
 
---text-color-body: var(--color-bluepetro-50);
---text-color-body-subtle: var(--color-bluepetro-300);
+    /* semantic foreground */
+    --color-fg-heading: var(--color-ember-500);
+    --color-fg-heading-subtle: var(--color-ember-50);
+    --color-fg-body: var(--color-bluepetro-50);
+    --color-fg-body-subtle: var(--color-bluepetro-300);
 
---text-body-sm: var(--size-14);
---text-body: var(--size-16);
---text-body-lg: var(--size-20);
---text-body--line-height: 1.6;
---text-title--line-height: 1.1;
---text-hero--line-height: 1;
+    /* page / hero / surfaces */
+    --color-page: var(--bg-color-page);
+    --color-page-subtle: var(--bg-color-subtle);
+    --color-hero: var(--hero-bg);
+    --color-header: var(--header-bg);
+    --color-header-border: var(--header-border-bottom-color);
 
+    --color-surface: var(--surface-color);
+    --color-surface-hover: var(--surface-color-hover);
+    --color-surface-active: var(--surface-color-active);
 
+    --color-surface-inverse: var(--surface-color-inverse);
+    --color-surface-inverse-hover: var(--surface-color-inverse-hover);
+    --color-surface-inverse-active: var(--surface-color-inverse-active);
 
+    /* brand */
+    --color-brand: var(--color-brand-primary);
+    --color-brand-alt: var(--color-brand-secondary);
+    --color-accent: var(--color-brand-accent);
 
+    /* CTA / buttons */
+    --color-cta: var(--button-primary-bg);
+    --color-cta-hover: var(--button-primary-bg-hover);
+    --color-cta-fg: var(--button-primary-text);
+
+    --color-ghost-fg: var(--button-ghost-text-color);
+    --color-ghost-border: var(--button-ghost-border-color);
+    --color-ghost-border-hover: var(--button-ghost-border-color-hover);
+
+    /* badges */
+    --color-badge: var(--badge-bg-color);
+    --color-badge-fg: var(--badge-text-color);
+    --color-badge-border: var(--badge-border-color);
+
+    --color-badge-secondary: var(--badge-secondary-bg-color);
+    --color-badge-secondary-fg: var(--badge-secondary-text-color);
+    --color-badge-secondary-border: var(--badge-secondary-border-color);
+
+    /* radius */
+    --radius-button: var(--button-primary-radius);
+    --radius-button-ghost: var(--button-ghost-radius);
+
+    /* component sizing */
+    --spacing-button: var(--button-primary-height);
+    --spacing-button-ghost: calc(var(--size-48) - var(--button-ghost-border-size));
+
+    --spacing-media-sm: var(--sys-size-media-sm);
+    --spacing-media-md: var(--sys-size-media-md);
+    --spacing-media-lg: var(--sys-size-media-lg);
+    --spacing-media-xl: var(--sys-size-media-xl);
+
+    /* motion */
+    --ease-emphatic: cubic-bezier(0.22, 1, 0.36, 1);
 }

@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${fontPrimary.variable} ${fontSecondary.variable} ${fontUtils.variable}`}
     >
-      <body className="antialiased">
+      <body className="antialiased bg-page text-fg-body">
         <a href="#main" className="skip-link">
           Pular para o conteúdo
         </a>

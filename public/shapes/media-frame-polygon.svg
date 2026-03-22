@@ -9,7 +9,7 @@
   <defs>
     <filter id="media-frame-glow" x="-20%" y="-20%" width="140%" height="140%"
       color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="0" stdDeviation="24" flood-color="#1A3252" flood-opacity="1" />
+      <feDropShadow dx="0" dy="0" stdDeviation="24" flood-color="#1F3A5F" flood-opacity="1" />
     </filter>
 
     <linearGradient id="media-frame-gradient" x1="532.023" y1="289.023" x2="46.0227" y2="289.023"

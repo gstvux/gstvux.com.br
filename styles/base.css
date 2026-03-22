@@ -1,6 +1,16 @@
 body {
   background-color: var(--bg-color-page);
-  color: var(--text-color-body)
+}
+
+h1,
+h2,
+h3,p,li {
+  text-wrap: balance;
+}
+
+@utility text-trim-cap {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 .skip-link {
@@ -102,7 +112,6 @@ body {
 }
 
 .hero-eyebrow {
-  --hero-eyebrow-gap: 0.35rem;
   --hero-eyebrow-margin-bottom: 0;
 
   --hero-eyebrow-icon-size: clamp(2rem, 3vw, 3.25rem);
@@ -119,10 +128,6 @@ body {
   --hero-eyebrow-wave-rotate-4: 9deg;
   --hero-eyebrow-wave-rotate-5: -5deg;
 
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--hero-eyebrow-gap);
   margin-bottom: var(--hero-eyebrow-margin-bottom);
 }
 

@@ -146,6 +146,16 @@ export default defineConfig({
                 ],
               },
               {
+                type: "image",
+                name: "imageSrc",
+                label: "Imagem do Media Frame",
+              },
+              {
+                type: "string",
+                name: "imageAlt",
+                label: "Texto alternativo",
+              },
+              {
                 type: "string",
                 label: "Title",
                 name: "title",
