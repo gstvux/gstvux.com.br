@@ -1,5 +1,5 @@
 import type { PageQuery } from "@/tina/__generated__/types";
-import type { FeaturedCase, HomePageData } from "@/lib/content/types";
+import type { FeaturedCase, HomePageData } from "@/src/lib/content/types";
 
 export function mapHomePageData(data: PageQuery): HomePageData {
     const page = data.page;

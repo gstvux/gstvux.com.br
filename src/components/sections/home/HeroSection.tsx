@@ -3,6 +3,7 @@ import type { PageQuery } from "@/tina/__generated__/types";
 import { ButtonLink } from "@/src/components/ui/button/ButtonLink";
 import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
 import { HeroLocalTime } from "./HeroLocalTime";
+import { Typewriter } from "@/src/components/ui/typewriter/Typewriter";
 
 type IconPosition = "leading" | "trailing";
 
@@ -75,7 +76,9 @@ export function HeroSection({ hero }: HeroSectionProps) {
               )}
 
               {hero.subtitle && (
-                <p className="text-trim-cap text-fg-secondary font-bold font-utils text-size-title-sm text-amber-500">{hero.subtitle}</p>
+                <p className="text-trim-cap text-fg-secondary font-bold font-utils text-size-title-sm text-amber-500">
+                  <Typewriter text={hero.subtitle} />
+                </p>
               )}
             </div>
           )}

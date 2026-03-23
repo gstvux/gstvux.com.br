@@ -13,6 +13,21 @@ h3,p,li {
   text-box-edge: cap alphabetic;
 }
 
+.typewriter-wrapper::after {
+  content: '|';
+  color: currentColor;
+  animation: typewriter-blink 0.8s step-end infinite;
+  display: inline-block;
+  vertical-align: baseline;
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+@keyframes typewriter-blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
 .skip-link {
   position: absolute;
   top: 0;

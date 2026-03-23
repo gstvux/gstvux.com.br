@@ -33,7 +33,7 @@ export function Header() {
 
           <Link
             href="/contact"
-            className="rounded-xl bg-(--color-accent) px-4 py-2 text-(--color-accent-contrast)"
+            className="rounded-xl bg-(--color-ember-300) px-4 py-2 text-(--color-bluepetro-950)"
           >
             Vamos conversar
           </Link>

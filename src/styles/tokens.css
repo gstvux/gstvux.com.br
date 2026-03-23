@@ -39,16 +39,16 @@
   --color-bluepetro-900: #0C1625;
 
   /* ember */
-  --color-ember-50: #FFF4E6;
-  --color-ember-100: #FFE9C8;
-  --color-ember-200: #FFD29A;
-  --color-ember-300: #E8B466;
-  --color-ember-400: #D0943A;
-  --color-ember-500: #B8791A;
-  --color-ember-600: #9E6616;
-  --color-ember-700: #825313;
-  --color-ember-800: #66400F;
-  --color-ember-900: #4D300B;
+  --color-ember-50:  #FFEEDE;
+  --color-ember-100: #FFDDB8;
+  --color-ember-200: #FFB95F;
+  --color-ember-300: #EE9800;
+  --color-ember-400: #CA8100;
+  --color-ember-500: #A76A00;
+  --color-ember-600: #855300;
+  --color-ember-700: #653E00;
+  --color-ember-800: #472A00;
+  --color-ember-900: #2A1700;
 
   /* wine */
   --color-wine-50: #F8EDF1;
