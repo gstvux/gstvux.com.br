@@ -1,4 +1,4 @@
-import type { HomePageData } from "@/lib/content/types";
+import type { HomePageData } from "@/src/lib/content/types";
 
 type Props = {
   intro?: HomePageData["intro"];

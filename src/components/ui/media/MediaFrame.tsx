@@ -8,6 +8,7 @@ type MediaFrameProps = {
   sizes?: string;
   priority?: boolean;
   className?: string;
+  animatePolygon?: boolean;
 };
 
 export function MediaFrame({
@@ -17,6 +18,7 @@ export function MediaFrame({
   sizes = "(min-width: 1024px) 22rem, 42vw",
   priority = false,
   className,
+  animatePolygon = true
 }: MediaFrameProps) {
   const style = {
     "--media-frame-width":
@@ -25,7 +27,13 @@ export function MediaFrame({
 
   return (
     <div
-      className={["media-frame", className].filter(Boolean).join(" ")}
+      className={[
+        "media-frame",
+        animatePolygon && "media-frame--polygon-spin",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
       style={style}
     >
       <div className="media-frame__image-layer">
