@@ -41,6 +41,7 @@
   },
   "featuredCases": [
     {
+      "imageSrc": "/shapes/case-thumbnail.png",
       "slug": "ortocenter",
       "title": "Ortocenter",
       "summary": "Complex enterprise healthcare workflows, autosave logic and multi-API integration.",

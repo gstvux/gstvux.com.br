@@ -305,6 +305,16 @@ export default defineConfig({
             },
             fields: [
               {
+                type: "image",
+                label: "Image",
+                name: "imageSrc",
+              },
+              {
+                type: "string",
+                label: "Image Alt",
+                name: "imageAlt",
+              },
+              {
                 type: "string",
                 label: "Slug",
                 name: "slug",
