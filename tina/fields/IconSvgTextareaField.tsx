@@ -3,7 +3,7 @@
 import * as React from "react";
 import { wrapFieldsWithMeta } from "tinacms";
 
-import { CmsIcon } from "@/components/ui/icon/CmsIcon";
+import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
 
 export const IconSvgTextareaField = wrapFieldsWithMeta(({ input }) => {
     const value = typeof input.value === "string" ? input.value : "";

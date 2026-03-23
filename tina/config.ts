@@ -92,7 +92,7 @@ export default defineConfig({
       {
         label: "Pages",
         name: "page",
-        path: "content/pages",
+        path: "/src/content/pages/",
         format: "json",
         ui: {
           allowedActions: {

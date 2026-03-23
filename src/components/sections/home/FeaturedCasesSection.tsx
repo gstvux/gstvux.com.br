@@ -1,8 +1,12 @@
 import Link from "next/link";
-import type { HomePageData } from "@/lib/content/types";
+import type { PageQuery } from "@/tina/__generated__/types";
+
+type FeaturedCaseItem = NonNullable<
+  NonNullable<PageQuery["page"]>["featuredCases"]
+>[number];
 
 type Props = {
-  featuredCases?: HomePageData["featuredCases"];
+  featuredCases?: NonNullable<FeaturedCaseItem>[];
 };
 
 export function FeaturedCasesSection({ featuredCases }: Props) {
@@ -14,7 +18,7 @@ export function FeaturedCasesSection({ featuredCases }: Props) {
         <article key={item.slug}>
           {item.tag && <p>{item.tag}</p>}
           <h3>{item.title}</h3>
-          <p>{item.summary}</p>
+          {item.summary && <p>{item.summary}</p>}
           <Link href={`/cases/${item.slug}`}>Ver case</Link>
         </article>
       ))}

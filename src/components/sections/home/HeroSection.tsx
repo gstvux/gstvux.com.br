@@ -1,7 +1,7 @@
-import { MediaFrame } from "@/components/ui/media/MediaFrame";
+import { MediaFrame } from "@/src/components/ui/media/MediaFrame";
 import type { PageQuery } from "@/tina/__generated__/types";
-import { ButtonLink } from "@/components/ui/button/ButtonLink";
-import { CmsIcon } from "@/components/ui/icon/CmsIcon";
+import { ButtonLink } from "@/src/components/ui/button/ButtonLink";
+import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
 import { HeroLocalTime } from "./HeroLocalTime";
 
 type IconPosition = "leading" | "trailing";
@@ -41,13 +41,14 @@ export function HeroSection({ hero }: HeroSectionProps) {
 
   return (
     <section className="hero-surface pt-20 lg:flex lg:flex-col lg:justify-center lg:min-h-(--hero-min-h-desktop)">
-      <div className=" mx-auto w-full max-w-7xl lg:flex lg:items-center lg:justify-between">
+      <div className="mx-auto p-6 lg:p-0 w-full max-w-7xl lg:flex lg:items-center lg:justify-between">
         <div className="w-full lg:max-w-121.5 ">
 
           {hero?.imageSrc && (
             <MediaFrame
               imageSrc={hero.imageSrc}
               imageAlt={hero.imageAlt || ""}
+              animatePolygon
             />
           )}
         </div>
@@ -68,7 +69,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
               )}
 
               {hero.title && (
-                <h1 className="text-trim-cap uppercase font-bold font-primary text-size-hero-lg text-fg-heading-subtle leading-none" data-testid="hero-title">
+                <h1 className="text-trim-cap uppercase font-bold font-primary text-size-hero text-fg-heading-subtle leading-none" data-testid="hero-title">
                   {hero.title}
                 </h1>
               )}
@@ -85,7 +86,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             {hero.description && <p>{hero.description}</p>}
 
             {bullets?.length ? (
-              <ul className="list-none lg:flex lg:flex-col lg:gap-4">
+              <ul className="list-none lg:flex lg:flex-col lg:gap-2">
                 {bullets.map((bullet, index) => (
                   <li key={index} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-amber-500">{bullet}</li>
                 ))}

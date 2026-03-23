@@ -1,10 +1,15 @@
+@property --media-frame-polygon-rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .media-frame {
   --media-frame-max-width: 100%;
   --media-frame-content-size: 83%;
   --media-frame-polygon-scale: 1.015;
-
-  width: min(100%, var(--media-frame-max-width));
-  flex: 0 1 auto;
+  --media-frame-polygon-rotate: 0deg;
+  --media-frame-polygon-rpm: 1;
 }
 
 .media-frame__image-layer {
@@ -23,8 +28,22 @@
   z-index: 0;
   pointer-events: none;
   background: url("/shapes/media-frame-polygon.svg") center / contain no-repeat;
-  transform: scale(var(--media-frame-polygon-scale));
+  transform: scale(var(--media-frame-polygon-scale)) rotate(var(--media-frame-polygon-rotate));
   transform-origin: center;
+}
+
+.media-frame--polygon-spin .media-frame__image-layer::before {
+  animation: media-frame-polygon-spin calc(60s / var(--media-frame-polygon-rpm)) linear infinite;
+}
+
+@keyframes media-frame-polygon-spin {
+  from {
+    --media-frame-polygon-rotate: 0deg;
+  }
+
+  to {
+    --media-frame-polygon-rotate: 360deg;
+  }
 }
 
 .media-frame__content-box {
