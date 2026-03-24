@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import {
   getButtonClassName,
@@ -13,6 +14,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   trailingIcon?: ReactNode;
   iconOnly?: boolean;
   isLoading?: boolean;
+  href?: string;
 };
 
 export function Button({
@@ -26,23 +28,13 @@ export function Button({
   className,
   children,
   disabled,
+  href,
   ...props
 }: ButtonProps) {
   const isDisabled = disabled || isLoading;
 
-  return (
-    <button
-      type={type}
-      disabled={isDisabled}
-      aria-busy={isLoading || undefined}
-      className={getButtonClassName({
-        appearance,
-        size,
-        iconOnly,
-        className,
-      })}
-      {...props}
-    >
+  const content = (
+    <>
       <span
         className={cx(
           "inline-flex items-center justify-center gap-2",
@@ -50,7 +42,10 @@ export function Button({
         )}
       >
         {leadingIcon ? (
-          <span aria-hidden="true" className="inline-flex size-4 items-center justify-center">
+          <span
+            aria-hidden="true"
+            className="inline-flex size-4 items-center justify-center"
+          >
             {leadingIcon}
           </span>
         ) : null}
@@ -58,7 +53,10 @@ export function Button({
         {!iconOnly ? <span>{children}</span> : null}
 
         {trailingIcon ? (
-          <span aria-hidden="true" className="inline-flex size-4 items-center justify-center">
+          <span
+            aria-hidden="true"
+            className="inline-flex size-4 items-center justify-center"
+          >
             {trailingIcon}
           </span>
         ) : null}
@@ -70,6 +68,35 @@ export function Button({
           className="absolute inline-block size-4 animate-spin rounded-full border-2 border-current border-r-transparent"
         />
       ) : null}
+    </>
+  );
+
+  const commonProps = {
+    className: getButtonClassName({
+      appearance,
+      size,
+      iconOnly,
+      className,
+    }),
+  };
+
+  if (href) {
+    return (
+      <Link href={href} {...commonProps} {...(props as any)}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      type={type}
+      disabled={isDisabled}
+      aria-busy={isLoading || undefined}
+      {...commonProps}
+      {...props}
+    >
+      {content}
     </button>
   );
 }

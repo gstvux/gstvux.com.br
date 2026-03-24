@@ -7,16 +7,16 @@
     },
     {
       "label": "Peril",
-      "href": "#profile"
+      "href": "#perfil"
     },
     {
       "label": "Processo",
-      "href": "#process"
+      "href": "#processo"
     }
   ],
   "footer": {
-    "since": "2008",
-    "current_year": "2026",
-    "availability": "Disponível para novos projetos."
+    "since": "© 2026 — Reduzindo entropia em sistemas complexos desde 2008.",
+    "current_year": "Projetado com 🧠. Refinado com ☕.",
+    "availability": "🟢Atualmente disponível para parcerias estratégicas."
   }
 }

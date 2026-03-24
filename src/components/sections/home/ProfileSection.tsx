@@ -9,7 +9,7 @@ export function ProfileSection({ profile }: Props) {
   if (!profile) return null;
 
   return (
-    <section className="w-full" id="profile">
+    <section className="w-full" id="perfil">
       <div className="w-full flex flex-col items-center py-16 lg:py-[64px]">
         <div className="w-full max-w-[800px] flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-[40px] gap-8 md:gap-0 rounded-[8px]">
 

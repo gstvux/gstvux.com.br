@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { PageQuery } from "@/tina/__generated__/types";
+import { Button } from "../../ui/button/Button";
 
 type FeaturedCaseItem = NonNullable<
   NonNullable<PageQuery["page"]>["featuredCases"]
@@ -27,7 +28,7 @@ export function FeaturedCasesSection({ featuredCases }: Props) {
         <div className="mt-12 flex flex-col gap-8 lg:flex-row lg:gap-6 w-full">
           {validCases.map((item, index) => (
             <article key={item.slug || `case-${index}`} className="group flex flex-1 flex-col gap-4">
-              <Link href={`/cases/${item.slug}`} className="relative block w-full aspect-4/3 rounded-2xl overflow-hidden bg-surface-inverse">
+              <Link href={`/cases/${item.slug}`} className="relative block w-full aspect-4/3 rounded-2xl overflow-hidden bg-surface-inverse" title="Explorar solução">
                 {item.imageSrc && (
                   <img 
                     src={item.imageSrc} 
@@ -59,9 +60,9 @@ export function FeaturedCasesSection({ featuredCases }: Props) {
         </div>
 
         <div className="mt-12">
-          <Link href="/cases" className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-cta-fg h-12 px-8 rounded-button font-bold transition-colors">
-            Ver Cases
-          </Link>
+          <Button href="/cases" size="lg">
+            Explorar todos os Cases &rarr;
+          </Button>
         </div>
       </div>
     </section>

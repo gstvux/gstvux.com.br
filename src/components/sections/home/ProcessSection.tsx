@@ -24,7 +24,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
   const duplicatedBadges = process.badges ? [...process.badges, ...process.badges, ...process.badges, ...process.badges, ...process.badges, ...process.badges] : [];
 
   return (
-    <section className="w-full bg-page-subtle py-12 overflow-hidden relative" id="process">
+    <section className="w-full bg-page-subtle py-24 overflow-hidden relative" id="processo">
 
       <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto px-4 lg:px-8">
 
