@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sofia_Sans, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
+import { Footer } from "@/src/components/layout/Footer";
 
 const fontPrimary = Sofia_Sans({
   subsets: ["latin"],
@@ -59,6 +60,9 @@ export default function RootLayout({
         <Header />
 
         <main id="main">{children}</main>
+
+        <Footer />
+
       </body>
     </html>
   );

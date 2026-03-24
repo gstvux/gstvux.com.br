@@ -107,6 +107,34 @@ export default defineConfig({
               },
             ],
           },
+          {
+            type: "object",
+            name: "footer",
+            label: "Footer",
+            fields: [
+              {
+                type: "string",
+                name: "since",
+                label: "Since",
+                description: 'Ex: "Desde 2013"',
+                required: true,
+              },
+              {
+                type: "string",
+                name: "current_year",
+                label: "Current Year",
+                description: 'Ex: "2024"',
+                required: true,
+              },
+              {
+                type: "string",
+                name: "availability",
+                label: "Availability",
+                description: 'Ex: "Disponível para alocação."',
+                required: true,
+              },
+            ],
+          },
         ],
       },
       {

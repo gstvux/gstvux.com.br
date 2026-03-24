@@ -13,5 +13,10 @@
       "label": "Processo",
       "href": "/processo"
     }
-  ]
+  ],
+  "footer": {
+    "since": "© 2026 — Reduzindo entropia em sistemas complexos desde 2008.",
+    "current_year": "Projetado com 🧠. Refinado com ☕.",
+    "availability": "🟢 Atualmente disponível para parcerias estratégicas."
+  }
 }
