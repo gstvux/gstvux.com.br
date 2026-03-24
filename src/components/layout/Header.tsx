@@ -8,7 +8,7 @@ export async function Header() {
   const { logoText, navItems } = res.data.global;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-20 backdrop-blur-sm bg-[rgba(31,58,95,0.2)] border-b border-b-(--color-bluepetro-500) flex items-center justify-center">
+    <header className="fixed top-0 left-0 right-0 z-50 h-20 backdrop-blur-sm bg-header border-b border-b-fg-section-separator flex items-center justify-center">
       <div className="flex items-center justify-between w-full max-w-7xl px-6 md:px-10">
         <Link href="/" aria-label="gstvux, página inicial">
           <p className="font-primary font-bold text-2xl text-fg-body leading-[1.4] tracking-wide">
@@ -25,7 +25,7 @@ export async function Header() {
                   <ButtonLink
                     href={item.href}
                     appearance="link"
-                    className="font-utils font-bold text-lg text-fg-body hover:text-white"
+                    className="font-secondary text-lg"
                   >
                     {item.label}
                   </ButtonLink>

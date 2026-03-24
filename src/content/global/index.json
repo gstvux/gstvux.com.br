@@ -7,11 +7,11 @@
     },
     {
       "label": "Peril",
-      "href": "/peril"
+      "href": "#profile"
     },
     {
       "label": "Processo",
-      "href": "/processo"
+      "href": "#process"
     }
   ],
   "footer": {

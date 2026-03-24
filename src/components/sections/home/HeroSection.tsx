@@ -161,7 +161,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
                   )}
                 </div>
 
-                <hr className="flex-1 text-(--color-bluepetro-500)" />
+                <hr className="flex-1 text-fg-section-separator" />
 
 
                 <div className="flex gap-2">

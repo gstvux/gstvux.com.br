@@ -21,10 +21,6 @@
   --color-mist: #E2E7EE;
   --color-lightgray: #6B7280;
   --color-gray: #4B5563;
-  --color-deepblue: #111827;
-
-  /* font color */
-  --font-color-default: var(--color-deepblue);
 
   /* bluepetro */
   --color-bluepetro-50: #EEF2F7;
@@ -50,23 +46,6 @@
   --color-ember-800: #472A00;
   --color-ember-900: #2A1700;
 
-  /* wine */
-  --color-wine-50: #F8EDF1;
-  --color-wine-100: #F0DCE5;
-  --color-wine-200: #DDB3C6;
-  --color-wine-300: #C484A2;
-  --color-wine-400: #A6577C;
-  --color-wine-500: #7A2E4D;
-  --color-wine-600: #682642;
-  --color-wine-700: #561F36;
-  --color-wine-800: #45182B;
-  --color-wine-900: #341220;
-
-  /* brand */
-  --color-brand-primary: var(--color-bluepetro-500);
-  --color-brand-secondary: var(--color-wine-500);
-  --color-brand-accent: var(--color-ember-500);
-
   /* size */
   --size-0: 0rem;
   --size-1: 0.0625rem;
@@ -91,45 +70,43 @@
 
   /* semantic tokens */
 
-  --hero-bg: var(--color-bluepetro-500);
-  --hero-min-h-desktop: 54rem;
-  /* 864px */
-  --hero-content-max-w: 45.3125rem;
-  /* 725px */
+  --color-body-default: var(--color-bluepetro-50);
+  --color-body-default-subtle: var(--color-bluepetro-300);
+  --color-section-separator: var(--color-bluepetro-500);
+  
+  --color-title-fg: var(--color-ember-300);
+  --color-title-fg-subtle: var(--color-ember-50);
 
-  --header-bg: color-mix(in oklab, var(--color-bluepetro-900) 50%, transparent);
-  --header-border-bottom-color: var(--color-bluepetro-500);
+  --hero-min-h-desktop: 54rem; /* 864px */
+  --hero-content-max-w: 45.3125rem; /* 725px */
+
+  --header-bg: color-mix(in oklab, var(--color-bluepetro-900) 80%, transparent);
 
   --text-color-body: var(--color-bluepetro-50);
-
-  --surface-color: var(--color-bluepetro-900);
-  --surface-color-hover: var(--color-bluepetro-800);
-  --surface-color-active: var(--color-bluepetro-700);
-
-  --surface-color-inverse: var(--color-bluepetro-50);
-  --surface-color-inverse-hover: var(--color-bluepetro-100);
-  --surface-color-inverse-active: var(--color-bluepetro-200);
 
   --bg-color-page: var(--color-bluepetro-900);
   --bg-color-page-subtle: var(--color-bluepetro-800);
 
-  --button-primary-bg: var(--color-ember-400);
-  --button-primary-bg-hover: var(--color-ember-600);
-  --button-primary-text: var(--color-ember-50);
+  --button-primary-bg: var(--color-ember-300);
+  --button-primary-bg-hover: var(--color-ember-200);
+  --button-primary-text: var(--color-bluepetro-900);
+  --button-primary-text-hover: var(--color-bluepetro-700);
   --button-primary-icon-color: var(--button-primary-text);
   --button-primary-radius: var(--size-12);
   --button-primary-height: var(--size-48);
 
   --button-ghost-bg: transparent;
-  --button-ghost-border-color: var(--color-ember-500);
-  --button-ghost-border-color-hover: var(--color-ember-600);
-  --button-ghost-border-size: var(--size-1);
-  --button-ghost-text-color: var(--color-ember-500);
+  --button-ghost-border-color: var(--color-ember-300);
+  --button-ghost-border-color-hover: var(--color-ember-100);
+  --button-ghost-text-color: var(--color-ember-300);
+  --button-ghost-text-color-hover: var(--color-ember-100);
   --button-ghost-icon-color: var(--button-ghost-text-color);
-  --button-ghost-radius: var(--size-12);
-  --button-ghost-height: calc(var(--size-48)- var(--button-ghost-border-size));
 
-  --badge-bg-color: var(--color-bluepetro-800);
+  --button-link-text-color: var(--color-bluepetro-50);
+  --button-link-text-color-hover: var(--color-ember-100);
+  --button-link-text-color-current: var(--color-ember-300);
+
+  --badge-bg-color: var(--color-bluepetro-900);
   --badge-text-color: var(--color-bluepetro-50);
   --badge-border-color: var(--color-bluepetro-500);
   --badge-icon-color: var(--badge-text-color);
@@ -147,30 +124,52 @@
 
 /* Light Theme Overrides */
 .light {
-  --hero-bg: var(--color-polar);
-  --header-bg: color-mix(in oklab, var(--color-polar) 40%, transparent);
+  
+  --header-bg: color-mix(in oklab, var(--color-bluepetro-100) 90%, transparent);
   --header-border-bottom-color: var(--color-bluepetro-200);
 
-  --text-color-body: var(--color-bluepetro-900);
+  --color-body-default: var(--color-bluepetro-500);
+  --color-body-default-subtle: var(--color-bluepetro-400);
+  --color-section-separator: var(--color-bluepetro-200);
+  
+  --color-title-fg: var(--color-bluepetro-900);
+  --color-title-fg-subtle: var(--color-bluepetro-500);
 
-  --surface-color: var(--color-polar);
-  --surface-color-hover: var(--color-mist);
-  --surface-color-active: var(--color-bluepetro-100);
+  --bg-color-page: var(--color-bluepetro-50);
+  --bg-color-page-subtle: var(--color-bluepetro-100);
 
-  --surface-color-inverse: var(--color-bluepetro-900);
-  --surface-color-inverse-hover: var(--color-bluepetro-800);
-  --surface-color-inverse-active: var(--color-bluepetro-700);
+  --button-primary-bg: var(--color-bluepetro-500);
+  --button-primary-bg-hover: var(--color-bluepetro-400);
+  --button-primary-text: var(--color-ember-200);
+  --button-primary-text-hover: var(--color-ember-100);
+  --button-primary-icon-color: var(--button-primary-text);
 
-  --bg-color-page: var(--color-polar);
-  --bg-color-subtle: var(--color-mist);
+  --button-ghost-bg: transparent;
+  --button-ghost-border-color: var(--color-bluepetro-400);
+  --button-ghost-border-color-hover: var(--color-bluepetro-500);
+  --button-ghost-text-color: var(--color-bluepetro-400);
+  --button-ghost-text-color-hover: var(--color-bluepetro-500);
+  --button-ghost-icon-color: var(--button-ghost-text-color);
 
-  --badge-bg-color: var(--color-bluepetro-100);
+  --button-link-text-color: var(--color-bluepetro-50);
+  --button-link-text-color-hover: var(--color-ember-100);
+  --button-link-text-color-current: var(--color-ember-300);
+
+  --badge-bg-color: var(--color-bluepetro-200);
   --badge-text-color: var(--color-bluepetro-900);
   --badge-border-color: var(--color-bluepetro-300);
-  --badge-icon-color: var(--badge-text-color);
 
-  --badge-secondary-bg-color: var(--color-ember-50);
-  --badge-secondary-text-color: var(--color-ember-700);
-  --badge-secondary-border-color: var(--color-ember-300);
+  --badge-secondary-bg-color: var(--color-bluepetro-800);
+  --badge-secondary-text-color: var(--color-ember-500);
+  --badge-secondary-border-color: var(--color-ember-500);
   --badge-secondary-icon-color: var(--badge-secondary-text-color);
+
+  .hero-surface{
+    --hero-base: white;
+    --hero-fade: var(--color-bluepetro-50);
+    --hero-hover: var(--color-bluepetro-100);
+    --pattern-dot-color: color-mix(in oklab, var(--color-bluepetro-400), transparent);
+
+
+  }
 }

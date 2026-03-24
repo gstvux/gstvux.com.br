@@ -21,15 +21,17 @@
     --tracking-hero: -0.02em;
 
     /* semantic foreground */
-    --color-fg-heading: var(--color-ember-300);
-    --color-fg-heading-subtle: var(--color-ember-50);
-    --color-fg-body: var(--color-bluepetro-50);
-    --color-fg-body-subtle: var(--color-bluepetro-300);
+    --color-fg-heading: var(--color-title-fg);
+    --color-fg-heading-subtle: var(--color-title-fg-subtle);
 
+    --color-fg-body: var(--color-body-default);
+    --color-fg-body-subtle: var(--color-body-default-subtle);    
+    --color-fg-section-separator: var(--color-section-separator);
+    
     /* page / hero / surfaces */
     --color-page: var(--bg-color-page);
     --color-page-subtle: var(--bg-color-page-subtle);
-    --color-hero: var(--hero-bg);
+
     --color-header: var(--header-bg);
     --color-header-border: var(--header-border-bottom-color);
 
@@ -47,13 +49,21 @@
     --color-accent: var(--color-brand-accent);
 
     /* CTA / buttons */
-    --color-cta: var(--button-primary-bg);
-    --color-cta-hover: var(--button-primary-bg-hover);
+    --color-cta-bg: var(--button-primary-bg);
+    --color-cta-bg-hover: var(--button-primary-bg-hover);
+    --color-cta-border-color: var(--color-cta-bg);
+    --color-cta-border-color-hover: var(--color-cta-bg-hover);
     --color-cta-fg: var(--button-primary-text);
+    --color-cta-fg-hover: var(--button-primary-text-hover);
+    
+    --color-cta-ghost-bg: transparent;    
+    --color-cta-ghost-border: var(--button-ghost-border-color);
+    --color-cta-ghost-border-hover: var(--button-ghost-border-color-hover);
+    --color-cta-ghost-fg: var(--button-ghost-text-color);
+    --color-cta-ghost-fg-hover: var(--button-ghost-text-color-hover);
 
-    --color-ghost-fg: var(--button-ghost-text-color);
-    --color-ghost-border: var(--button-ghost-border-color);
-    --color-ghost-border-hover: var(--button-ghost-border-color-hover);
+    --color-cta-link-fg: var(--button-link-text-color);
+    --color-cta-link-fg-hover: var(--button-link-text-color-hover);
 
     /* badges */
     --color-badge: var(--badge-bg-color);

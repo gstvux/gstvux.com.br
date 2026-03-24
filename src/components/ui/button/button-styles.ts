@@ -26,25 +26,26 @@ const base =
 const appearanceMap: Record<ButtonAppearance, string> = {
   primary:
     "rounded-xl border " +
-    "border-[color:var(--color-ember-300)] " +
-    "bg-[color:var(--color-ember-300)] " +
-    "text-[color:var(--color-bluepetro-900)] " +
+    "border-cta-border-color " +
+    "bg-cta-bg " +
+    "text-cta-fg " +
     "shadow-[0_12px_28px_rgba(0,0,0,0.18)] " +
-    "hover:border-[color:var(--color-ember-100)] " +
-    "hover:bg-[color:var(--color-ember-100)]",
+    "hover:border-cta-border-color-hover " +
+    "hover:bg-cta-bg-hover " +
+    "hover:text-cta-fg-hover",
 
   secondary:
-    "rounded-xl border " +
-    "border-[color:var(--color-ember-100)] " +
+    "rounded-xl border-2 " +
+    "border-cta-ghost-border" +
     "bg-transparent " +
-    "text-[color:var(--color-ember-100)] " +
-    "hover:border-[color:var(--color-ember-200)] " +
-    "hover:text-[color:var(--color-ember-200)]",
+    "text-cta-ghost-fg " +
+    "hover:border-cta-ghost-border-hover " +
+    "hover:text-cta-ghost-fg-hover",
 
   link:
     "rounded-md border border-transparent bg-transparent px-0 shadow-none " +
-    "text-[color:var(--color-bluepetro-50)] " +
-    "hover:text-[color:var(--color-bluepetro-100)] hover:underline hover:underline-offset-4",
+    "text-cta-link-fg " +
+    "hover:text-cta-link-fg-hover hover:underline hover:underline-offset-4",
 };
 
 const solidSizeMap: Record<ButtonSize, string> = {
