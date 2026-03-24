@@ -248,6 +248,15 @@ h3,p,li {
 
 }
 
+@keyframes slideRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@utility animate-slide-right {
+  animation: slideRight 60s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
   .hero-eyebrow__wave,

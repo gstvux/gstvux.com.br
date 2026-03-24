@@ -21,14 +21,14 @@
     --tracking-hero: -0.02em;
 
     /* semantic foreground */
-    --color-fg-heading: var(--color-ember-500);
+    --color-fg-heading: var(--color-ember-300);
     --color-fg-heading-subtle: var(--color-ember-50);
     --color-fg-body: var(--color-bluepetro-50);
     --color-fg-body-subtle: var(--color-bluepetro-300);
 
     /* page / hero / surfaces */
     --color-page: var(--bg-color-page);
-    --color-page-subtle: var(--bg-color-subtle);
+    --color-page-subtle: var(--bg-color-page-subtle);
     --color-hero: var(--hero-bg);
     --color-header: var(--header-bg);
     --color-header-border: var(--header-border-bottom-color);

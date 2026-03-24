@@ -24,16 +24,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
   const duplicatedBadges = process.badges ? [...process.badges, ...process.badges, ...process.badges, ...process.badges, ...process.badges, ...process.badges] : [];
 
   return (
-    <section className="w-full bg-(--color-bluepetro-800) text-white py-[48px] overflow-hidden relative">
-      <style>{`
-        @keyframes slideRight {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
-        .animate-slide-right {
-          animation: slideRight 60s linear infinite;
-        }
-      `}</style>
+    <section className="w-full bg-page-subtle py-12 overflow-hidden relative">
 
       <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto px-4 lg:px-8">
 

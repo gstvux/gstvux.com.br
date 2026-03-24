@@ -97,7 +97,7 @@
   --hero-content-max-w: 45.3125rem;
   /* 725px */
 
-  --header-bg: color-mix(in oklab, var(--color-bluepetro-500) 20%, transparent);
+  --header-bg: color-mix(in oklab, var(--color-bluepetro-900) 50%, transparent);
   --header-border-bottom-color: var(--color-bluepetro-500);
 
   --text-color-body: var(--color-bluepetro-50);
@@ -111,7 +111,7 @@
   --surface-color-inverse-active: var(--color-bluepetro-200);
 
   --bg-color-page: var(--color-bluepetro-900);
-  --bg-color-subtle: var(--color-bluepetro-800);
+  --bg-color-page-subtle: var(--color-bluepetro-800);
 
   --button-primary-bg: var(--color-ember-400);
   --button-primary-bg-hover: var(--color-ember-600);

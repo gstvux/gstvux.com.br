@@ -76,7 +76,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
               )}
 
               {hero.subtitle && (
-                <p className="text-trim-cap text-fg-secondary font-bold font-utils text-size-title-sm text-amber-500">
+                <p className="text-trim-cap font-utils text-size-title-sm text-fg-heading">
                   <Typewriter text={hero.subtitle} />
                 </p>
               )}
