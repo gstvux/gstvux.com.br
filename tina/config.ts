@@ -316,8 +316,8 @@ export default defineConfig({
           },
           {
             type: "object",
-            label: "Intro",
-            name: "intro",
+            label: "Profile",
+            name: "profile",
             fields: [
               {
                 type: "image",

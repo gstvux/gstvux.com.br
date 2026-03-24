@@ -7,7 +7,7 @@ import type {
 } from "@/tina/__generated__/types";
 
 import { HeroSection } from "@/src/components/sections/home/HeroSection";
-import { IntroSection } from "@/src/components/sections/home/IntroSection";
+import { ProfileSection } from "@/src/components/sections/home/ProfileSection";
 import { FeaturedCasesSection } from "@/src/components/sections/home/FeaturedCasesSection";
 import { CtaSection } from "@/src/components/sections/home/CtaSection";
 
@@ -35,13 +35,13 @@ export default function HomePageClient(props: HomePageClientProps) {
     return null;
   }
 
-  const intro = home.intro
+  const profile = home.profile
     ? {
-      imageSrc: home.intro.imageSrc ?? undefined,
-      imageAlt: home.intro.imageAlt ?? undefined,
-      kicker: home.intro.kicker ?? undefined,
-      headline: home.intro.headline ?? undefined,
-      body: home.intro.body ?? undefined,
+      imageSrc: home.profile.imageSrc ?? undefined,
+      imageAlt: home.profile.imageAlt ?? undefined,
+      kicker: home.profile.kicker ?? undefined,
+      headline: home.profile.headline ?? undefined,
+      body: home.profile.body ?? undefined,
     }
     : undefined;
 
@@ -51,7 +51,7 @@ export default function HomePageClient(props: HomePageClientProps) {
       {!!featuredCases.length && (
         <FeaturedCasesSection featuredCases={featuredCases} />
       )}
-      {intro && <IntroSection intro={intro} />}
+      {profile && <ProfileSection profile={profile} />}
       {home.cta && <CtaSection cta={home.cta} />}
     </>
   );

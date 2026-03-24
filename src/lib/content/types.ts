@@ -6,7 +6,9 @@ export type FeaturedCase = {
 };
 
 export type HomePageData = {
-    intro?: {
+    profile?: {
+        imageSrc?: string;
+        imageAlt?: string;
         kicker?: string;
         headline?: string;
         body?: string;
