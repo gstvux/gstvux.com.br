@@ -37,6 +37,8 @@ export default function HomePageClient(props: HomePageClientProps) {
 
   const intro = home.intro
     ? {
+      imageSrc: home.intro.imageSrc ?? undefined,
+      imageAlt: home.intro.imageAlt ?? undefined,
       kicker: home.intro.kicker ?? undefined,
       headline: home.intro.headline ?? undefined,
       body: home.intro.body ?? undefined,
@@ -46,10 +48,10 @@ export default function HomePageClient(props: HomePageClientProps) {
   return (
     <>
       {home.hero && <HeroSection hero={home.hero} />}
-      {intro && <IntroSection intro={intro} />}
       {!!featuredCases.length && (
         <FeaturedCasesSection featuredCases={featuredCases} />
       )}
+      {intro && <IntroSection intro={intro} />}
       {home.cta && <CtaSection cta={home.cta} />}
     </>
   );

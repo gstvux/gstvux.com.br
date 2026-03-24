@@ -1,0 +1,17 @@
+{
+  "logoText": "GSTV.UX",
+  "navItems": [
+    {
+      "label": "Cases",
+      "href": "/cases"
+    },
+    {
+      "label": "Peril",
+      "href": "/peril"
+    },
+    {
+      "label": "Processo",
+      "href": "/processo"
+    }
+  ]
+}

@@ -39,9 +39,9 @@
   --color-bluepetro-900: #0C1625;
 
   /* ember */
-  --color-ember-50:  #FFEEDE;
+  --color-ember-50: #FFEEDE;
   --color-ember-100: #FFDDB8;
-  --color-ember-200: #FFB95F;
+  --color-ember-200: #FFC174;
   --color-ember-300: #EE9800;
   --color-ember-400: #CA8100;
   --color-ember-500: #A76A00;
@@ -92,9 +92,11 @@
   /* semantic tokens */
 
   --hero-bg: var(--color-bluepetro-500);
-  --hero-min-h-desktop: 54rem;       /* 864px */
-  --hero-content-max-w: 45.3125rem;  /* 725px */
-  
+  --hero-min-h-desktop: 54rem;
+  /* 864px */
+  --hero-content-max-w: 45.3125rem;
+  /* 725px */
+
   --header-bg: color-mix(in oklab, var(--color-bluepetro-500) 20%, transparent);
   --header-border-bottom-color: var(--color-bluepetro-500);
 
@@ -141,5 +143,34 @@
   --sys-size-media-md: 16rem;
   --sys-size-media-lg: 20rem;
   --sys-size-media-xl: 26rem;
+}
 
+/* Light Theme Overrides */
+.light {
+  --hero-bg: var(--color-polar);
+  --header-bg: color-mix(in oklab, var(--color-polar) 40%, transparent);
+  --header-border-bottom-color: var(--color-bluepetro-200);
+
+  --text-color-body: var(--color-bluepetro-900);
+
+  --surface-color: var(--color-polar);
+  --surface-color-hover: var(--color-mist);
+  --surface-color-active: var(--color-bluepetro-100);
+
+  --surface-color-inverse: var(--color-bluepetro-900);
+  --surface-color-inverse-hover: var(--color-bluepetro-800);
+  --surface-color-inverse-active: var(--color-bluepetro-700);
+
+  --bg-color-page: var(--color-polar);
+  --bg-color-subtle: var(--color-mist);
+
+  --badge-bg-color: var(--color-bluepetro-100);
+  --badge-text-color: var(--color-bluepetro-900);
+  --badge-border-color: var(--color-bluepetro-300);
+  --badge-icon-color: var(--badge-text-color);
+
+  --badge-secondary-bg-color: var(--color-ember-50);
+  --badge-secondary-text-color: var(--color-ember-700);
+  --badge-secondary-border-color: var(--color-ember-300);
+  --badge-secondary-icon-color: var(--badge-secondary-text-color);
 }

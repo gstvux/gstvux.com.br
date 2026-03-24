@@ -66,6 +66,50 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "global",
+        label: "Configurações Globais",
+        path: "src/content/global",
+        format: "json",
+        ui: {
+          global: true,
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "logoText",
+            label: "Logo Text",
+            required: true,
+          },
+          {
+            type: "object",
+            name: "navItems",
+            label: "Navigation Items",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.label }),
+            },
+            fields: [
+              {
+                type: "string",
+                name: "label",
+                label: "Label",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "href",
+                label: "URL",
+                required: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "post",
         label: "Posts",
         path: "content/posts",
@@ -275,6 +319,16 @@ export default defineConfig({
             label: "Intro",
             name: "intro",
             fields: [
+              {
+                type: "image",
+                name: "imageSrc",
+                label: "Imagem do Perfil",
+              },
+              {
+                type: "string",
+                name: "imageAlt",
+                label: "Texto Alternativo",
+              },
               {
                 type: "string",
                 label: "Kicker",

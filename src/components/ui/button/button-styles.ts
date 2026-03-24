@@ -17,21 +17,21 @@ const base =
   "select-none outline-none transition-[background-color,border-color,color,box-shadow,transform,opacity] " +
   "duration-150 ease-out active:translate-y-px " +
   "focus-visible:ring-2 focus-visible:ring-offset-2 " +
-  "focus-visible:ring-[color:var(--color-ember-400)] " +
-  "focus-visible:ring-offset-[color:var(--color-bluepetro-900)] " +
+  "focus-visible:ring-[color:var(--color-ember-300)] " +
+  "focus-visible:ring-offset-[color:var(--color-bluepetro-  900)] " +
   "disabled:pointer-events-none disabled:opacity-50 " +
   "aria-disabled:pointer-events-none aria-disabled:opacity-50 " +
-  "[font-family:var(--font-family-utils)] font-bold tracking-[0.01em]";
+  "[font-family:var(--font-family-secondary)] font-bold tracking-[0.01em]";
 
 const appearanceMap: Record<ButtonAppearance, string> = {
   primary:
     "rounded-xl border " +
-    "border-[color:var(--color-ember-100)] " +
-    "bg-[color:var(--color-ember-100)] " +
-    "text-[color:var(--color-bluepetro-500)] " +
+    "border-[color:var(--color-ember-300)] " +
+    "bg-[color:var(--color-ember-300)] " +
+    "text-[color:var(--color-bluepetro-900)] " +
     "shadow-[0_12px_28px_rgba(0,0,0,0.18)] " +
-    "hover:border-[color:var(--color-ember-200)] " +
-    "hover:bg-[color:var(--color-ember-200)]",
+    "hover:border-[color:var(--color-ember-100)] " +
+    "hover:bg-[color:var(--color-ember-100)]",
 
   secondary:
     "rounded-xl border " +
@@ -49,15 +49,15 @@ const appearanceMap: Record<ButtonAppearance, string> = {
 
 const solidSizeMap: Record<ButtonSize, string> = {
   sm: "h-10 px-4 text-sm",
-  md: "h-11 px-5 text-sm",
-  lg: "h-12 px-6 text-base",
+  md: "h-11 px-5 text-md",
+  lg: "h-12 px-6 text-lg",
   icon: "size-11 p-0",
 };
 
 const linkSizeMap: Record<ButtonSize, string> = {
   sm: "text-sm",
-  md: "text-sm",
-  lg: "text-base",
+  md: "text-md",
+  lg: "text-lg",
   icon: "size-11 p-0",
 };
 

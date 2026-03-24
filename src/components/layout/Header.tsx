@@ -1,42 +1,42 @@
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
+import { ButtonLink } from "../ui/button/ButtonLink";
+import client from "../../../tina/__generated__/client";
 
-export function Header() {
+export async function Header() {
+  const res = await client.queries.global({ relativePath: "index.json" });
+  const { logoText, navItems } = res.data.global;
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-20 backdrop-blur-sm border-b border-b-(--header-border-bottom-color) bg-(--header-bg)">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
-        <Link href="/" aria-label="gstvux, página inicial" className="font-medium">
-          gstvux
+    <header className="fixed top-0 left-0 right-0 z-50 h-20 backdrop-blur-sm bg-[rgba(31,58,95,0.2)] border-b border-b-(--color-bluepetro-500) flex items-center justify-center">
+      <div className="flex items-center justify-between w-full max-w-7xl px-6 md:px-10">
+        <Link href="/" aria-label="gstvux, página inicial">
+          <p className="font-primary font-bold text-2xl text-fg-body leading-[1.4] tracking-wide">
+            {logoText}
+          </p>
         </Link>
 
         <nav aria-label="Principal">
           <ul className="flex items-center gap-6">
-            <li>
-              <Link href="/cases">Cases</Link>
-            </li>
-            <li>
-              <Link href="/about">Sobre</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contato</Link>
-            </li>
+            {navItems?.map((item: any, index: number) => {
+              if (!item) return null;
+              return (
+                <li key={index}>
+                  <ButtonLink
+                    href={item.href}
+                    appearance="link"
+                    className="font-utils font-bold text-lg text-fg-body hover:text-white"
+                  >
+                    {item.label}
+                  </ButtonLink>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            aria-label="Alternar tema"
-            className="rounded-xl border border-(--color-border) px-3 py-2"
-          >
-            Tema
-          </button>
-
-          <Link
-            href="/contact"
-            className="rounded-xl bg-(--color-ember-300) px-4 py-2 text-(--color-bluepetro-950)"
-          >
-            Vamos conversar
-          </Link>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
         </div>
       </div>
     </header>
