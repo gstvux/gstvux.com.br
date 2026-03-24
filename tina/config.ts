@@ -397,13 +397,85 @@ export default defineConfig({
           },
           {
             type: "object",
-            label: "CTA",
-            name: "cta",
+            label: "Process",
+            name: "process",
             fields: [
               {
                 type: "string",
                 label: "Title",
                 name: "title",
+              },
+              {
+                type: "string",
+                label: "Description",
+                name: "description",
+                ui: {
+                  component: "textarea",
+                },
+              },
+              {
+                type: "object",
+                label: "Cards",
+                name: "cards",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({ label: item?.title || "New Card" }),
+                },
+                fields: [
+                  createInlineSvgField("icon", "Icon SVG"),
+                  {
+                    type: "string",
+                    label: "Title",
+                    name: "title",
+                  },
+                  {
+                    type: "string",
+                    label: "Description",
+                    name: "description",
+                    ui: {
+                      component: "textarea",
+                    },
+                  },
+                ],
+              },
+              {
+                type: "object",
+                label: "Badges",
+                name: "badges",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({ label: item?.label || "New Badge" }),
+                },
+                fields: [
+                  createInlineSvgField("icon", "Icon SVG (Optional)"),
+                  {
+                    type: "string",
+                    label: "Label",
+                    name: "label",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            label: "Contact",
+            name: "contact",
+            fields: [
+              {
+                type: "image",
+                name: "imageSrc",
+                label: "Imagem",
+              },
+              {
+                type: "string",
+                name: "imageAlt",
+                label: "Texto Alternativo da Imagem",
+              },
+              {
+                type: "string",
+                label: "Headline",
+                name: "headline",
               },
               {
                 type: "string",
@@ -415,13 +487,9 @@ export default defineConfig({
               },
               {
                 type: "string",
-                label: "Button Label",
-                name: "buttonLabel",
-              },
-              {
-                type: "string",
-                label: "Button Href",
-                name: "buttonHref",
+                label: "Bullets",
+                name: "bullets",
+                list: true,
               },
             ],
           },

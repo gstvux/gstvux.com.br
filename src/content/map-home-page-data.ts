@@ -15,22 +15,25 @@ export function mapHomePageData(data: PageQuery): HomePageData {
             })) ?? [];
 
     return {
-        intro: page.intro
+        profile: page.profile
             ? {
-                kicker: page.intro.kicker ?? undefined,
-                headline: page.intro.headline ?? undefined,
-                body: page.intro.body ?? undefined,
+                imageSrc: page.profile.imageSrc ?? undefined,
+                imageAlt: page.profile.imageAlt ?? undefined,
+                kicker: page.profile.kicker ?? undefined,
+                headline: page.profile.headline ?? undefined,
+                body: page.profile.body ?? undefined,
             }
             : undefined,
 
         featuredCases,
 
-        cta: page.cta
+        contact: page.contact
             ? {
-                title: page.cta.title ?? undefined,
-                body: page.cta.body ?? undefined,
-                buttonLabel: page.cta.buttonLabel ?? undefined,
-                buttonHref: page.cta.buttonHref ?? undefined,
+                imageSrc: page.contact.imageSrc ?? undefined,
+                imageAlt: page.contact.imageAlt ?? undefined,
+                headline: page.contact.headline ?? undefined,
+                body: page.contact.body ?? undefined,
+                bullets: page.contact.bullets as (string | null)[] | null | undefined,
             }
             : undefined,
     };

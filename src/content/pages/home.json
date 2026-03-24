@@ -62,10 +62,51 @@
       "tag": "Brand/Product"
     }
   ],
-  "cta": {
-    "title": "Quer um designer que fala a língua da interface até o nível de implementação?",
-    "body": "Vamos conversar sobre produto, sistema e execução visual de alto nível.",
-    "buttonLabel": "Falar comigo",
-    "buttonHref": "/contact"
+  "process": {
+    "title": "Toolbox & processo",
+    "description": "Eu atuo na interseção entre UX, craft e engenharia — e transformo ambiguidade em sistema entregável.",
+    "cards": [
+      {
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 12h4l3-9 5 18 3-9h5\"/></svg>",
+        "title": "Descoberta",
+        "description": "Mergulho profundo nas necessidades, mapeando regras, limites do sistema e oportunidades de produto."
+      },
+      {
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"/><polyline points=\"2 17 12 22 22 17\"/><polyline points=\"2 12 12 17 22 12\"/></svg>",
+        "title": "Design System",
+        "description": "Criação de tokens e padronização dos componentes para entregar UI consistente e altamente escalável."
+      },
+      {
+        "icon": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M27.0667 6.79999L28.9333 4.93332C29.4667 4.39999 29.4667 3.59999 28.9333 3.06666C28.4 2.53332 27.6 2.53332 27.0667 3.06666L13.0667 17.0667C12 16.4 10.6667 16 9.33332 16C5.59999 16 2.66666 18.9333 2.66666 22.6667C2.66666 26.4 5.59999 29.3333 9.33332 29.3333C13.0667 29.3333 16 26.4 16 22.6667C16 21.3333 15.6 20 14.9333 18.9333L21.4667 12.4L23.3333 14.2667C23.8667 14.8 24.6667 14.8 25.2 14.2667C25.7333 13.7333 25.7333 12.9333 25.2 12.4L23.3333 10.5333L25.2 8.66666L27.0667 10.5333C27.6 11.0667 28.4 11.0667 28.9333 10.5333C29.4667 9.99999 29.4667 9.19999 28.9333 8.66666L27.0667 6.79999ZM9.33332 26.6667C7.06666 26.6667 5.33332 24.9333 5.33332 22.6667C5.33332 20.4 7.06666 18.6667 9.33332 18.6667C11.6 18.6667 13.3333 20.4 13.3333 22.6667C13.3333 24.9333 11.6 26.6667 9.33332 26.6667Z\" fill=\"#8FA6C4\"/>\n</svg>\n",
+        "title": "Front-End",
+        "description": "front-end orientadao ao sucesso do clientem feito com muito carinho, atingido limites"
+      }
+    ],
+    "badges": [
+      {
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"/></svg>",
+        "label": "Pesquisa Ativa"
+      },
+      {
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/><polyline points=\"10 9 9 9 8 9\"/></svg>",
+        "label": "Regras de Negócio"
+      },
+      {
+        "label": "Tokens & Variáveis"
+      },
+      {
+        "label": "Figma Dev Mode"
+      }
+    ]
+  },
+  "contact": {
+    "imageSrc": "/images/contact-section-gustavo-luciano.png",
+    "headline": "Vamos desenhar algo que faça sentido.",
+    "body": "Projetos bons raramente nascem de telas bonitas.\nEles nascem da decisão de enfrentar a complexidade de frente — com método, clareza e execução.\n\nEstou aberto a conversar sobre:",
+    "bullets": [
+      "Posições em Product Design, UX/UI e Design Systems",
+      "Projetos freelance, mentoria e consultoria",
+      "Produtos, plataformas e fluxos que pedem mais estrutura e menos ruído"
+    ]
   }
 }

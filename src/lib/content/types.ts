@@ -20,4 +20,11 @@ export type HomePageData = {
         buttonLabel?: string;
         buttonHref?: string;
     };
+    contact?: {
+        imageSrc?: string | null;
+        imageAlt?: string | null;
+        headline?: string | null;
+        body?: string | null;
+        bullets?: (string | null)[] | null;
+    };
 };

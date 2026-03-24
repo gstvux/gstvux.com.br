@@ -9,7 +9,8 @@ import type {
 import { HeroSection } from "@/src/components/sections/home/HeroSection";
 import { ProfileSection } from "@/src/components/sections/home/ProfileSection";
 import { FeaturedCasesSection } from "@/src/components/sections/home/FeaturedCasesSection";
-import { CtaSection } from "@/src/components/sections/home/CtaSection";
+import { ProcessSection } from "@/src/components/sections/home/ProcessSection";
+import { ContactSection } from "@/src/components/sections/home/ContactSection";
 
 type HomePageClientProps = {
   query: string;
@@ -52,7 +53,12 @@ export default function HomePageClient(props: HomePageClientProps) {
         <FeaturedCasesSection featuredCases={featuredCases} />
       )}
       {profile && <ProfileSection profile={profile} />}
-      {home.cta && <CtaSection cta={home.cta} />}
+      {home.process && (
+        <ProcessSection
+          process={home.process}
+        />
+      )}
+      {home.contact && <ContactSection contact={home.contact} />}
     </>
   );
 }
