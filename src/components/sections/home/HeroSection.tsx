@@ -42,7 +42,8 @@ export function HeroSection({ hero }: HeroSectionProps) {
 
   return (
     <section className="hero-surface pt-20 lg:flex lg:flex-col lg:justify-center lg:min-h-(--hero-min-h-desktop)">
-      <div className="mx-auto p-6 lg:p-0 w-full max-w-7xl lg:flex lg:items-center lg:justify-between">
+      <div className="mx-auto p-6 lg:p-0 w-full max-w-7xl flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        
         <div className="w-full lg:max-w-121.5 ">
 
           {hero?.imageSrc && (
@@ -54,9 +55,9 @@ export function HeroSection({ hero }: HeroSectionProps) {
           )}
         </div>
 
-        <div className="tracking-hero lg:flex lg:flex-col  lg:gap-10 lg:justify-center lg:max-w-(--hero-content-max-w)">
+        <div className="tracking-hero flex flex-col gap-4 lg:flex-col  lg:gap-10 lg:justify-center lg:max-w-(--hero-content-max-w)">
           {(hero.eyebrow?.icon || hero.eyebrow?.text) && (
-            <div className="hero-eyebrow lg:flex lg:flex-col lg:gap-4">
+            <div className="hero-eyebrow flex flex-col gap-4 lg:flex-col lg:gap-4">
               {hero.eyebrow.icon && (
                 <span className="hero-eyebrow__icon" aria-hidden="true">
                   <span className="hero-eyebrow__wave">
@@ -85,7 +86,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
 
 
 
-          <div className="lg:flex lg:flex-col lg:gap-4">
+          <div className="flex flex-col gap-4 lg:flex-col lg:gap-4">
             {hero.description && <p>{hero.description}</p>}
 
             {bullets?.length ? (
@@ -97,7 +98,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             ) : null}
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col gap-4 lg:flex-row">
             {hero.primaryCtaLabel && hero.primaryCtaHref && (
               <ButtonLink
                 href={hero.primaryCtaHref}
@@ -139,7 +140,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             contactBar?.linkedinHref ||
             contactBar?.email ||
             (contactBar?.showTimezone && contactBar?.timezoneLabel)) && (
-              <div className="text-size-body-xs flex gap-4 text-fg-body-subtle  items-baseline justify-between gap-y-2 text-sm">
+              <div className="text-size-body-xs flex flex-col lg:flex-row lg:justify-between text-fg-body-subtle justify-center  gap-y-4 text-sm">
                 <div className="flex gap-2">
                   {contactBar?.email && (
                     <a
