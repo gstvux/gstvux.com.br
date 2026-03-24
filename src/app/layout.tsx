@@ -36,7 +36,21 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       className={`${fontPrimary.variable} ${fontSecondary.variable} ${fontUtils.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.getItem('theme') === 'light') {
+                  document.documentElement.classList.add('light');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased bg-page text-fg-body">
         <a href="#main" className="skip-link">
           Pular para o conteúdo
