@@ -30,16 +30,16 @@ export function ContactSection({ contact }: Props) {
           </div>
 
           {/* Conteúdo (Direita) */}
-          <div className="flex flex-col gap-[24px] items-start w-full max-w-[630px]">
+          <div className="flex flex-col gap-4 items-start w-full max-w-[630px]">
 
             {contact.headline && (
-              <h2 className="font-primary text-[28px] lg:text-[32px] font-bold leading-tight text-fg-heading max-w-[360px]">
+              <h2 className="font-primary text-size-title font-bold leading-tight text-fg-heading max-w-[360px]">
                 {contact.headline}
               </h2>
             )}
 
             {contact.body && (
-              <p className="font-secondary text-[16px] lg:text-[20px] leading-normal text-fg-body whitespace-pre-wrap">
+              <p className="font-secondary leading-normal text-fg-body whitespace-pre-wrap">
                 {contact.body}
               </p>
             )}

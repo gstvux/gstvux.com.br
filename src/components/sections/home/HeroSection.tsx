@@ -92,7 +92,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             {bullets?.length ? (
               <ul className="list-none lg:flex lg:flex-col lg:gap-2">
                 {bullets.map((bullet, index) => (
-                  <li key={index} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-amber-500">{bullet}</li>
+                  <li key={index} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-bullet-fg">{bullet}</li>
                 ))}
               </ul>
             ) : null}

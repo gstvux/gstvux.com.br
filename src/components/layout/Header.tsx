@@ -30,7 +30,7 @@ export async function Header() {
             className="group flex items-center gap-2"
             aria-label="gstvux, página inicial"
           >
-            <span className="font-primary font-bold text-2xl text-fg-body tracking-wide transition-colors group-hover:text-blue-500">
+            <span className="font-primary font-bold text-2xl text-fg-body tracking-wide transition-colors group-hover:text-cta-link-fg-hover">
               {logoText}
             </span>
           </Link>

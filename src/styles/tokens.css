@@ -73,6 +73,7 @@
   --color-body-default: var(--color-bluepetro-50);
   --color-body-default-subtle: var(--color-bluepetro-300);
   --color-section-separator: var(--color-bluepetro-500);
+  --color-bullet-fg: var(--color-ember-300);
   
   --color-title-fg: var(--color-ember-300);
   --color-title-fg-subtle: var(--color-ember-50);
@@ -131,6 +132,7 @@
   --color-body-default: var(--color-bluepetro-500);
   --color-body-default-subtle: var(--color-bluepetro-400);
   --color-section-separator: var(--color-bluepetro-200);
+   --color-bullet-fg: var(--color-bluepetro-300);
   
   --color-title-fg: var(--color-bluepetro-900);
   --color-title-fg-subtle: var(--color-bluepetro-500);

@@ -29,10 +29,10 @@ export function NavigationItems({ items }: NavigationItemsProps) {
                 className={`
                   relative font-secondary text-lg font-medium transition-colors duration-200
                   ${isActive 
-                    ? "text-blue-500" 
-                    : "text-fg-body hover:text-blue-500/80"
+                    ? "text-cta-link-fg-hover" 
+                    : "text-fg-body hover:text-cta-link-fg-hover"
                   }
-                  after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-blue-500 after:transition-transform after:duration-300
+                  after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-cta-link-fg-hover after:transition-transform after:duration-300
                   ${isActive ? "after:scale-x-100" : "hover:after:scale-x-100"}
                 `}
               >

@@ -50,7 +50,7 @@ export function FeaturedCasesSection({ featuredCases }: Props) {
                   </Link>
                 </h3>
                 {item.summary && (
-                  <p className="text-size-body-sm text-fg-body line-clamp-2 leading-body">
+                  <p className="text-fg-body line-clamp-2 leading-body">
                     {item.summary}
                   </p>
                 )}

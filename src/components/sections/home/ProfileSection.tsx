@@ -27,14 +27,23 @@ export function ProfileSection({ profile }: Props) {
           </div>
 
           <div className="flex flex-col gap-[24px] items-start w-full max-w-[360px]">
-            {(profile.kicker || profile.headline) && (
-              <h2 className="font-primary text-[32px] font-normal leading-tight text-fg-heading">
-                {profile.headline || profile.kicker}
-              </h2>
-            )}
+            <div className="flex flex-col">
+
+              {profile.kicker && (
+                <p className="font-utils text-size-body-xs uppercase tracking-wider text-fg-heading-subtle">
+                  {profile.kicker}
+                </p>
+              )}
+
+              {profile.headline && (
+                <h2 className="font-primary text-size-title font-normal leading-tight text-fg-heading">
+                  {profile.headline}
+                </h2>
+              )}
+            </div>
 
             {profile.body && (
-              <p className="font-secondary text-[18px] leading-normal text-fg-body whitespace-pre-wrap">
+              <p className="font-secondary leading-normal">
                 {profile.body}
               </p>
             )}

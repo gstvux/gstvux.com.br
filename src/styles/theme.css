@@ -10,7 +10,7 @@
     --text-size-body: var(--size-16);
     --text-size-body-lg: var(--size-18);
 
---text-size-title-sm: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem);
+    --text-size-title-sm: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem);
     --text-size-title: clamp(1.75rem, 1.4rem + 1.2vw, 2rem);
     --text-size-hero: clamp(2.5rem, 1.6rem + 4vw, 4rem);
     --text-size-hero-lg: clamp(3rem, 2rem + 5vw, 5rem);
@@ -33,6 +33,7 @@
     --color-fg-body: var(--color-body-default);
     --color-fg-body-subtle: var(--color-body-default-subtle);    
     --color-fg-section-separator: var(--color-section-separator);
+    --color-bullet-fg: var(--color-bullet-fg);
     
     /* page / hero / surfaces */
     --color-page: var(--bg-color-page);
@@ -48,11 +49,6 @@
     --color-surface-inverse: var(--surface-color-inverse);
     --color-surface-inverse-hover: var(--surface-color-inverse-hover);
     --color-surface-inverse-active: var(--surface-color-inverse-active);
-
-    /* brand */
-    --color-brand: var(--color-brand-primary);
-    --color-brand-alt: var(--color-brand-secondary);
-    --color-accent: var(--color-brand-accent);
 
     /* CTA / buttons */
     --color-cta-bg: var(--button-primary-bg);
