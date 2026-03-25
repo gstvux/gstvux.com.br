@@ -140,7 +140,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             contactBar?.linkedinHref ||
             contactBar?.email ||
             (contactBar?.showTimezone && contactBar?.timezoneLabel)) && (
-              <div className="text-size-body-xs flex flex-col lg:flex-row lg:justify-between text-fg-body-subtle justify-center  gap-y-4 text-sm">
+              <div className="text-size-body-xs flex flex-col lg:flex-row items-center lg:justify-between text-fg-body-subtle justify-center  gap-4 text-sm">
                 <div className="flex gap-2">
                   {contactBar?.email && (
                     <a
