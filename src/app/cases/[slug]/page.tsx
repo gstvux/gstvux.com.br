@@ -38,8 +38,7 @@ export default async function Page(props: Props) {
     let response;
     try {
       response = await client.queries.cases(
-        { relativePath: `${params.slug}.md` },
-        { fetchOptions: { next: { revalidate: 0 } } }
+        { relativePath: `${params.slug}.md` }
       );
     } catch (e) {
       // If filename lookup fails, we fall back to searching by slug field
@@ -57,8 +56,7 @@ export default async function Page(props: Props) {
       }
 
       response = await client.queries.cases(
-        { relativePath: caseNode._sys.relativePath },
-        { fetchOptions: { next: { revalidate: 0 } } }
+        { relativePath: caseNode._sys.relativePath }
       );
     }
 

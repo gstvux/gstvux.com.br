@@ -3,14 +3,7 @@ import CasesPageClient from "../features/cases-page-client";
 
 export default async function Page() {
   const pageResponse = await client.queries.page({ relativePath: "cases.json" });
-  const casesResponse = await client.queries.casesConnection(
-    {},
-    {
-      fetchOptions: {
-        next: { revalidate: 0 },
-      },
-    }
-  );
+  const casesResponse = await client.queries.casesConnection({});
 
   return (
     <CasesPageClient 

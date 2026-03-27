@@ -39,7 +39,7 @@ export default function RootLayout({
       className={`${fontPrimary.variable} ${fontSecondary.variable} ${fontUtils.variable}`}
       suppressHydrationWarning
     >
-      <head>
+      <body className="antialiased bg-page text-fg-body">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -51,8 +51,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="antialiased bg-page text-fg-body">
         <a href="#main" className="skip-link">
           Pular para o conteúdo
         </a>
