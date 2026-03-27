@@ -27,12 +27,8 @@ outcomes:
   - item b
 strategy: teste stratrgy
 interventions:
-  - teste
+  - testes
 gallery:
-  - image: ''
-    alt: ''
-    caption: ''
-    kind: screenshot
   - image: ''
     alt: ''
     caption: ''

@@ -28,8 +28,8 @@ const fontUtils = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "gstvux",
-  description: "Portfolio de Gustavo Luciano",
+  title: "gstvux | UI Design & Development",
+  description: "Trabalho com design e desenvolvimento de interfaces.",
 };
 
 export default function RootLayout({

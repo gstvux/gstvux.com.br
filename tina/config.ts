@@ -9,9 +9,6 @@ const branch =
   process.env.HEAD ||
   "main";
 
-// const isGhPages = process.env.IS_GH_PAGES === "true";
-// const basePath = isGhPages ? "/gstvux.com.br" : "";
-
 const iconSvgTextareaComponent =
   IconSvgTextareaField as unknown as string;
 
@@ -44,35 +41,20 @@ function createIconPositionField(name: string, label: string) {
   } as const;
 }
 
-
-
-
-
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
-
   build: {
     outputFolder: "admin",
     publicFolder: "public",
   },
-  // Uncomment to allow cross-origin requests from non-localhost origins
-  // during local development (e.g. GitHub Codespaces, Gitpod, Docker).
-  // Use 'private' to allow all private-network IPs (WSL2, Docker, etc.)
-  // server: {
-  //   allowedOrigins: ['https://your-codespace.github.dev'],
-  // },
   media: {
     tina: {
       mediaRoot: "",
       publicFolder: "public",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/r/content-modelling-collections/
   schema: {
     collections: [
       {
@@ -127,21 +109,18 @@ export default defineConfig({
                 name: "since",
                 label: "Since",
                 description: 'Ex: "Desde 2013"',
-                // required: true,
               },
               {
                 type: "string",
                 name: "current_year",
                 label: "Current Year",
                 description: 'Ex: "2024"',
-                // required: true,
               },
               {
                 type: "string",
                 name: "availability",
                 label: "Availability",
                 description: 'Ex: "Disponível para alocação."',
-                // required: true,
               },
             ],
           },
@@ -171,30 +150,6 @@ export default defineConfig({
             ],
           },
         ],
-      },
-      {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
       },
       {
         label: "Pages",
@@ -369,13 +324,11 @@ export default defineConfig({
                         type: "string",
                         name: "timezoneLabel",
                         label: "Timezone Label",
-                        description: 'Ex.: "GMT-3"',
                       },
                       {
                         type: "string",
                         name: "timezoneId",
                         label: "Timezone ID",
-                        description: 'Ex.: "America/Sao_Paulo"',
                       }
                     ],
                   }
@@ -463,15 +416,6 @@ export default defineConfig({
                 label: "Featured Cases",
                 name: "featured_cases",
                 list: true,
-                ui: {
-                  max: 3,
-                  itemProps: (item) => {
-                    if (!item?.case) return { label: "New Featured Case" }
-                    const name = item.case.split('/').pop()?.replace('.md', '') || item.case;
-                    const label = name.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
-                    return { label };
-                  }
-                },
                 fields: [
                   {
                     type: "reference",
@@ -504,9 +448,6 @@ export default defineConfig({
                     label: "Cards",
                     name: "cards",
                     list: true,
-                    ui: {
-                      itemProps: (item) => ({ label: item?.title || "New Card" }),
-                    },
                     fields: [
                       createInlineSvgField("icon", "Icon SVG"),
                       {
@@ -529,9 +470,6 @@ export default defineConfig({
                     label: "Badges",
                     name: "badges",
                     list: true,
-                    ui: {
-                      itemProps: (item) => ({ label: item?.label || "New Badge" }),
-                    },
                     fields: [
                       createInlineSvgField("icon", "Icon SVG (Optional)"),
                       {
@@ -594,7 +532,6 @@ export default defineConfig({
             ],
           },
         ],
-
       },
       {
         name: "cases",
@@ -602,41 +539,9 @@ export default defineConfig({
         path: "src/content/cases",
         format: "md",
         ui: {
-          filename: {
-            readonly: true, // Impedir mudança manual do nome do arquivo
-            slugify: (values) => {
-              const str = (values?.title || 'no-title') as string;
-              return str
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "") 
-                .replace(/ç/g, "c")
-                .replace(/[^a-z0-9]+/g, "-") 
-                .replace(/^-+|-+$/g, "");
-            },
-          },
-          beforeSubmit: async ({ values }) => {
-            const slugify = (str: string) => {
-              return str
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "") 
-                .replace(/ç/g, "c")
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-+|-+$/g, "");
-            };
-            
-            const finalSlug = slugify(values.title as string);
-            return {
-              ...values,
-              // Força o slug a ser sempre a versão slugfied do titulo no momento do save
-              slug: finalSlug,
-            }
-          },
           router: ({ document }) => `/cases/${document._sys.filename}`,
         },
         fields: [
-
           {
             type: "string",
             label: "Title",
@@ -651,7 +556,6 @@ export default defineConfig({
             type: "string",
             label: "Slug",
             name: "slug",
-            description: "Identificador único (gerado automaticamente pelo título)",
             required: true,
             ui: {
                 component: readOnlyComponent,
@@ -667,7 +571,6 @@ export default defineConfig({
             type: "string",
             label: "Year",
             name: "year",
-            options: Array.from({length: new Date().getFullYear() - 2008 + 1}, (_, i) => (2008 + i).toString()).reverse(),
             required: true,
           },
           {
@@ -768,10 +671,6 @@ export default defineConfig({
             label: "Gallery",
             name: "gallery",
             list: true,
-            ui: {
-              itemProps: (item) => ({ label: item?.caption || item?.kind || "Image" }),
-              defaultItem: () => ({ image: "", alt: "", caption: "", kind: "screenshot" })
-            },
             fields: [
               {
                 type: "image",
