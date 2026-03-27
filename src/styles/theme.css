@@ -15,11 +15,6 @@
     --text-size-hero: clamp(2.5rem, 1.6rem + 4vw, 4rem);
     --text-size-hero-lg: clamp(3rem, 2rem + 5vw, 5rem);
 
-    /* --text-size-title-sm: var(--size-24);
-    --text-size-title: var(--size-32);
-    --text-size-hero: var(--size-64);
-    --text-size-hero-lg: var(--size-80); */
-
     /* typography rhythm */
     --leading-body: 1.6;
     --leading-title: 1.1;
@@ -41,14 +36,6 @@
 
     --color-header: var(--header-bg);
     --color-header-border: var(--header-border-bottom-color);
-
-    --color-surface: var(--surface-color);
-    --color-surface-hover: var(--surface-color-hover);
-    --color-surface-active: var(--surface-color-active);
-
-    --color-surface-inverse: var(--surface-color-inverse);
-    --color-surface-inverse-hover: var(--surface-color-inverse-hover);
-    --color-surface-inverse-active: var(--surface-color-inverse-active);
 
     /* CTA / buttons */
     --color-cta-bg: var(--button-primary-bg);
@@ -76,6 +63,9 @@
     --color-badge-secondary-fg: var(--badge-secondary-text-color);
     --color-badge-secondary-border: var(--badge-secondary-border-color);
 
+    --background-image-gradient-default: var(--gradient-default);
+    --background-image-gradient-default-inverse: var(--gradient-default-inverse);
+    
     /* radius */
     --radius-button: var(--button-primary-radius);
     --radius-button-ghost: var(--button-ghost-radius);

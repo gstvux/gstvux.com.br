@@ -6,12 +6,12 @@
       "href": "/cases"
     },
     {
-      "label": "Peril",
-      "href": "#perfil"
+      "label": "Perfil",
+      "href": "/#perfil"
     },
     {
       "label": "Processo",
-      "href": "#processo"
+      "href": "/#processo"
     }
   ],
   "footer": {

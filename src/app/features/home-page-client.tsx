@@ -25,16 +25,20 @@ export default function HomePageClient(props: HomePageClientProps) {
     data: props.data,
   });
 
-  const home = data.page;
+  const page = data.page;
 
-  const featuredCases =
-    home.featuredCases?.filter(
-      (item): item is NonNullable<typeof item> => item !== null
-    ) ?? [];
-
-  if (!home) {
+  if (page.__typename !== 'PageHome') {
     return null;
   }
+
+  const home = page;
+
+  const featuredCases =
+    home.featured_cases?.filter(
+      (item): item is NonNullable<typeof item> => item !== null
+    ) ?? [];
+    
+  const casesOverview = home.cases_overview;
 
   const profile = home.profile
     ? {
@@ -49,8 +53,11 @@ export default function HomePageClient(props: HomePageClientProps) {
   return (
     <>
       {home.hero && <HeroSection hero={home.hero} />}
-      {!!featuredCases.length && (
-        <FeaturedCasesSection featuredCases={featuredCases} />
+      {casesOverview && !!featuredCases.length && (
+        <FeaturedCasesSection 
+          overview={casesOverview} 
+          featuredCases={featuredCases} 
+        />
       )}
       {profile && <ProfileSection profile={profile} />}
       {home.process && (

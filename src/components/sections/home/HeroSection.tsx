@@ -27,7 +27,8 @@ function getIconProps(svg?: string | null, position?: string | null) {
     : { trailingIcon: node };
 }
 
-type HeroData = NonNullable<NonNullable<PageQuery["page"]>["hero"]>;
+type PageHome = Extract<PageQuery["page"], { __typename: "PageHome" }>;
+type HeroData = NonNullable<PageHome["hero"]>;
 
 type HeroSectionProps = {
   hero: HeroData;
@@ -35,7 +36,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ hero }: HeroSectionProps) {
   const bullets = hero.bullets?.filter(
-    (bullet): bullet is string => Boolean(bullet)
+    (bullet: string | null): bullet is string => Boolean(bullet)
   );
 
   const contactBar = hero.contactBar;
@@ -91,7 +92,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
 
             {bullets?.length ? (
               <ul className="list-none lg:flex lg:flex-col lg:gap-2">
-                {bullets.map((bullet, index) => (
+                {bullets.map((bullet: string, index: number) => (
                   <li key={index} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-bullet-fg">{bullet}</li>
                 ))}
               </ul>
