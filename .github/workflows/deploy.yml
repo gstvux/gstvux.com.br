@@ -47,8 +47,7 @@ jobs:
         run: |
           if [ -z "$NEXT_PUBLIC_TINA_CLIENT_ID" ] || [ "$NEXT_PUBLIC_TINA_CLIENT_ID" = "placeholder" ]; then
             echo "No Tina Cloud tokens found. Building in local mode..."
-            pnpm exec tinacms build --local
-            pnpm exec next build
+            pnpm exec tinacms dev -c "pnpm exec next build"
           else
             echo "Building with Tina Cloud..."
             pnpm build
