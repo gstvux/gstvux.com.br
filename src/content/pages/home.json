@@ -2,11 +2,11 @@
   "hero": {
     "eyebrow": {
       "icon": "👋",
-      "text": "Prazer,"
+      "text": "Prazer,s"
     },
     "imageSrc": "/images/gustavo-luciano-profile.png",
-    "title": "FLICKER TEST 2dddtr",
-    "subtitle": "SUBTITLE TEST",
+    "title": "Gustavo Luciano",
+    "subtitle": "UI Designer, Front-End Dev, Produc Designer",
     "description": "Transformo regras, fluxos e restrições em interfaces mais claras, consistentes e escaláveis — com foco em produtos complexos, design systems e redução de ambiguidade.",
     "bullets": [
       "8Eu transformo regras, fluxos e “telas demais” em uma experiência clara e consistente — com craft visual, método e um toque humano.",
