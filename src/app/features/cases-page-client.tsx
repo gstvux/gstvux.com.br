@@ -1,6 +1,6 @@
 "use client";
 
-import { useTina } from "tinacms/dist/react";
+import { useMaybeTina } from "@/src/hooks/use-tina-data";
 import type {
   CasesConnectionQuery,
   CasesConnectionQueryVariables,
@@ -24,14 +24,14 @@ type CasesPageClientProps = {
 
 export default function CasesPageClient({ pageProps, casesProps }: CasesPageClientProps) {
   // Hook for the page metadata (title, etc)
-  const { data: pageData } = useTina({
+  const { data: pageData } = useMaybeTina({
     query: pageProps.query,
     variables: pageProps.variables,
     data: pageProps.data,
   });
 
   // Hook for the cases collection
-  const { data: casesData } = useTina({
+  const { data: casesData } = useMaybeTina({
     query: casesProps.query,
     variables: casesProps.variables,
     data: casesProps.data,

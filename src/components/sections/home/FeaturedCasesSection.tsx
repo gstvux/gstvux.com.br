@@ -70,8 +70,8 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
           ) : (
             // Empty State Placeholder
             Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="flex-1 flex flex-col gap-4 opacity-40">
-                <div className="w-full aspect-4/3 rounded-2xl bg-surface-inverse border-2 border-dashed border-fg-section-separator flex items-center justify-center">
+              <div key={i} className="flex-1 flex flex-col gap-4">
+                <div className="w-full aspect-4/3 rounded-2xl bg-page-subtle border-2 border-dashed border-fg-section-separator flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-bg-surface/10 border border-fg-section-separator" />
                 </div>
                 <div className="flex flex-col gap-2">

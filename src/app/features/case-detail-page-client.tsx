@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTina } from "tinacms/dist/react";
+import { useMaybeTina } from "@/src/hooks/use-tina-data";
 import type { CasesQuery, CasesQueryVariables } from "@/tina/__generated__/types";
 import { Dialog, DialogPanel, DialogBackdrop } from "@headlessui/react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -13,7 +13,7 @@ type CaseDetailPageClientProps = {
 };
 
 export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
-  const { data } = useTina({
+  const { data } = useMaybeTina({
     query: props.query,
     variables: props.variables,
     data: props.data,

@@ -1,8 +1,14 @@
 import client from "../../../tina/__generated__/client";
 
 export async function Footer() {
-  const res = await client.queries.global({ relativePath: "index.json" });
-  const footer = res.data.global.footer;
+  let footer = null;
+  
+  try {
+    const res = await client.queries.global({ relativePath: "index.json" });
+    footer = res.data.global.footer;
+  } catch (error) {
+    console.error("TinaCMS: Erro ao buscar dados do Footer durante o build.", error);
+  }
 
   if (!footer) return null;
 

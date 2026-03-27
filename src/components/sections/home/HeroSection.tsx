@@ -1,3 +1,4 @@
+import React from "react";
 import { MediaFrame } from "@/src/components/ui/media/MediaFrame";
 import type { PageQuery } from "@/tina/__generated__/types";
 import { ButtonLink } from "@/src/components/ui/button/ButtonLink";
@@ -52,6 +53,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
               imageSrc={hero.imageSrc}
               imageAlt={hero.imageAlt || ""}
               animatePolygon
+              priority={true}
             />
           )}
         </div>

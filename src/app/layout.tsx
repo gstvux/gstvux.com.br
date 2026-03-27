@@ -4,14 +4,18 @@ import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 
+export const runtime = "nodejs";
+
 const fontPrimary = Sofia_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
   variable: "--font-family-primary",
   display: "swap",
 });
 
 const fontSecondary = IBM_Plex_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
   variable: "--font-family-secondary",
   display: "swap",
 });
@@ -39,8 +43,9 @@ export default function RootLayout({
       className={`${fontPrimary.variable} ${fontSecondary.variable} ${fontUtils.variable}`}
       suppressHydrationWarning
     >
-      <body className="antialiased bg-page text-fg-body">
+      <head>
         <script
+          key="theme-init"
           dangerouslySetInnerHTML={{
             __html: `
               try {
@@ -51,16 +56,14 @@ export default function RootLayout({
             `,
           }}
         />
+      </head>
+      <body className="antialiased bg-page text-fg-body">
         <a href="#main" className="skip-link">
           Pular para o conteúdo
         </a>
-
         <Header />
-
         <main id="main">{children}</main>
-
         <Footer />
-
       </body>
     </html>
   );

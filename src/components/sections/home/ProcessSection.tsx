@@ -1,3 +1,4 @@
+import React from "react";
 import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
 
 type ProcessCard = {

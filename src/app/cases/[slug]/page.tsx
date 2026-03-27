@@ -1,6 +1,6 @@
-import { notFound } from "next/navigation";
 import { client } from "@/tina/__generated__/client";
-import CaseDetailPageClient from "../../features/case-detail-page-client";
+import CaseDetailPageClient from "@/src/app/features/case-detail-page-client";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{
@@ -8,67 +8,75 @@ type Props = {
   }>;
 };
 
-export async function generateStaticParams() {
-  const casesResponse = await client.queries.casesConnection();
-  const edges = casesResponse.data?.casesConnection?.edges || [];
-  
-  // We generate paths for both filenames (internal) and slugs (public) 
-  // to ensure maximum compatibility and preview functionality.
-  const pathSet = new Set<string>();
-  edges.forEach((edge) => {
-    if (edge?.node?._sys?.filename) pathSet.add(edge.node._sys.filename);
-    if (edge?.node?.slug) pathSet.add(edge.node.slug);
-  });
+export const dynamicParams = false;
 
-  return Array.from(pathSet).map((slug) => ({
-    slug,
-  }));
+export async function generateStaticParams() {
+  try {
+    const casesResponse = await client.queries.casesConnection();
+    const edges = casesResponse.data?.casesConnection?.edges || [];
+    
+    const pathSet = new Set<string>();
+    edges.forEach((edge) => {
+      const filename = edge?.node?._sys?.filename;
+      const slug = edge?.node?.slug;
+      if (filename) pathSet.add(filename);
+      if (slug) pathSet.add(slug);
+    });
+
+    return Array.from(pathSet).map((slug) => ({
+      slug,
+    }));
+  } catch (error) {
+    console.error("Error in generateStaticParams for /cases/[slug]:", error);
+    return [];
+  }
 }
 
 export default async function Page(props: Props) {
-  try {
-    const params = await props.params;
-    
-    if (!params.slug || params.slug === 'undefined') {
-      notFound();
-    }
+  const params = await props.params;
+  const isDev = process.env.NODE_ENV === "development";
+  
+  if (!params.slug || params.slug === 'undefined') {
+    notFound();
+  }
 
-    // Hybrid Lookup Strategy:
-    // 1. First attempt to find by filename (Standard Tina behavior, preserves SSG and live preview)
+  try {
     let response;
+    
+    // 1. Tentar carregar pelo filename direto (mais rápido e padrão do Tina)
     try {
       response = await client.queries.cases(
-        { relativePath: `${params.slug}.md` }
+        { relativePath: `${params.slug}.md` },
+        // @ts-ignore
+        { fetchOptions: isDev ? { cache: "no-store" } : undefined }
       );
     } catch (e) {
-      // If filename lookup fails, we fall back to searching by slug field
-    }
-
-    // 2. If filename lookup failed (no response.data.cases), search by slug field
-    if (!response?.data?.cases) {
-      const connection = await client.queries.casesConnection({
-        filter: { slug: { eq: params.slug } }
-      });
+      // 2. Se falhar, buscar pelo campo 'slug' no frontmatter
+      const casesConnection = await client.queries.casesConnection(
+        { filter: { slug: { eq: params.slug } } },
+        // @ts-ignore
+        { fetchOptions: isDev ? { cache: "no-store" } : undefined }
+      );
       
-      const caseNode = connection.data.casesConnection.edges?.[0]?.node;
-      if (!caseNode) {
-        notFound();
+      const edge = casesConnection.data.casesConnection.edges?.[0];
+      if (!edge || !edge.node?._sys?.relativePath) {
+        throw new Error("Case not found");
       }
-
+      
       response = await client.queries.cases(
-        { relativePath: caseNode._sys.relativePath }
+        { relativePath: edge.node._sys.relativePath },
+        // @ts-ignore
+        { fetchOptions: isDev ? { cache: "no-store" } : undefined }
       );
     }
 
-    if (!response?.data?.cases) {
+    if (!response) {
       notFound();
     }
 
     return <CaseDetailPageClient {...response} />;
-  } catch (error) {
-    console.error("Error in Case Detail Page:", error);
-    notFound();
+  } catch (e) {
+    console.error(`Error rendering case ${params.slug}:`, e);
+    return notFound();
   }
 }
-
-
