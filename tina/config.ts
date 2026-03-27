@@ -204,8 +204,8 @@ export default defineConfig({
             delete: false,
           },
           router: ({ document }) => {
-            if (document._sys.filename === "home") return "/";
-            return `/${document._sys.filename}`;
+            if (document._sys.filename === "home") return "/gstvux.com.br/";
+            return `/gstvux.com.br/${document._sys.filename}`;
           },
         },
         templates: [
@@ -630,7 +630,7 @@ export default defineConfig({
               slug: finalSlug,
             }
           },
-          router: ({ document }) => `/cases/${document._sys.filename}`,
+          router: ({ document }) => `/gstvux.com.br/cases/${document._sys.filename}`,
         },
         fields: [
 
