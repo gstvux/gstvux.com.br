@@ -18,5 +18,10 @@
     "since": "© 2026 — Reduzindo entropia em sistemas complexos desde 2008.",
     "current_year": "Projetado com 🧠. Refinado com ☕.",
     "availability": "🟢Atualmente disponível para parcerias estratégicas."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "message": "O conteúdo que você está procurando não existe ou foi movido.\nQue tal voltar para o início?",
+    "buttonLabel": "Voltar para o início"
   }
 }

@@ -259,6 +259,10 @@ h3,p,li {
   animation: slideRight 60s linear infinite;
 }
 
+@utility text-shadow-sm {
+  text-shadow: 0 2px 4px rgb(0 0 0 / 0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
 
   .hero-eyebrow__wave,

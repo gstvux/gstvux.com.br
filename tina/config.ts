@@ -142,6 +142,31 @@ export default defineConfig({
               },
             ],
           },
+          {
+            type: "object",
+            name: "notFound",
+            label: "Página 404",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Título",
+              },
+              {
+                type: "string",
+                name: "message",
+                label: "Mensagem",
+                ui: {
+                  component: "textarea",
+                },
+              },
+              {
+                type: "string",
+                name: "buttonLabel",
+                label: "Texto do Botão",
+              },
+            ],
+          },
         ],
       },
       {
