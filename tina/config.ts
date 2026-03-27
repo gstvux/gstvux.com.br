@@ -9,6 +9,9 @@ const branch =
   process.env.HEAD ||
   "main";
 
+const isGhPages = process.env.IS_GH_PAGES === "true";
+const basePath = isGhPages ? "/gstvux.com.br" : "";
+
 const iconSvgTextareaComponent =
   IconSvgTextareaField as unknown as string;
 
@@ -204,8 +207,8 @@ export default defineConfig({
             delete: false,
           },
           router: ({ document }) => {
-            if (document._sys.filename === "home") return "/gstvux.com.br/";
-            return `/gstvux.com.br/${document._sys.filename}`;
+            if (document._sys.filename === "home") return `${basePath}/`;
+            return `${basePath}/${document._sys.filename}`;
           },
         },
         templates: [
@@ -630,7 +633,7 @@ export default defineConfig({
               slug: finalSlug,
             }
           },
-          router: ({ document }) => `/gstvux.com.br/cases/${document._sys.filename}`,
+          router: ({ document }) => `${basePath}/cases/${document._sys.filename}`,
         },
         fields: [
 
