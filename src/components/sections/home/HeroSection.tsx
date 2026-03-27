@@ -44,7 +44,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
   return (
     <section className="hero-surface pt-20 lg:flex lg:flex-col lg:justify-center lg:min-h-(--hero-min-h-desktop)">
       <div className="mx-auto p-6 lg:p-0 w-full max-w-7xl flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        
+
         <div className="w-full lg:max-w-121.5 ">
 
           {hero?.imageSrc && (
@@ -64,12 +64,13 @@ export function HeroSection({ hero }: HeroSectionProps) {
                   <span className="hero-eyebrow__wave">
                     {hero.eyebrow.icon}
                   </span>
+                  {hero.eyebrow.text && (
+                    <span className="hero-eyebrow__text">{hero.eyebrow.text}</span>
+                  )}
                 </span>
               )}
 
-              {hero.eyebrow.text && (
-                <p className="hero-eyebrow__text">{hero.eyebrow.text}</p>
-              )}
+
 
               {hero.title && (
                 <h1 className="text-trim-cap uppercase font-bold font-primary text-size-hero text-fg-heading-subtle leading-none" data-testid="hero-title">
