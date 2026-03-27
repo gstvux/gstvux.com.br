@@ -41,10 +41,18 @@ jobs:
 
       - name: Build with Next.js
         env:
-          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID || 'placeholder' }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN || 'placeholder' }}
+          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           NODE_OPTIONS: "--max-old-space-size=4096"
-        run: pnpm build
+        run: |
+          if [ -z "$NEXT_PUBLIC_TINA_CLIENT_ID" ] || [ "$NEXT_PUBLIC_TINA_CLIENT_ID" = "placeholder" ]; then
+            echo "No Tina Cloud tokens found. Building in local mode..."
+            pnpm exec tinacms build --local
+            pnpm exec next build
+          else
+            echo "Building with Tina Cloud..."
+            pnpm build
+          fi
 
       - name: Remove admin from production build
         run: rm -rf out/admin
