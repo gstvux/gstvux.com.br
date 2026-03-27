@@ -23,7 +23,7 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
   );
 
   return (
-    <section className="w-full bg-gradient-default py-16 lg:py-24 border-t border-fg-section-separator">
+    <section className="w-full bg-gradient-default py-16 lg:py-24 border-t border-fg-section-separator" id="cases-selecionados">
       <div className="mx-auto px-6 w-full max-w-7xl flex flex-col items-center">
         {overview?.title && (
           <h2 className="font-primary text-fg-heading text-size-title font-bold text-center">

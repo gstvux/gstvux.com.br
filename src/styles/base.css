@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Offset for the fixed header (h-20 = 5rem / 80px) */
+}
+
 body {
   background-color: var(--bg-color-page);
 }

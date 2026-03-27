@@ -14,7 +14,7 @@
       "Da descoberta ao impacto: conecto pesquisa, conteúdo e UI a métricas (fricção, adoção, tempo de tarefa, conversão)."
     ],
     "primaryCtaLabel": "Ver cases",
-    "primaryCtaHref": "/cases",
+    "primaryCtaHref": "/#cases-selecionados",
     "primaryCtaSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.775 8.825C14.475 8.525 14.025 8.525 13.725 8.825L11.55 11V5C11.55 3.35 10.2 2 8.55 2H0.75C0.3 2 0 2.3 0 2.75C0 3.2 0.3 3.5 0.75 3.5H8.55C9.375 3.5 10.05 4.175 10.05 5V11L7.875 8.825C7.575 8.525 7.125 8.525 6.825 8.825C6.525 9.125 6.525 9.575 6.825 9.875L10.275 13.325C10.425 13.475 10.575 13.55 10.8 13.55C11.025 13.55 11.175 13.475 11.325 13.325L14.775 9.875C15.075 9.575 15.075 9.05 14.775 8.825Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
     "primaryCtaIconPosition": "trailing",
     "secondaryCtaLabel": "Entrar em contato",
