@@ -42,17 +42,20 @@ export function ContactSection({ contact }: Props) {
                 </h2>
               )}
 
-              {contact.connector && (
-                <p className="font-utils text-fg-body-subtle">
-                  {contact.connector}
-                </p>
-              )}
+              <div className="flex flex-col gap-1">
+                {contact.connector && (
+                  <p className="font-utils text-fg-body-subtle">
+                    {contact.connector}
+                  </p>
+                )}
 
-              {contact.body && (
-                <p className="font-secondary leading-normal text-fg-body">
-                  {contact.body}
-                </p>
-              )}
+                {contact.body && (
+                  <p className="font-secondary leading-normal text-fg-body">
+                    {contact.body}
+                  </p>
+                )}
+              </div>
+
             </div>
 
 

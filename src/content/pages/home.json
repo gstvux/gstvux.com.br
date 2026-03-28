@@ -30,8 +30,8 @@
       "locationText": "São Carlos/SP, BR",
       "workmodeText": "Remote-first",
       "linkedinText": "LinkedIn",
-      "linkedinHref": "https://www.linkedin.com/in/SEU-USUARIO",
-      "email": "gstv.ux@gmail.com",
+      "linkedinHref": "https://www.linkedin.com/in/gstvux/",
+      "email": "hello@gstvux.com.br",
       "showTimezone": true,
       "timezoneLabel": "GMT-3",
       "timezoneId": "America/Sao_Paulo"
@@ -164,7 +164,8 @@
   "contact": {
     "imageSrc": "/images/contact-section-gustavo-luciano.png",
     "headline": "Complexidade mal resolvida vira custo",
-    "body": "Meu trabalho é estruturar produtos para que regras, fluxos e interfaces funcionem de forma previsível.\n\nAberto a conversas sobre:",
+    "connector": "Aberto a conversas sobre:",
+    "body": "Meu trabalho é estruturar produtos para que regras, fluxos e interfaces funcionem de forma previsível.",
     "bullets": [
       "Product Design em sistemas e plataformas",
       "Estruturação de Design Systems e interfaces escaláveis",

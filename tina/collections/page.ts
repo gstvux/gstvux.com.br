@@ -391,6 +391,7 @@ export const pageCollection: Collection = {
                 component: "textarea",
               },
             },
+            
             {
               type: "string",
               label: "Bullets",
