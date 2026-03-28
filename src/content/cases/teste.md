@@ -1,7 +1,7 @@
 ---
-title: teste
-slug: teste
-thumbnail: /shapes/case-thumbnail.png
+title: testeddd
+slug: testeddd
+thumbnail: /shapes/media-frame-polygon.svg
 year: '2026'
 client: teste
 partner: teste part
@@ -29,15 +29,15 @@ strategy: teste stratrgy
 interventions:
   - testes
 gallery:
-  - image: ''
+  - image: /images/contact-section-gustavo-luciano.png
     alt: ''
     caption: ''
     kind: screenshot
-  - image: ''
+  - image: /images/gustavo-luciano-profile.png
     alt: ''
     caption: ''
     kind: screenshot
-  - image: ''
+  - image: /images/gustavo-luciano-ux-design-product-designer-front-end-dev.png
     alt: ''
     caption: ''
     kind: screenshot

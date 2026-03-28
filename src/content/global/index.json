@@ -12,28 +12,16 @@
     {
       "label": "Processo",
       "href": "/#processo"
-    },
-    {
-      "label": "ITEM NUMBER 4",
-      "href": "/"
-    },
-    {
-      "label": "princing",
-      "href": "/"
-    },
-    {
-      "label": "tescts",
-      "href": "/"
     }
   ],
   "footer": {
-    "since": "© 2026 — Reduzindo entropia em sistemas complexos desde 2008S.ddd",
-    "current_year": "Projetado com 🧠. Refinado com ☕.Sddd",
-    "availability": "🟢Atualmente disponível para parcerias estratégicas.Sddd"
+    "since": "© 2026 — Reduzindo entropia em sistemas complexos desde 2008S.",
+    "current_year": "Projetado com 🧠. Refinado com ☕.",
+    "availability": "🟢Atualmente disponível para parcerias estratégicas."
   },
   "notFound": {
-    "title": "TESTE DINAMICO0",
-    "message": "ASDO conteúdo que você está procurando não existe ou foi movido.\nQue tal voltar para o início?aaa",
+    "title": "TESTE DINAMICO0asdasasd",
+    "message": "ASDO conteúdo que você está procurando não existe ou foi movido.\nQue tal voltar para o início?aaaasd a1111",
     "buttonLabel": "Voltar para o inícioS3"
   }
 }

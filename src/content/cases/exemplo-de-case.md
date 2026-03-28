@@ -2,7 +2,7 @@
 title: Exemplo de Casess
 slug: exemplo-de-casess
 thumbnail: /images/placeholder.jpg
-year: '2022'
+year: '2024'
 client: Cliente Testes
 partner: sss
 role:

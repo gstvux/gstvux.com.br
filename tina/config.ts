@@ -163,6 +163,10 @@ export default defineConfig({
           },
           router: ({ document }) => {
             if (document._sys.filename === "home") return `/`;
+            // Retorna null para a página de cases para evitar redirect loop
+            // causado por conflito entre a coleção 'cases' e a rota '/cases'.
+            // O formulário de edição continua funcionando normalmente.
+            if (document._sys.filename === "cases") return null;
             return `/${document._sys.filename}`;
           },
         },
@@ -571,6 +575,10 @@ export default defineConfig({
             type: "string",
             label: "Year",
             name: "year",
+            options: Array.from(
+              { length: new Date().getFullYear() - 2008 + 1 },
+              (_, i) => (2008 + i).toString()
+            ).reverse(),
             required: true,
           },
           {
