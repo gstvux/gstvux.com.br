@@ -2,12 +2,18 @@
   "hero": {
     "eyebrow": {
       "icon": "👋",
-      "text": "Prazer,ss"
+      "text": "Prazer,"
     },
-    "imageSrc": "/images/gustavo-luciano-profile.png",
+    "imageSrc": "/images/gustavo-luciano-ux-design-product-designer-front-end-dev.png",
     "title": "Gustavo Luciano",
     "subtitle": "UX Designer, Product Designer, UI Engineer, Systems Thinking",
-    "description": "Transformo regras, fluxos e restrições em interfaces mais claras, consistentes e escaláveis — com foco em produtos complexos, design systems e redução de ambiguidade.",
+    "description": "Transformo regras de negócio e fluxos críticos em interfaces previsíveis, consistentes e escaláveis. Atuo entre Product Design, design systems e front-end para reduzir ambiguidade, erro operacional e custo estrutural em produtos B2B complexos.",
+    "connector": "Na prática:",
+    "bullets": [
+      "Organizo sistemas complexos para que regras, estados e fluxos deixem de gerar erro e retrabalho",
+      "Estruturo design systems e componentes que mantêm consistência sem travar o delivery",
+      "Conecto decisões de produto à interface, com impacto mensurável na operação"
+    ],
     "primaryCtaLabel": "Explorar",
     "primaryCtaHref": "/#cases-selecionados",
     "primaryCtaSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.775 8.825C14.475 8.525 14.025 8.525 13.725 8.825L11.55 11V5C11.55 3.35 10.2 2 8.55 2H0.75C0.3 2 0 2.3 0 2.75C0 3.2 0.3 3.5 0.75 3.5H8.55C9.375 3.5 10.05 4.175 10.05 5V11L7.875 8.825C7.575 8.525 7.125 8.525 6.825 8.825C6.525 9.125 6.525 9.575 6.825 9.875L10.275 13.325C10.425 13.475 10.575 13.55 10.8 13.55C11.025 13.55 11.175 13.475 11.325 13.325L14.775 9.875C15.075 9.575 15.075 9.05 14.775 8.825Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
@@ -34,9 +40,9 @@
   "profile": {
     "imageSrc": "/images/gustavo-luciano-profile.png",
     "imageAlt": "Foto de perfil do Gustavo Luciano",
-    "kicker": "Além dos asdasasdssd",
-    "headline": "Mais sobre meu perfil",
-    "body": "UX Designer com base forte em UI Engineering. Desde 2007, atuo em produtos e sistemas B2B complexos, transformando regras e fluxos em experiências consistentes e escaláveis. Reduzo ambiguidade, erro e retrabalho com design system, componentes e UX writing, guiado por métricas e feedback. Busco um contexto onde UX seja explícito e mensurado."
+    "kicker": "Posicionamento",
+    "headline": "Design orientado a sistemas, não a telas isoladas",
+    "body": "Mais de 15 anos atuando entre Product Design e UI Engineering em produtos B2B e domínios complexos.\n\nTrabalho a partir de regras de negócio, fluxos críticos e restrições técnicas, estruturando interfaces como sistemas previsíveis — com design systems, componentes e implementação em front-end.\n\nFoco em reduzir ambiguidade, erro operacional e custo de manutenção."
   },
   "cases_overview": {
     "title": "Cases",
@@ -53,8 +59,8 @@
     {}
   ],
   "process": {
-    "title": "Toolbox & processo",
-    "description": "Eu atuo na interseção entre UX, craft e engenharia — e transformo ambiguidade em sistema entregável.",
+    "title": "Processo & ferramentas",
+    "description": "Atuo entre Product Design e engenharia, transformando ambiguidade em sistemas claros, consistentes e implementáveis.",
     "cards": [
       {
         "icon": "<svg width=\"168\" height=\"171\" viewBox=\"0 0 168 171\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M136.231 119.231L128.784 111.784L153.806 85.8752C154.273 85.3918 154.273 84.6082 153.806 84.1248L84.5014 12.3625C84.0346 11.8792 83.2778 11.8792 82.811 12.3625L13.5063 84.1248C13.0395 84.6082 13.0395 85.3918 13.5063 85.8752L82.811 157.637C83.2778 158.121 84.0346 158.121 84.5014 157.637L111.546 129.634L118.886 136.975L87.073 169.519C85.1428 171.494 82.0134 171.494 80.0832 169.519L1.44764 89.0753C-0.482547 87.1007 -0.482547 83.8993 1.44764 81.9247L80.0832 1.48093C82.0134 -0.493643 85.1428 -0.493643 87.073 1.48093L165.709 81.9247C167.639 83.8993 167.639 87.1007 165.709 89.0753L136.231 119.231Z\" fill=\"black\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M113.29 105.283C113.444 105.407 113.594 105.541 113.737 105.685L133.536 125.484C135.684 127.631 135.684 131.114 133.536 133.262C131.388 135.41 127.906 135.41 125.758 133.262L105.959 113.463C105.776 113.28 105.609 113.087 105.457 112.886C99.9442 116.74 93.2361 119 86 119C67.2223 119 52 103.778 52 85C52 66.2223 67.2223 51 86 51C104.778 51 120 66.2223 120 85C120 92.6017 117.505 99.6208 113.29 105.283ZM86 109C99.2548 109 110 98.2548 110 85C110 71.7452 99.2548 61 86 61C72.7452 61 62 71.7452 62 85C62 98.2548 72.7452 109 86 109Z\" fill=\"black\"/>\n</svg>\n",
@@ -157,12 +163,12 @@
   },
   "contact": {
     "imageSrc": "/images/contact-section-gustavo-luciano.png",
-    "headline": "Projetos bons começam enfrentando a complexidade",
-    "body": "Interfaces consistentes não surgem por acaso. Elas são resultado de decisões estruturadas sobre regras, fluxos e restrições.\n\nAberto a conversar sobre:",
+    "headline": "Complexidade mal resolvida vira custo",
+    "body": "Meu trabalho é estruturar produtos para que regras, fluxos e interfaces funcionem de forma previsível.\n\nAberto a conversas sobre:",
     "bullets": [
-      "Posições em Product Design, UX/UI e Design Systems",
-      "Projetos freelance, consultoria e mentoria",
-      "Produtos e plataformas que exigem estrutura, clareza e escala"
+      "Product Design em sistemas e plataformas",
+      "Estruturação de Design Systems e interfaces escaláveis",
+      "Problemas onde a clareza da interface impacta diretamente a operação"
     ]
   },
   "_template": "home"

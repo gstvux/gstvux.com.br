@@ -34,14 +34,14 @@ export function ProcessSection({ process }: ProcessSectionProps) {
   const duration = Math.max(40, originalBadges.length * 16);
 
   return (
-    <section className="w-full bg-gradient-default-inverse py-24 overflow-hidden relative" id="processo">
+    <section className="flex flex-col gap-12 w-full bg-gradient-default-inverse py-24 overflow-hidden relative" id="processo">
 
-      <div className="flex flex-col items-center w-full max-w-[1280px] mx-auto px-4 lg:px-8">
+      <div className="flex flex-col gap-12 items-center w-full max-w-[1280px] mx-auto px-4 lg:px-8">
 
         {/* Header */}
-        <div className="flex flex-col gap-[24px] text-center items-center mb-[48px] max-w-[512px] mx-auto">
+        <div className="flex flex-col gap-6 text-center items-center max-w-[640px] mx-auto">
           {process.title && (
-            <h2 className="font-primary text-size-title font-bold leading-normal text-fg-heading">
+            <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
               {process.title}
             </h2>
           )}
@@ -53,10 +53,9 @@ export function ProcessSection({ process }: ProcessSectionProps) {
         </div>
 
         {/* Cards Wrapper */}
-        <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-12 items-stretch justify-center w-full mb-[48px]">
+        <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-12 items-stretch justify-center w-full">
           {process.cards?.map((card, i) => {
             if (!card) return null;
-
             return (
               <div key={i} className="flex flex-col gap-6 sm:flex-row items-center sm:items-start overflow-clip w-full md:w-[384px] shrink-0">
                 <div className="relative w-16 h-16 shrink-0 mb-4 sm:mb-0">
@@ -96,6 +95,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
             );
           })}
         </div>
+
       </div>
 
       {/* Global Badges Marquee */}
@@ -131,6 +131,8 @@ export function ProcessSection({ process }: ProcessSectionProps) {
           </div>
         </div>
       )}
+
+
 
     </section>
   );

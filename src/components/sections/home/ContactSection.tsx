@@ -13,7 +13,7 @@ export function ContactSection({ contact }: Props) {
       <div className="w-full flex flex-col items-center py-16 lg:py-[96px]">
 
         {/* Container */}
-        <div className="w-full max-w-[1070px] flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-[40px] px-6">
+        <div className="w-full max-w-[1280px] flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12 px-6">
 
           {/* Imagem (Esquerda) */}
           <div className="relative shrink-0 w-[275px] h-[275px] lg:w-[320px] lg:h-[320px]">
@@ -29,20 +29,32 @@ export function ContactSection({ contact }: Props) {
             )}
           </div>
 
+
+
           {/* Conteúdo (Direita) */}
           <div className="flex flex-col gap-4 items-start w-full max-w-[630px]">
 
-            {contact.headline && (
-              <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
-                {contact.headline}
-              </h2>
-            )}
+            <div className="flex flex-col gap-6">
 
-            {contact.body && (
-              <p className="font-secondary leading-normal text-fg-body whitespace-pre-wrap">
-                {contact.body}
-              </p>
-            )}
+              {contact.headline && (
+                <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
+                  {contact.headline}
+                </h2>
+              )}
+
+              {contact.connector && (
+                <p className="font-utils text-fg-body-subtle">
+                  {contact.connector}
+                </p>
+              )}
+
+              {contact.body && (
+                <p className="font-secondary leading-normal text-fg-body">
+                  {contact.body}
+                </p>
+              )}
+            </div>
+
 
             {/* Bullets */}
             {contact.bullets && contact.bullets.length > 0 && (

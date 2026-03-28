@@ -25,6 +25,7 @@ export type HomePageData = {
         imageAlt?: string | null;
         headline?: string | null;
         body?: string | null;
+        connector?: string | null;
         bullets?: (string | null)[] | null;
     };
 };

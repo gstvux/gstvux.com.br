@@ -102,6 +102,11 @@ export const pageCollection: Collection = {
             },
             {
               type: "string",
+              label: "Connector",
+              name: "connector"
+            },
+            {
+              type: "string",
               label: "Bullets",
               name: "bullets",
               list: true,
@@ -372,6 +377,11 @@ export const pageCollection: Collection = {
               type: "string",
               label: "Headline",
               name: "headline",
+            },
+            {
+              type: "string",
+              label: "Connector",
+              name: "connector",
             },
             {
               type: "string",

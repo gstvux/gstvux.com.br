@@ -13,7 +13,7 @@ export function ProfileSection({ profile }: Props) {
       <div className="w-full flex flex-col items-center py-16 lg:py-[64px]">
         <div className="w-full max-w-[800px] flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-[40px] gap-8 md:gap-0 rounded-[8px]">
 
-          <div className="relative shrink-0 w-[275px] h-[275px]">
+          <div className="relative shrink-0 w-[320px] h-[320px]">
             {profile.imageSrc ? (
               <MediaFrame
                 imageSrc={profile.imageSrc}
@@ -26,17 +26,17 @@ export function ProfileSection({ profile }: Props) {
             )}
           </div>
 
-          <div className="flex flex-col gap-[24px] items-start w-full max-w-[360px]">
+          <div className="flex flex-col gap-6 items-start w-full max-w-[420px]">
             <div className="flex flex-col">
 
               {profile.kicker && (
-                <p className="font-utils text-size-body-xs uppercase tracking-wider text-fg-heading-subtle">
+                <p className="font-utils text-fg-body-subtle">
                   {profile.kicker}
                 </p>
               )}
 
               {profile.headline && (
-                <h2 className="font-primary text-size-title font-normal leading-tight text-fg-heading">
+                <h2 className="font-primary text-size-title font-normal leading-title text-fg-heading">
                   {profile.headline}
                 </h2>
               )}
