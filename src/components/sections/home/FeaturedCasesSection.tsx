@@ -19,7 +19,7 @@ type Props = {
 export function FeaturedCasesSection({ overview, featuredCases }: Props) {
   // Filter only valid case references
   const validCases = (featuredCases || []).filter((item): item is NonNullable<FeaturedCaseItem> =>
-    Boolean(item && item.case && item.case.__typename === 'Cases')
+    Boolean(item && item.case && (item.case as any).slug)
   );
 
   return (
@@ -37,9 +37,11 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
         )}
 
         <div className="mt-12 flex flex-col gap-8 lg:flex-row lg:gap-6 w-full">
-          {validCases.length > 0 ? (
-            validCases.map((item: any, index) => {
-              const caseData = item.case;
+          {Array.from({ length: 3 }).map((_, index) => {
+            const item = validCases[index];
+
+            if (item && item.case && (item.case as any).slug) {
+              const caseData = item.case as any;
               return (
                 <article key={`${caseData.slug}-${index}`} className="group flex flex-1 flex-col gap-4">
                   <Link href={`/cases/${caseData.slug}`} className="relative block w-full aspect-4/3 rounded-2xl overflow-hidden bg-surface-inverse shadow-sm" title="Explorar solução">
@@ -66,21 +68,21 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
                   </div>
                 </article>
               );
-            })
-          ) : (
+            }
+
             // Empty State Placeholder
-            Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="flex-1 flex flex-col gap-4">
-                <div className="w-full aspect-4/3 rounded-2xl bg-page-subtle border-2 border-dashed border-fg-section-separator flex items-center justify-center">
+            return (
+              <div key={`empty-${index}`} className="flex-1 flex flex-col gap-4">
+                <div className="w-full aspect-4/3 rounded-2xl bg-page-subtle border-2 border-dashed border-fg-section-separator flex items-center justify-center opacity-40">
                   <div className="w-12 h-12 rounded-full bg-bg-surface/10 border border-fg-section-separator" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="h-4 w-3/4 bg-surface-inverse rounded" />
-                  <div className="h-3 w-1/2 bg-surface-inverse rounded" />
+                  <div className="h-4 w-3/4 bg-surface-inverse rounded opacity-20" />
+                  <div className="h-3 w-1/2 bg-surface-inverse rounded opacity-10" />
                 </div>
               </div>
-            ))
-          )}
+            );
+          })}
         </div>
 
         {overview?.cta?.label && overview?.cta?.link && (
