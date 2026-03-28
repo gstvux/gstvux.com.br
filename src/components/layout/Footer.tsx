@@ -14,7 +14,7 @@ export async function Footer() {
 
   return (
     <footer className="w-full py-8 border-t border-(--color-bluepetro-500) bg-page">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-4 text-fg-body font-utils text-sm">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-4 font-secondary text-size-body-xs text-fg-body-subtle">
 
         {footer.since && <p className="text-center md:text-left">{footer.since}</p>}
         {footer.current_year && <p className="text-center">{footer.current_year}</p>}

@@ -23,19 +23,7 @@ export function HeroLocalTime({
     const safeTimezoneId = timezoneId?.trim();
     const safeTimezoneLabel = timezoneLabel?.trim();
 
-    const initialTime = useMemo(() => {
-        if (!safeTimezoneId) return "";
-
-        const resolvedTimezoneId = safeTimezoneId;
-
-        try {
-            return formatTime(resolvedTimezoneId);
-        } catch {
-            return "";
-        }
-    }, [safeTimezoneId]);
-
-    const [time, setTime] = useState(initialTime);
+    const [time, setTime] = useState("");
 
     useEffect(() => {
         if (!safeTimezoneId) return;

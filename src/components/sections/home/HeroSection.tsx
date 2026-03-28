@@ -5,6 +5,7 @@ import { ButtonLink } from "@/src/components/ui/button/ButtonLink";
 import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
 import { HeroLocalTime } from "./HeroLocalTime";
 import { Typewriter } from "@/src/components/ui/typewriter/Typewriter";
+import { formatMonthYearPtBr } from "@/src/utils/cv-publisher";
 
 type IconPosition = "leading" | "trailing";
 
@@ -33,9 +34,10 @@ type HeroData = NonNullable<PageHome["hero"]>;
 
 type HeroSectionProps = {
   hero: HeroData;
+  cvData?: any; // Will be properly typed once Tina generates the Cv types
 };
 
-export function HeroSection({ hero }: HeroSectionProps) {
+export function HeroSection({ hero, cvData }: HeroSectionProps) {
   const bullets = hero.bullets?.filter(
     (bullet: string | null): bullet is string => Boolean(bullet)
   );
@@ -113,17 +115,29 @@ export function HeroSection({ hero }: HeroSectionProps) {
               </ButtonLink>
             )}
 
-            {hero.secondaryCtaLabel && hero.secondaryCtaHref && (
-              <ButtonLink
-                href={hero.secondaryCtaHref}
-                appearance="secondary"
-                {...getIconProps(
-                  hero.secondaryCtaSvg,
-                  hero.secondaryCtaIconPosition
+            {hero.secondaryCtaLabel && (cvData?.href || hero.secondaryCtaHref) && (
+              <div className="flex flex-col gap-1">
+
+                <ButtonLink
+                  href={cvData?.href || hero.secondaryCtaHref}
+                  appearance="secondary"
+                  download={cvData?.href ? cvData.href.split('/').pop() : true}
+                  {...getIconProps(
+                    hero.secondaryCtaSvg,
+                    hero.secondaryCtaIconPosition
+                  )}
+                >
+                  {hero.secondaryCtaLabel}
+                </ButtonLink>
+                {cvData?.updatedAt && (
+                  <div className="flex justify-center gap-2 text-size-body-xs text-fg-body-subtle">
+                    <span className="text-fg-body">{cvData.extension || 'pdf'}</span>
+                    <span>•</span>
+                    <span>última versão <span className="text-fg-body">{formatMonthYearPtBr(cvData.updatedAt)}</span></span>
+                  </div>
                 )}
-              >
-                {hero.secondaryCtaLabel}
-              </ButtonLink>
+
+              </div>
             )}
 
             {hero.whatsappLabel && hero.whatsappHref && (

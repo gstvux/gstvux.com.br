@@ -16,6 +16,7 @@ type HomePageClientProps = {
   query: string;
   variables: PageQueryVariables;
   data: PageQuery;
+  cvData?: any;
 };
 
 export default function HomePageClient(props: HomePageClientProps) {
@@ -50,7 +51,7 @@ export default function HomePageClient(props: HomePageClientProps) {
 
   return (
     <>
-      {home.hero && <HeroSection hero={home.hero} />}
+      {home.hero && <HeroSection hero={home.hero} cvData={props.cvData} />}
       {/* {casesOverview && !!featuredCases.length && ( */}
       <FeaturedCasesSection
         overview={casesOverview}

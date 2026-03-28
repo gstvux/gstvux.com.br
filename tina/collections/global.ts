@@ -5,6 +5,9 @@ export const globalCollection: Collection = {
   label: "Configurações Globais",
   path: "src/content/global",
   format: "json",
+  match: {
+    include: "index",
+  },
   ui: {
     global: true,
     allowedActions: {

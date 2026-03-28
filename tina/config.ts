@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 import { globalCollection } from "./collections/global";
+import { cvCollection } from "./collections/cv";
 import { pageCollection } from "./collections/page";
 import { casesCollection } from "./collections/cases";
 
@@ -27,6 +28,7 @@ export default defineConfig({
   schema: {
     collections: [
       globalCollection,
+      cvCollection,
       pageCollection,
       casesCollection,
     ],
