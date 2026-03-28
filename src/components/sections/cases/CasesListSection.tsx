@@ -86,7 +86,7 @@ export function CasesListSection({ title, cases }: Props) {
             <p className="text-fg-body mt-2 max-w-sm">Tente selecionar outra categoria ou limpe os filtros para ver todos os projetos.</p>
             <button
               onClick={() => setActiveTaxonomy("Todos")}
-              className="mt-8 px-6 py-2 rounded-full bg-fg-heading text-bg-surface font-utils text-size-body-xs font-bold hover:opacity-90 transition-opacity"
+              className="mt-8 px-6 py-2 rounded-full bg-cta-bg text-cta-fg font-utils text-size-body-xs font-bold hover:opacity-90 transition-opacity"
             >
               Limpar Filtros
             </button>

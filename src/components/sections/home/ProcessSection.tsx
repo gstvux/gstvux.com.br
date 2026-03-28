@@ -22,7 +22,16 @@ type ProcessSectionProps = {
 export function ProcessSection({ process }: ProcessSectionProps) {
   if (!process) return null;
 
-  const duplicatedBadges = process.badges ? [...process.badges, ...process.badges, ...process.badges, ...process.badges, ...process.badges, ...process.badges] : [];
+  const originalBadges = (process.badges || []).filter(Boolean);
+
+  // Create enough copies to ensure the screen is always full and the animation is seamless
+  // We need at least 2 copies for the -50% to 0% trick, but 4-6 is safer for very short lists
+  const repeats = originalBadges.length < 5 ? 12 : 6;
+  const duplicatedBadges = Array(repeats).fill(originalBadges).flat();
+
+  // Calculate duration to maintain a very slow, constant pixel speed
+  // A higher multiplier (e.g. 10s per item) results in a slower, smoother move
+  const duration = Math.max(40, originalBadges.length * 16);
 
   return (
     <section className="w-full bg-gradient-default-inverse py-24 overflow-hidden relative" id="processo">
@@ -32,12 +41,12 @@ export function ProcessSection({ process }: ProcessSectionProps) {
         {/* Header */}
         <div className="flex flex-col gap-[24px] text-center items-center mb-[48px] max-w-[512px] mx-auto">
           {process.title && (
-            <h2 className="font-primary text-[32px] font-bold leading-normal text-fg-heading">
+            <h2 className="font-primary text-size-title font-bold leading-normal text-fg-heading">
               {process.title}
             </h2>
           )}
           {process.description && (
-            <p className="font-secondary text-[16px] leading-normal text-fg-body">
+            <p className="font-secondary text-size-body leading-normal text-fg-body">
               {process.description}
             </p>
           )}
@@ -50,7 +59,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
 
             return (
               <div key={i} className="flex flex-col gap-6 sm:flex-row items-center sm:items-start overflow-clip w-full md:w-[384px] shrink-0">
-                <div className="relative w-[64px] h-[64px] shrink-0 mb-4 sm:mb-0">
+                <div className="relative w-16 h-16 shrink-0 mb-4 sm:mb-0">
                   {/* Squircle SVG Frame Absolute Background */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none" className="w-[63px] h-[63px]">
@@ -66,7 +75,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
 
                   {/* Real Icon rendered in front of the squircle */}
                   <div className="absolute inset-0 z-10 flex items-center justify-center">
-                    {card.icon && <CmsIcon svg={card.icon} className="w-[32px] h-[32px]" />}
+                    {card.icon && <CmsIcon svg={card.icon} className="w-8 h-8" />}
                   </div>
                 </div>
 
@@ -90,32 +99,29 @@ export function ProcessSection({ process }: ProcessSectionProps) {
       </div>
 
       {/* Global Badges Marquee */}
-      {process.badges && process.badges.length > 0 && (
-        <div className="relative w-full overflow-hidden mt-[16px]">
-
-          {/* Fade left */}
-          <div className="absolute left-0 top-0 bottom-0 w-[112px] bg-linear-to-r from-page-subtle to-transparent z-10 pointer-events-none" />
-
-          {/* Fade right */}
-          <div className="absolute right-0 top-0 bottom-0 w-[112px] bg-linear-to-l from-page-subtle to-transparent z-10 pointer-events-none" />
+      {originalBadges.length > 0 && (
+        <div className="relative w-full overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
 
           {/* Wrapper */}
-          <div className="flex w-[200%] overflow-hidden py-1">
-            <div className="flex gap-[16px] items-center animate-slide-right whitespace-nowrap">
+          <div className="flex w-max py-1 animate-marquee-custom gap-0">
+            <div
+              className="flex gap-4 items-center animate-slide-right whitespace-nowrap"
+              style={{ animationDuration: `${duration}s` }}
+            >
               {duplicatedBadges.map((badge, j) => {
                 if (!badge) return null;
                 return (
-                  <div key={j} className="flex gap-[8px] items-center justify-center px-[12px] py-[8px] bg-badge border border-badge-border rounded-[8px] shrink-0">
-                    <div className="flex items-center justify-center w-[16px] h-[16px] shrink-0 overflow-clip">
+                  <div key={j} className="flex gap-2 items-center justify-center px-4 py-1.5 rounded-full transition-colors duration-200 border bg-page-card/50 backdrop-blur-sm shrink-0 flex-nowrap">
+                    <div className="flex items-center justify-center w-4 h-4 shrink-0 overflow-clip">
                       {badge.icon ? (
-                        <CmsIcon svg={badge.icon} className="w-[16px] h-[16px] text-badge-fg" />
+                        <CmsIcon svg={badge.icon} className="w-4 h-4 text-badge-fg" />
                       ) : (
-                        <svg className="w-[10.5px] h-[8px] text-badge-fg" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-4 h-4 text-badge-fg" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fillRule="evenodd" clipRule="evenodd" d="M10.9789 1.15494C11.2389 1.47463 11.2007 1.94498 10.8935 2.20577L4.77498 7.39736C4.62002 7.52885 4.41708 7.59325 4.2127 7.5776C4.00833 7.56195 3.8202 7.46781 3.69238 7.3144L0.231998 3.16117C-0.0384814 2.8365 -0.0105312 2.36159 0.294371 2.06733C0.599273 1.77307 1.06646 1.82458 1.33694 2.14925L4.30129 5.70678L9.92385 0.933333C10.2311 0.672545 10.7188 0.835245 10.9789 1.15494Z" fill="currentColor" />
                         </svg>
                       )}
                     </div>
-                    <p className="font-utils text-[14px] leading-normal text-badge-fg whitespace-nowrap">
+                    <p className="font-utils text-size-body-sm leading-normal text-badge-fg whitespace-nowrap">
                       {badge.label}
                     </p>
                   </div>

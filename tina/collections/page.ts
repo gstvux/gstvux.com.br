@@ -273,6 +273,11 @@ export const pageCollection: Collection = {
           label: "Featured Cases",
           name: "featured_cases",
           list: true,
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.case?.split('/').pop()?.replace('.md', '') };
+            },
+          },
           fields: [
             {
               type: "reference",
@@ -305,6 +310,11 @@ export const pageCollection: Collection = {
               label: "Cards",
               name: "cards",
               list: true,
+              ui: {
+                itemProps: (item) => {
+                  return { label: item?.title };
+                },
+              },
               fields: [
                 createInlineSvgField("icon", "Icon SVG"),
                 {
@@ -327,6 +337,11 @@ export const pageCollection: Collection = {
               label: "Badges",
               name: "badges",
               list: true,
+              ui: {
+                itemProps: (item) => {
+                  return { label: item?.label };
+                },
+              },
               fields: [
                 createInlineSvgField("icon", "Icon SVG (Optional)"),
                 {

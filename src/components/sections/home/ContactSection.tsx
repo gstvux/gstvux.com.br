@@ -33,7 +33,7 @@ export function ContactSection({ contact }: Props) {
           <div className="flex flex-col gap-4 items-start w-full max-w-[630px]">
 
             {contact.headline && (
-              <h2 className="font-primary text-size-title font-bold leading-tight text-fg-heading max-w-[360px]">
+              <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
                 {contact.headline}
               </h2>
             )}
