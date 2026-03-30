@@ -61,6 +61,9 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
 
           <div className="flex flex-col gap-8 order-2 lg:order-1">
             <div className="flex flex-col gap-3">
+              <h1 className="font-primary text-fg-heading text-size-title leading-title font-bold tracking-tight">
+                {caseData.title}
+              </h1>
               {taxonomy.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {taxonomy.map((t) => (
@@ -70,9 +73,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
                   ))}
                 </div>
               )}
-              <h1 className="font-primary text-fg-heading text-size-title leading-title font-bold tracking-tight">
-                {caseData.title}
-              </h1>
+
             </div>
 
 

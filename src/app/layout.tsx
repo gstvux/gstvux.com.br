@@ -3,7 +3,9 @@ import { Sofia_Sans, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
+import { ScrollAffordance } from "@/src/components/ui/ScrollAffordance";
+import { EndOfPageParty } from "@/src/components/ui/EndOfPageParty";
 
 export const runtime = "nodejs";
 
@@ -70,6 +72,8 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <ScrollAffordance />
+        <EndOfPageParty />
       </body>
     </html>
   );

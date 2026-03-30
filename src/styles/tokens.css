@@ -46,6 +46,11 @@
   --color-ember-800: #472A00;
   --color-ember-900: #2A1700;
 
+  --color-confetti-1: var(--color-ember-300);
+  --color-confetti-2: var(--color-ember-900);
+  --color-confetti-3: var(--color-ember-200);
+  --color-confetti-4: var(--color-ember-800);
+
   --gradient-default: linear-gradient(0deg,
         var(--color-bluepetro-700) 1%,
         var(--color-bluepetro-900) 100%);
@@ -187,6 +192,11 @@
   --badge-secondary-text-color: var(--color-ember-500);
   --badge-secondary-border-color: var(--color-ember-500);
   --badge-secondary-icon-color: var(--badge-secondary-text-color);
+
+  --color-confetti-1: var(--color-bluepetro-300);
+  --color-confetti-2: var(--color-bluepetro-900);
+  --color-confetti-3: var(--color-bluepetro-200);
+  --color-confetti-4: var(--color-bluepetro-800);
 
   .hero-surface{
     --hero-base: white;

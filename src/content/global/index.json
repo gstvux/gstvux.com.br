@@ -20,8 +20,8 @@
     "availability": "🟢Atualmente disponível para parcerias estratégicas."
   },
   "notFound": {
-    "title": "TESTE DINAMICO0asdasasd",
-    "message": "ASDO conteúdo que você está procurando não existe ou foi movido.\nQue tal voltar para o início?aaaasd a1111",
-    "buttonLabel": "Voltar para o inícioS3"
+    "title": "Página não encontrada",
+    "message": "O conteúdo que você está procurando não existe ou foi movido.\nQue tal voltar para o início?",
+    "buttonLabel": "Voltar para o início"
   }
 }
