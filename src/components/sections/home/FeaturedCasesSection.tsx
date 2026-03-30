@@ -44,7 +44,7 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
               const caseData = item.case as any;
               return (
                 <article key={`${caseData.slug}-${index}`} className="group flex flex-1 flex-col gap-4">
-                  <Link href={`/cases/${caseData.slug}`} className="relative block w-full aspect-4/3 rounded-2xl overflow-hidden bg-surface-inverse shadow-sm" title="Explorar solução">
+                  <Link href={`/cases/${caseData.slug}`} className="relative block w-full aspect-4/3 rounded-2xl bg-surface-inverse" title="Explorar solução">
                     {caseData.thumbnail && (
                       <img
                         src={caseData.thumbnail}
@@ -73,7 +73,7 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
             // Empty State Placeholder
             return (
               <div key={`empty-${index}`} className="flex-1 flex flex-col gap-4">
-                <div className="w-full aspect-4/3 rounded-2xl bg-page-subtle border-2 border-dashed border-fg-section-separator flex items-center justify-center opacity-40">
+                <div className="w-full aspect-4/3 rounded-2xl bg-page-subtle border-2 border-dotted border-fg-section-separator flex items-center justify-center opacity-40">
                   <div className="w-12 h-12 rounded-full bg-bg-surface/10 border border-fg-section-separator" />
                 </div>
                 <div className="flex flex-col gap-2">

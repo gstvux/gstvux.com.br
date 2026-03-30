@@ -94,7 +94,7 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
 
           <div className="flex flex-col gap-4 lg:flex-col lg:gap-4">
             {hero.description && <p>{hero.description}</p>}
-            {hero.connector && <p className="text-size-body-sm font-utils text-fg-body-subtle">{hero.connector}</p>}
+            {hero.connector && <p className="text-size-body-xs font-secondary text-fg-body-subtle tracking-wider font-bold">{hero.connector}</p>}
             {bullets?.length ? (
               <ul className="list-none lg:flex lg:flex-col lg:gap-2">
                 {bullets.map((bullet: string, index: number) => (

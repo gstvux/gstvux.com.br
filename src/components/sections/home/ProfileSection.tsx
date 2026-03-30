@@ -30,7 +30,7 @@ export function ProfileSection({ profile }: Props) {
             <div className="flex flex-col">
 
               {profile.kicker && (
-                <p className="font-utils text-fg-body-subtle">
+                <p className="text-size-body-xs font-secondary text-fg-body-subtle tracking-wider font-bold">
                   {profile.kicker}
                 </p>
               )}

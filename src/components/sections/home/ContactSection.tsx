@@ -44,7 +44,7 @@ export function ContactSection({ contact }: Props) {
 
               <div className="flex flex-col gap-1">
                 {contact.connector && (
-                  <p className="font-utils text-fg-body-subtle">
+                  <p className="text-size-body-xs font-secondary text-fg-body-subtle tracking-wider font-bold">
                     {contact.connector}
                   </p>
                 )}

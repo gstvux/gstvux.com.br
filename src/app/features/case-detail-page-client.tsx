@@ -90,7 +90,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
             )}
 
             <div className="flex flex-col gap-1">
-              <h3 className="text-size-body-xs font-secondary text-fg-body-subtle">Responsabilidades:</h3>
+              <h3 className="text-size-body-xs font-secondary text-fg-body-subtle tracking-wider font-bold">Responsabilidades:</h3>
               <ul className="list-none flex flex-col gap-1">
                 {(responsibilities.length > 0 ? responsibilities : ["research", "information-architecture", "prototyping"]).map((r, i) => (
                   <li key={i} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-bullet-fg flex items-center gap-2 text-fg-body text-size-body">
@@ -105,7 +105,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
           <div className="w-full lg:sticky lg:top-32">
             <div className="w-full rounded-2xl overflow-hidden bg-surface-inverse aspect-video lg:aspect-square flex items-center justify-center relative">
               {caseData.thumbnail ? (
-                <img src={caseData.thumbnail} alt={caseData.title} className="absolute inset-0 w-full h-full object-cover" />
+                <img src={caseData.thumbnail} alt={caseData.title} className="absolute inset-0 w-full h-full object-contain" />
               ) : (
                 <div className="w-full h-full bg-slate-800" />
               )}
@@ -172,7 +172,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
                 <h2 className="font-primary text-fg-heading text-size-title-sm font-bold">Resultados</h2>
                 <ul className="flex flex-col gap-3">
                   {outcomes.map((c, i) => (
-                    <li key={i} className="flex items-start gap-3 text-fg-body text-size-body leading-body">
+                    <li key={i} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-bullet-fg flex items-start gap-3 text-fg-body text-size-body leading-body">
 
                       <span>{c}</span>
                     </li>
