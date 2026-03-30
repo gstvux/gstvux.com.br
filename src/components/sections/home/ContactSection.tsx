@@ -16,7 +16,7 @@ export function ContactSection({ contact }: Props) {
         <div className="w-full max-w-[1280px] flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12 px-6">
 
           {/* Imagem (Esquerda) */}
-          <div className="relative shrink-0 w-[275px] h-[275px] lg:w-[320px] lg:h-[320px]">
+          <div className="hidden lg:block relative shrink-0 w-[275px] h-[275px] lg:w-[320px] lg:h-[320px]">
             {contact.imageSrc ? (
               <MediaFrame
                 imageSrc={contact.imageSrc}

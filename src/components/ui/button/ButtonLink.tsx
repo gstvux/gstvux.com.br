@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
+import { forwardRef, type AnchorHTMLAttributes, type MouseEvent, type ReactNode } from "react";
 import {
   getButtonClassName,
   type ButtonAppearance,
   type ButtonSize,
 } from "./button-styles";
 
-type ButtonLinkProps = Omit<
+export type ButtonLinkProps = Omit<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   "className" | "children"
 > & {
@@ -24,23 +24,26 @@ type ButtonLinkProps = Omit<
   disabled?: boolean;
 };
 
-export function ButtonLink({
-  href,
-  appearance = "primary",
-  size = "md",
-  leadingIcon,
-  trailingIcon,
-  iconOnly = false,
-  external = false,
-  className,
-  children,
-  disabled = false,
-  target,
-  rel,
-  onClick,
-  download,
-  ...props
-}: ButtonLinkProps) {
+export const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(function ButtonLink(
+  {
+    href,
+    appearance = "primary",
+    size = "md",
+    leadingIcon,
+    trailingIcon,
+    iconOnly = false,
+    external = false,
+    className,
+    children,
+    disabled = false,
+    target,
+    rel,
+    onClick,
+    download,
+    ...props
+  },
+  ref
+) {
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (disabled) {
       event.preventDefault();
@@ -90,6 +93,7 @@ export function ButtonLink({
   if (external || download || target === "_blank") {
     return (
       <a
+        ref={ref}
         href={href}
         target={target}
         rel={safeRel}
@@ -103,8 +107,8 @@ export function ButtonLink({
   }
 
   return (
-    <Link href={href} {...props} {...sharedProps}>
+    <Link ref={ref as any} href={href} {...props} {...sharedProps}>
       {content}
     </Link>
   );
-}
+});

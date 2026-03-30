@@ -1,4 +1,4 @@
-export type ButtonAppearance = "primary" | "secondary" | "link";
+export type ButtonAppearance = "primary" | "secondary" | "subtle" | "link";
 export type ButtonSize = "sm" | "md" | "lg" | "icon";
 
 type GetButtonClassNameOptions = {
@@ -35,12 +35,20 @@ const appearanceMap: Record<ButtonAppearance, string> = {
     "hover:text-cta-fg-hover",
 
   secondary:
-    "rounded-xl border-2 " +
-    "border-cta-ghost-border" +
+    "rounded-xl border-1 " +
+    "border-cta-ghost-border " +
     "bg-transparent " +
     "text-cta-ghost-fg " +
     "hover:border-cta-ghost-border-hover " +
     "hover:text-cta-ghost-fg-hover",
+
+  subtle:
+    "rounded-xl border-1 " +
+    "border-cta-subtle-border " +
+    "bg-transparent " +
+    "text-cta-subtle-fg " +
+    "hover:border-cta-subtle-border-hover " +
+    "hover:text-cta-subtle-fg-hover",
 
   link:
     "rounded-md border border-transparent bg-transparent px-0 shadow-none " +

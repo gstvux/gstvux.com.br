@@ -51,7 +51,7 @@ export function ThemeToggle() {
   return (
     <Button
       type="button"
-      appearance="secondary"
+      appearance="subtle"
       iconOnly
       leadingIcon={IconSymbol}
       onClick={toggleTheme}

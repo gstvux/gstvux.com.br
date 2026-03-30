@@ -45,7 +45,13 @@
     --color-cta-fg: var(--button-primary-text);
     --color-cta-fg-hover: var(--button-primary-text-hover);
     
-    --color-cta-ghost-bg: transparent;    
+    --color-cta-subtle-bg: transparent;    
+    --color-cta-subtle-border: var(--button-subtle-border-color);
+    --color-cta-subtle-border-hover: var(--button-subtle-border-color-hover);
+    --color-cta-subtle-fg: var(--button-subtle-text-color);
+    --color-cta-subtle-fg-hover: var(--button-subtle-text-color-hover);
+
+    --color-cta-ghost-bg: transparent;
     --color-cta-ghost-border: var(--button-ghost-border-color);
     --color-cta-ghost-border-hover: var(--button-ghost-border-color-hover);
     --color-cta-ghost-fg: var(--button-ghost-text-color);

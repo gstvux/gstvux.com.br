@@ -110,6 +110,13 @@
   --button-ghost-text-color-hover: var(--color-ember-100);
   --button-ghost-icon-color: var(--button-ghost-text-color);
 
+  --button-subtle-bg: transparent;
+  --button-subtle-border-color: var(--color-bluepetro-300);
+  --button-subtle-border-color-hover: var(--color-bluepetro-400);
+  --button-subtle-text-color: var(--color-bluepetro-300);
+  --button-subtle-text-color-hover: var(--color-bluepetro-400);
+  --button-subtle-icon-color: var(--button-subtle-text-color);
+
   --button-link-text-color: var(--color-bluepetro-50);
   --button-link-text-color-hover: var(--color-ember-100);
   --button-link-text-color-current: var(--color-ember-300);

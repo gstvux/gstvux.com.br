@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMaybeTina } from "@/src/hooks/use-tina-data";
 import type { CasesQuery, CasesQueryVariables } from "@/tina/__generated__/types";
 import { Dialog, DialogPanel, DialogBackdrop } from "@headlessui/react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, Search } from "lucide-react";
 
 type CaseDetailPageClientProps = {
   data: CasesQuery;
@@ -30,7 +30,11 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
   const constraints = (caseData.constraints || []).filter(Boolean) as string[];
   const outcomes = (caseData.outcomes || []).filter(Boolean) as string[];
   const interventions = (caseData.interventions || []).filter(Boolean) as string[];
-  const gallery = (caseData.gallery || []).filter(Boolean) as any[];
+  const baseGallery = (caseData.gallery || []).filter(Boolean) as any[];
+  const gallery = [
+    ...(caseData.thumbnail ? [{ image: caseData.thumbnail, alt: caseData.title, kind: "Capa" }] : []),
+    ...baseGallery
+  ];
 
   // Interações do modal
   const openModal = (idx: number) => setActiveImageIdx(idx);
@@ -55,7 +59,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
       <section className="bg-gradient-default">
         <div className="mx-auto px-6 lg:px-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start pt-12 lg:pt-24 pb-16">
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 order-2 lg:order-1">
             <div className="flex flex-col gap-3">
               {taxonomy.length > 0 && (
                 <div className="flex flex-wrap gap-2">
@@ -102,14 +106,25 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
           </div>
 
           {/* Hero Image (Right Side) */}
-          <div className="w-full lg:sticky lg:top-32">
-            <div className="w-full rounded-2xl overflow-hidden bg-surface-inverse aspect-video lg:aspect-square flex items-center justify-center relative">
+          <div className="w-full lg:sticky lg:top-32 order-1 lg:order-2">
+            <button
+              onClick={() => openModal(0)}
+              className="w-full rounded-2xl bg-surface-inverse aspect-video lg:aspect-square flex items-center justify-center relative group focus:outline-none focus:ring-2 focus:ring-fg-heading"
+              aria-label="Ver imagem da capa ampliada"
+            >
               {caseData.thumbnail ? (
-                <img src={caseData.thumbnail} alt={caseData.title} className="absolute inset-0 w-full h-full object-contain" />
+                <img src={caseData.thumbnail} alt={caseData.title} className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               ) : (
                 <div className="w-full h-full bg-slate-800" />
               )}
-            </div>
+
+              {/* Hover Overlay with Magnifying Glass */}
+              <div className="absolute inset-0 transition-all duration-300 flex items-center justify-center">
+                <div className="size-12 rounded-full bg-cta-bg text-cta-fg flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                  <Search size={24} />
+                </div>
+              </div>
+            </button>
           </div>
 
         </div>
@@ -189,7 +204,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
               <button
                 key={idx}
                 onClick={() => openModal(idx)}
-                className="w-full aspect-square rounded-2xl overflow-hidden bg-surface-inverse shadow-sm group relative focus:outline-none focus:ring-2 focus:ring-fg-heading"
+                className="w-full aspect-square rounded-2xl bg-surface-inverse shadow-sm group relative focus:outline-none focus:ring-2 focus:ring-fg-heading"
                 aria-label={`Ver imagem ${idx + 1} ampliada`}
               >
                 {img.image ? (
@@ -199,7 +214,11 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
                     {img.kind || "Image Placeholder"}
                   </div>
                 )}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                <div className="absolute inset-0 transition-all duration-300 flex items-center justify-center">
+                  <div className="size-12 rounded-full bg-cta-bg text-cta-fg flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                    <Search size={24} />
+                  </div>
+                </div>
 
 
               </button>

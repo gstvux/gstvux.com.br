@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
 import {
   getButtonClassName,
   type ButtonAppearance,
@@ -7,7 +7,7 @@ import {
   cx,
 } from "./button-styles";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   appearance?: ButtonAppearance;
   size?: ButtonSize;
   leadingIcon?: ReactNode;
@@ -17,20 +17,23 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   href?: string;
 };
 
-export function Button({
-  type = "button",
-  appearance = "primary",
-  size = "md",
-  leadingIcon,
-  trailingIcon,
-  iconOnly = false,
-  isLoading = false,
-  className,
-  children,
-  disabled,
-  href,
-  ...props
-}: ButtonProps) {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  {
+    type = "button",
+    appearance = "primary",
+    size = "md",
+    leadingIcon,
+    trailingIcon,
+    iconOnly = false,
+    isLoading = false,
+    className,
+    children,
+    disabled,
+    href,
+    ...props
+  },
+  ref
+) {
   const isDisabled = disabled || isLoading;
 
   const content = (
@@ -82,7 +85,7 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} {...commonProps} {...(props as any)}>
+      <Link href={href} ref={ref as any} {...commonProps} {...(props as any)}>
         {content}
       </Link>
     );
@@ -90,6 +93,7 @@ export function Button({
 
   return (
     <button
+      ref={ref}
       type={type}
       disabled={isDisabled}
       aria-busy={isLoading || undefined}
@@ -99,4 +103,4 @@ export function Button({
       {content}
     </button>
   );
-}
+});
