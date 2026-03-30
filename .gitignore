@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /out/
+/dist/
 
 # production
 /build
@@ -62,3 +63,8 @@ node_modules
 secrets/
 *.pem
 *.key
+*.p12
+.env*.local
+
+*.tar.gz
+*.tgz

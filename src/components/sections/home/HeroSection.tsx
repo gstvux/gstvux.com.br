@@ -107,6 +107,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
           <div className="flex flex-col gap-4 lg:flex-row">
             {hero.primaryCtaLabel && hero.primaryCtaHref && (
               <ButtonLink
+                id="hero-primary-cta"
+                data-analytics="hero-primary-cta"
                 href={hero.primaryCtaHref}
                 appearance="primary"
                 {...getIconProps(hero.primaryCtaSvg, hero.primaryCtaIconPosition)}
@@ -119,6 +121,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
               <div className="flex flex-col gap-1">
 
                 <ButtonLink
+                  id="hero-cv-download"
+                  data-analytics="hero-cv-download"
                   href={cvData?.href || hero.secondaryCtaHref}
                   appearance="secondary"
                   download={cvData?.href ? cvData.href.split('/').pop() : true}
@@ -142,6 +146,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
 
             {hero.whatsappLabel && hero.whatsappHref && (
               <ButtonLink
+                id="hero-whatsapp"
+                data-analytics="hero-whatsapp"
                 href={hero.whatsappHref}
                 appearance="secondary"
                 external
@@ -162,6 +168,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
                 <div className="flex gap-2">
                   {contactBar?.email && (
                     <a
+                      id="hero-email"
+                      data-analytics="hero-email"
                       href={`mailto:${contactBar.email}`}
                       className="underline underline-offset-4"
                     >
@@ -170,6 +178,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
                   )}
                   {contactBar?.linkedinHref && (
                     <a
+                      id="hero-linkedin"
+                      data-analytics="hero-linkedin"
                       href={contactBar.linkedinHref}
                       target="_blank"
                       rel="noopener noreferrer"

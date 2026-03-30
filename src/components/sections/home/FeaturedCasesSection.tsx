@@ -44,7 +44,12 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
               const caseData = item.case as any;
               return (
                 <article key={`${caseData.slug}-${index}`} className="group flex flex-1 flex-col gap-4">
-                  <Link href={`/cases/${caseData.slug}`} className="relative block w-full aspect-4/3 rounded-2xl bg-surface-inverse" title="Explorar solução">
+                  <Link
+                    id={`featured-case-thumb-${index + 1}`}
+                    data-analytics="featured-case-thumbnail"
+                    href={`/cases/${caseData.slug}`}
+                    className="relative block w-full aspect-4/3 rounded-2xl bg-surface-inverse"
+                    title="Explorar solução">
                     {caseData.thumbnail && (
                       <img
                         src={caseData.thumbnail}
@@ -56,7 +61,11 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
 
                   <div className="flex flex-col gap-1 mt-2">
                     <h3 className="font-primary text-fg-heading text-size-title-sm font-bold leading-title">
-                      <Link href={`/cases/${caseData.slug}`} className="hover:underline focus:outline-none">
+                      <Link
+                        id={`featured-case-title-${index + 1}`}
+                        data-analytics="featured-case-title"
+                        href={`/cases/${caseData.slug}`}
+                        className="hover:underline focus:outline-none">
                         {caseData.title}
                       </Link>
                     </h3>
@@ -87,7 +96,11 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
 
         {overview?.cta?.label && overview?.cta?.link && (
           <div className="mt-12">
-            <Button href={overview.cta.link} size="lg">
+            <Button
+              href={overview.cta.link}
+              id="featured-cases-section-cta"
+              data-analytics="featured-cases-section-cta"
+              size="lg">
               {overview.cta.label}
             </Button>
           </div>

@@ -3,6 +3,7 @@ import { Sofia_Sans, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const runtime = "nodejs";
 
@@ -37,6 +38,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html
       lang="pt-BR"
@@ -51,13 +55,15 @@ export default function RootLayout({
               try {
                 if (localStorage.getItem('theme') === 'light') {
                   document.documentElement.classList.add('light');
-                }
-              } catch (_) {}
-            `,
+                  }
+                  } catch (_) {}
+                  `,
           }}
         />
       </head>
       <body className="antialiased bg-page text-fg-body">
+        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+
         <a href="#main" className="skip-link">
           Pular para o conteúdo
         </a>
