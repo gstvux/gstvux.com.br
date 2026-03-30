@@ -1,3 +1,25 @@
 #!/usr/bin/env bash
-set -e
+
+# Detect secrets
+echo "🔍 Running gitleaks detection..."
 gitleaks detect --source . --no-banner
+
+# Check exit code
+if [ $? -ne 0 ]; then
+  echo "❌ Secrets detected! Please remove them before committing."
+  exit 1
+fi
+
+# Run build
+echo ""
+echo "📦 Running build..."
+npm run build
+
+# Check build exit code
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed! Please fix the errors before committing."
+  exit 1
+fi
+
+echo ""
+echo "✅ All checks passed!"

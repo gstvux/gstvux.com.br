@@ -62,7 +62,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-page text-fg-body">
-        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+        {gtmId ? <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} /> : null}
 
         <a href="#main" className="skip-link">
           Pular para o conteúdo
