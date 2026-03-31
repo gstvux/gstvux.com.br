@@ -201,29 +201,30 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-2 gap-4 auto-rows-max lg:sticky lg:top-32">
-            {gallery.length > 0 ? gallery.map((img, idx) => (
-              <button
-                key={idx}
-                onClick={() => openModal(idx)}
-                className="w-full aspect-square rounded-2xl bg-surface-inverse shadow-sm group relative focus:outline-none focus:ring-2 focus:ring-fg-heading"
-                aria-label={`Ver imagem ${idx + 1} ampliada`}
-              >
-                {img.image ? (
-                  <img src={img.image} alt={img.alt || `Gallery Image ${idx + 1}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                ) : (
-                  <div className="absolute inset-0 w-full h-full bg-slate-800/40 flex items-center justify-center text-fg-body-dimmed text-[10px] text-center uppercase tracking-widest font-utils p-2">
-                    {img.kind || "Image Placeholder"}
+            {baseGallery.length > 0 ? baseGallery.map((img, idx) => {
+              const modalIdx = caseData.thumbnail ? idx + 1 : idx;
+              return (
+                <button
+                  key={idx}
+                  onClick={() => openModal(modalIdx)}
+                  className="w-full aspect-square rounded-2xl bg-surface-inverse shadow-sm group relative focus:outline-none focus:ring-2 focus:ring-fg-heading"
+                  aria-label={`Ver imagem ${idx + 1} ampliada`}
+                >
+                  {img.image ? (
+                    <img src={img.image} alt={img.alt || `Gallery Image ${idx + 1}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  ) : (
+                    <div className="absolute inset-0 w-full h-full bg-slate-800/40 flex items-center justify-center text-fg-body-dimmed text-[10px] text-center uppercase tracking-widest font-utils p-2">
+                      {img.kind || "Image Placeholder"}
+                    </div>
+                  )}
+                  <div className="absolute inset-0 transition-all duration-300 flex items-center justify-center">
+                    <div className="size-12 rounded-full bg-cta-bg text-cta-fg flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                      <Search size={24} />
+                    </div>
                   </div>
-                )}
-                <div className="absolute inset-0 transition-all duration-300 flex items-center justify-center">
-                  <div className="size-12 rounded-full bg-cta-bg text-cta-fg flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                    <Search size={24} />
-                  </div>
-                </div>
-
-
-              </button>
-            )) : (
+                </button>
+              );
+            }) : (
               // Mock Gallery for viewing layout while it's empty
               Array.from({ length: 4 }).map((_, idx) => (
                 <div key={idx} className="w-full aspect-square rounded-2xl overflow-hidden bg-surface-inverse shadow-sm" />

@@ -57,7 +57,9 @@
     {
       "case": "src/content/cases/Reestruturao-do-site-institucional-da-Comunicao-Integrada.md"
     },
-    {},
+    {
+      "case": "src/content/cases/Cisco-souconnect--Hub-de-enablement-para-canal-indireto.md"
+    },
     {}
   ],
   "process": {
