@@ -70,7 +70,7 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
                       </Link>
                     </h3>
                     {caseData.context && (
-                      <p className="text-fg-body line-clamp-2 leading-body text-size-body-sm">
+                      <p className="text-fg-body line-clamp-2 leading-body text-size-body">
                         {caseData.context}
                       </p>
                     )}
