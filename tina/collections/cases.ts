@@ -8,6 +8,15 @@ export const casesCollection: Collection = {
   format: "md",
   ui: {
     router: ({ document }) => `/cases/${document._sys.filename}`,
+    beforeSubmit: async ({ values }: { values: any }) => {
+      return {
+        ...values,
+        gallery: (values.gallery as any[])?.map((item: any) => ({
+          ...item,
+          embed: item.kind === "embed" ? item.embed : "",
+        })),
+      };
+    },
   },
   fields: [
     {
@@ -143,7 +152,31 @@ export const casesCollection: Collection = {
       label: "Gallery",
       name: "gallery",
       list: true,
+      ui: {
+        itemProps: (item) => {
+          const label = item?.kind ? (item.alt ? `${item.kind}: ${item.alt}` : item.kind) : 'Gallery Item';
+          return { label };
+        },
+      },
       fields: [
+        {
+          type: "string",
+          label: "Kind",
+          name: "kind",
+          options: ["screenshot", "mockup", "before-after", "deliverable", "process", "evidence", "embed"],
+        },
+        {
+          type: "string",
+          label: "Embed Snippet",
+          name: "embed",
+          ui: {
+            component: "textarea",
+            // @ts-ignore
+            hidden: (props: any) => {
+              return props?.kind !== "embed";
+            },
+          } as any,
+        },
         {
           type: "image",
           label: "Image",
@@ -159,12 +192,6 @@ export const casesCollection: Collection = {
           label: "Caption",
           name: "caption",
           ui: { component: "textarea" },
-        },
-        {
-          type: "string",
-          label: "Kind",
-          name: "kind",
-          options: ["screenshot", "mockup", "before-after", "deliverable", "process", "evidence"],
         },
       ],
     },

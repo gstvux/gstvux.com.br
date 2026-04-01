@@ -40,6 +40,13 @@ interventions:
   - 'Intermediação técnica e alinhamento de requisitos entre Marketing, Design e Engenharia'
   - Coordenação de estratégia de Media Display e implementação de Tags de Performance
 gallery:
-  - image: /images/cases/vmware-vcpp/mockup-mobile.png
+  - kind: embed
+    embed: '<iframe width="768" height="496" src="https://miro.com/app/live-embed/o9J_lsgH5PA=/?focusWidget=3458764666073160251&embedMode=view_only_without_ui&embedId=999738027851" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>'
+    image: /images/cases/vmware-vcpp/Jornada.png
+    alt: Jornada do parceiro
+  - kind: mockup
+    embed: ''
+    image: /images/cases/vmware-vcpp/mockup-mobile.png
+    alt: Mobile UI
 ---
 

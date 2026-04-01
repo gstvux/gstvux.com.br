@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMaybeTina } from "@/src/hooks/use-tina-data";
 import type { CasesQuery, CasesQueryVariables } from "@/tina/__generated__/types";
 import { Dialog, DialogPanel, DialogBackdrop } from "@headlessui/react";
-import { ChevronLeft, ChevronRight, X, Search } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, Search, Code } from "lucide-react";
 
 type CaseDetailPageClientProps = {
   data: CasesQuery;
@@ -207,11 +207,18 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
                 <button
                   key={idx}
                   onClick={() => openModal(modalIdx)}
-                  className="w-full aspect-square rounded-2xl bg-surface-inverse shadow-sm group relative focus:outline-none focus:ring-2 focus:ring-fg-heading"
-                  aria-label={`Ver imagem ${idx + 1} ampliada`}
+                  className="w-full aspect-square rounded-2xl bg-surface-inverse shadow-sm group relative focus:outline-none focus:ring-2 focus:ring-fg-heading overflow-hidden"
+                  aria-label={`Ver ${img.kind || 'imagem'} ${idx + 1} ampliada`}
                 >
                   {img.image ? (
                     <img src={img.image} alt={img.alt || `Gallery Image ${idx + 1}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  ) : img.kind === 'embed' ? (
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-surface-inverse/20 to-surface-inverse/5 backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center transition-all duration-300 group-hover:bg-surface-inverse/10">
+                      <Code size={24} className="text-fg-body-subtle mb-3 opacity-70" />
+                      <span className="text-[10px] font-utils text-fg-body-subtle uppercase tracking-[0.15em] leading-tight">
+                        {img.kind}{img.alt ? `: ${img.alt}` : ''}
+                      </span>
+                    </div>
                   ) : (
                     <div className="absolute inset-0 w-full h-full bg-slate-800/40 flex items-center justify-center text-fg-body-dimmed text-[10px] text-center uppercase tracking-widest font-utils p-2">
                       {img.kind || "Image Placeholder"}
@@ -273,10 +280,15 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
               </>
             )}
 
-            {/* Render ACTIVE image */}
+            {/* Render ACTIVE image or embed */}
             {activeImageIdx !== null && gallery[activeImageIdx] && (
-              <div className="relative w-full h-full flex flex-col items-center justify-center p-12">
-                {gallery[activeImageIdx].image ? (
+              <div className="relative w-full h-full flex flex-col items-center justify-center p-4 md:p-12">
+                {gallery[activeImageIdx].kind === 'embed' && gallery[activeImageIdx].embed ? (
+                  <div 
+                    className="w-full h-full max-w-5xl max-h-[80vh] flex items-center justify-center bg-black/20 rounded-xl overflow-hidden shadow-2xl [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:border-none"
+                    dangerouslySetInnerHTML={{ __html: gallery[activeImageIdx].embed }}
+                  />
+                ) : gallery[activeImageIdx].image ? (
                   <img
                     src={gallery[activeImageIdx].image}
                     alt={gallery[activeImageIdx].alt || "Galeria Expandida"}
@@ -289,9 +301,10 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
                 )}
 
 
-                {(gallery[activeImageIdx].caption || gallery[activeImageIdx].kind) && (
+                {(gallery[activeImageIdx].caption || gallery[activeImageIdx].kind || gallery[activeImageIdx].alt) && (
                   <p className="mt-4 text-fg-body-dimmed text-sm text-center">
-                    {gallery[activeImageIdx].caption || gallery[activeImageIdx].kind}
+                    {gallery[activeImageIdx].caption || 
+                      (gallery[activeImageIdx].kind ? `${gallery[activeImageIdx].kind}${gallery[activeImageIdx].alt ? `: ${gallery[activeImageIdx].alt}` : ''}` : gallery[activeImageIdx].alt)}
                   </p>
                 )}
               </div>

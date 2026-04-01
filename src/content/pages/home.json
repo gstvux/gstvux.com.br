@@ -60,7 +60,9 @@
     {
       "case": "src/content/cases/Cisco-souconnect--Hub-de-enablement-para-canal-indireto.md"
     },
-    {}
+    {
+      "case": "src/content/cases/Ecossistema-de-Informao-VMWare-VCPP-Escalabilidade-e-Autoridade-para-Parceiros.md"
+    }
   ],
   "process": {
     "title": "Processo & ferramentas",
