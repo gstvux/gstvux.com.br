@@ -213,7 +213,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
                   {img.image ? (
                     <img src={img.image} alt={img.alt || `Gallery Image ${idx + 1}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   ) : img.kind === 'embed' ? (
-                    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-surface-inverse/20 to-surface-inverse/5 backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center transition-all duration-300 group-hover:bg-surface-inverse/10">
+                    <div className="absolute inset-0 w-full h-full bg-linear-to-br from-surface-inverse/20 to-surface-inverse/5 backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center transition-all duration-300 group-hover:bg-surface-inverse/10">
                       <Code size={24} className="text-fg-body-subtle mb-3 opacity-70" />
                       <span className="text-[10px] font-utils text-fg-body-subtle uppercase tracking-[0.15em] leading-tight">
                         {img.kind}{img.alt ? `: ${img.alt}` : ''}
@@ -284,7 +284,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
             {activeImageIdx !== null && gallery[activeImageIdx] && (
               <div className="relative w-full h-full flex flex-col items-center justify-center p-4 md:p-12">
                 {gallery[activeImageIdx].kind === 'embed' && gallery[activeImageIdx].embed ? (
-                  <div 
+                  <div
                     className="w-full h-full max-w-5xl max-h-[80vh] flex items-center justify-center bg-black/20 rounded-xl overflow-hidden shadow-2xl [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:border-none"
                     dangerouslySetInnerHTML={{ __html: gallery[activeImageIdx].embed }}
                   />
@@ -303,7 +303,7 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
 
                 {(gallery[activeImageIdx].caption || gallery[activeImageIdx].kind || gallery[activeImageIdx].alt) && (
                   <p className="mt-4 text-fg-body-dimmed text-sm text-center">
-                    {gallery[activeImageIdx].caption || 
+                    {gallery[activeImageIdx].caption ||
                       (gallery[activeImageIdx].kind ? `${gallery[activeImageIdx].kind}${gallery[activeImageIdx].alt ? `: ${gallery[activeImageIdx].alt}` : ''}` : gallery[activeImageIdx].alt)}
                   </p>
                 )}
