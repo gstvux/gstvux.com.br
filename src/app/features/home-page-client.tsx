@@ -8,7 +8,7 @@ import type {
 
 import { HeroSection } from "@/src/components/sections/home/HeroSection";
 import { ProfileSection } from "@/src/components/sections/home/ProfileSection";
-import { FeaturedCasesSection } from "@/src/components/sections/home/FeaturedCasesSection";
+import { FeaturedCasesSection } from "@/src/components/sections/cases/FeaturedCasesSection";
 import { ProcessSection } from "@/src/components/sections/home/ProcessSection";
 import { ContactSection } from "@/src/components/sections/home/ContactSection";
 
