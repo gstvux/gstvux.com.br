@@ -11,11 +11,11 @@ role:
   - Front-end
   - Design/Dev Bridge
 taxonomy:
-  - Information architecture
-  - Content structure
-  - Static site
-  - Partner enablement
-  - Conversion journey
+  - Client-led Discovery
+  - Information Architecture
+  - Content Structure
+  - Static Site
+  - Conversion Journey
 responsibilities:
   - Arquitetura da informação
   - UI design
@@ -47,11 +47,15 @@ interventions:
   - Coordenação de ativos visuais de apoio ao conteúdo
   - Consolidação de uma base estática para escala e publicação
 gallery:
-  - image: /images/cases/cisco-souconnect/Jornada.png
+  - embed: ''
+    image: /images/cases/cisco-souconnect/Jornada.png
     caption: Jornada do Parceiro
-  - image: /images/cases/cisco-souconnect/Sitemap.png
+  - kind: embed
+    embed: '<iframe title="Octopus.do visual sitemap" width="800" height="450" src="https://share.octopus.do/embed/9fd7doouqqm"></iframe>'
+    image: /images/cases/cisco-souconnect/Sitemap.png
     caption: Sitemap
-  - image: /images/cases/cisco-souconnect/mockup-mobile.png
+  - embed: ''
+    image: /images/cases/cisco-souconnect/mockup-mobile.png
     caption: Mockup Mobile
 ---
 
