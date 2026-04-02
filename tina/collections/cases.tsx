@@ -79,7 +79,7 @@ const TaxonomyListField = (props: any) => {
     fetchExistingTaxonomies();
   }, [cms]);
 
-  const currentTags = Array.isArray(props.input.value) ? props.input.value : [];
+  const currentTags = Array.isArray(props.input?.value) ? props.input.value : [];
 
   const addTag = (tag: string) => {
     const cleanedTag = tag.trim();
@@ -188,14 +188,19 @@ export const casesCollection: Collection = {
           .replace(/[\s_]+/g, "-")
           .replace(/^-+|-+$/g, "");
 
-      return {
+      const result = {
         ...values,
-        slug: values.title ? slugify(values.title) : values.slug,
-        gallery: (values.gallery as any[])?.map((item: any) => ({
-          ...item,
-          embed: item.kind === "embed" ? (item.embed || "") : "",
-        })),
+        slug: values.title ? slugify(values.title) : (values.slug || ""),
       };
+
+      if (Array.isArray(values.gallery)) {
+        result.gallery = values.gallery.map((item: any) => ({
+          ...item,
+          embed: item?.kind === "embed" ? (item?.embed || "") : "",
+        }));
+      }
+
+      return result;
     },
   },
   fields: [
