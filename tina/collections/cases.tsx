@@ -166,9 +166,31 @@ export const casesCollection: Collection = {
   format: "md",
   ui: {
     router: ({ document }) => `/cases/${document._sys.filename}`,
+    filename: {
+      readonly: true,
+      slugify: (values) => {
+        return values.title
+          ?.toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^\w\s-]/g, "")
+          .replace(/[\s_]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      },
+    },
     beforeSubmit: async ({ values }: { values: any }) => {
+      const slugify = (text: string) => 
+        text
+          ?.toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^\w\s-]/g, "")
+          .replace(/[\s_]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+
       return {
         ...values,
+        slug: values.title ? slugify(values.title) : values.slug,
         gallery: (values.gallery as any[])?.map((item: any) => ({
           ...item,
           embed: item.kind === "embed" ? (item.embed || "") : "",

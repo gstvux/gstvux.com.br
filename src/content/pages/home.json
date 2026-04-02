@@ -55,13 +55,13 @@
   },
   "featured_cases": [
     {
-      "case": "src/content/cases/Reestruturao-do-site-institucional-da-Comunicao-Integrada.md"
+      "case": "src/content/cases/reestruturacao-do-site-institucional-da-comunicacao-integrada.md"
     },
     {
-      "case": "src/content/cases/Cisco-souconnect--Hub-de-enablement-para-canal-indireto.md"
+      "case": "src/content/cases/cisco-sou-connect-hub-de-enablement-para-canal-indireto.md"
     },
     {
-      "case": "src/content/cases/Ecossistema-de-Informao-VMWare-VCPP-Escalabilidade-e-Autoridade-para-Parceiros.md"
+      "case": "src/content/cases/ecossistema-de-informacao-vmware-vcpp-escalabilidade-e-autoridade-para-parceiros.md"
     }
   ],
   "process": {
