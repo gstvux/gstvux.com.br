@@ -10,7 +10,7 @@ role:
 taxonomy:
   - Information Architecture
   - UI Design
-  - Font-End
+  - Front-End
 responsibilities:
   - UI Design
   - Arquitetura da informação
