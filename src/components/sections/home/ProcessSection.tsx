@@ -111,7 +111,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
               {duplicatedBadges.map((badge, j) => {
                 if (!badge) return null;
                 return (
-                  <div key={j} className="flex gap-2 items-center justify-center px-4 py-1.5 rounded-full transition-colors duration-200 border border-fg-section-separator bg-page-card/50 backdrop-blur-sm shrink-0 flex-nowrap">
+                  <div key={j} className="flex gap-2 items-center justify-center px-2 py-1.5 rounded-full transition-colors duration-200 border border-fg-section-separator bg-page-card/50 backdrop-blur-sm shrink-0 flex-nowrap">
                     <div className="flex items-center justify-center w-4 h-4 shrink-0 overflow-clip">
                       {badge.icon ? (
                         <CmsIcon svg={badge.icon} className="w-4 h-4 text-badge-fg" />
@@ -121,7 +121,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
                         </svg>
                       )}
                     </div>
-                    <p className="font-utils text-size-body-sm leading-normal text-badge-fg whitespace-nowrap">
+                    <p className="font-utils text-size-body-sm leading-none text-badge-fg whitespace-nowrap">
                       {badge.label}
                     </p>
                   </div>

@@ -95,7 +95,7 @@ export function CasesListSection({ title, cases }: Props) {
                   <button
                     key={tax}
                     onClick={() => handleTaxonomyChange(tax)}
-                    className={`px-3 py-2 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
+                    className={`px-2 py-1.5 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
                       ? "border-badge-border text-fg-heading bg-transparent font-bold"
                       : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
                       }`}
@@ -109,7 +109,7 @@ export function CasesListSection({ title, cases }: Props) {
                   <button
                     key={tax}
                     onClick={() => handleTaxonomyChange(tax)}
-                    className={`px-3 py-2 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
+                    className={`px-2 py-1.5 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
                       ? "border-badge-border text-fg-heading bg-transparent font-bold"
                       : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
                       }`}
@@ -126,7 +126,7 @@ export function CasesListSection({ title, cases }: Props) {
                 <button
                   key={tax}
                   onClick={() => handleTaxonomyChange(tax)}
-                  className={`px-3 py-2 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
+                  className={`px-2 py-1.5 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
                     ? "border-badge-border text-fg-heading bg-transparent font-bold"
                     : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
                     }`}
