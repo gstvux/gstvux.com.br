@@ -74,7 +74,7 @@ export function CasesListSection({ title, cases }: Props) {
   return (
     <section className="w-full bg-page py-16 lg:py-24">
       <div className="mx-auto px-6 lg:px-10 w-full max-w-7xl flex flex-col items-start gap-6">
-        <h1 className="font-primary text-fg-heading text-size-title font-bold tracking-tight">
+        <h1 className="font-primary text-fg-heading text-size-title font-bold tracking-tight leading-title">
           {title}
         </h1>
 
