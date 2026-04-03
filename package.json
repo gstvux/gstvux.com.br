@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tsx scripts/cv-watcher.ts & tinacms dev -c \"next dev\"",
+    "dev": "tsx scripts/cv-watcher.ts & tinacms dev -c \"next dev --hostname 0.0.0.0\"",
+    "proxy:tina": "socat TCP-LISTEN:4001,fork,reuseaddr TCP:127.0.0.1:4001",
+    "fulldev": "socat TCP-LISTEN:4001,fork,reuseaddr TCP:127.0.0.1:4001 & pnpm dev",
     "dev:next": "next dev",
     "build": "tinacms dev -c \"sleep 10 && NODE_ENV=production next build\" && rm -rf out/admin",
     "start": "next start",

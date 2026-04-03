@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { CaseCard } from "./CaseCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -24,6 +24,27 @@ export function CasesListSection({ title, cases }: Props) {
 
   const [activeTaxonomy, setActiveTaxonomy] = useState<string>("Todos");
   const [currentPage, setCurrentPage] = useState(1);
+  const [hasVisited, setHasVisited] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Pequeno delay para garantir que o usuário viu o componente antes de animar
+          setTimeout(() => setHasVisited(true), 400);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (scrollContainerRef.current) {
+      observer.observe(scrollContainerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleTaxonomyChange = (tax: string) => {
     setActiveTaxonomy(tax);
@@ -59,19 +80,62 @@ export function CasesListSection({ title, cases }: Props) {
 
 
         {/* Taxonomies Filter */}
-        <div className="w-full flex justify-start items-center gap-2 flex-wrap">
-          {taxonomies.map((tax) => (
-            <button
-              key={tax}
-              onClick={() => handleTaxonomyChange(tax)}
-              className={`px-3 py-1 rounded-full text-size-body font-utils transition-colors duration-200 border ${activeTaxonomy === tax
-                ? "border-badge-border text-fg-heading bg-transparent"
-                : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
+        <div className="w-full relative">
+          <div
+            ref={scrollContainerRef}
+            className="w-auto lg:w-full overflow-x-auto scrollbar-hide mask-[linear-gradient(to_right,transparent_0,black_32px,black_calc(100%-32px),transparent_100%)] lg:mask-none lg:overflow-visible -mx-6 px-6 lg:mx-0 lg:px-0"
+          >
+            {/* Mobile/Tablet: Bento-style double row scroller */}
+            <div
+              className={`flex flex-col gap-2 py-4 lg:hidden w-max transition-transform duration-500 ${hasVisited ? "animate-scroll-hint" : ""
                 }`}
             >
-              {tax}
-            </button>
-          ))}
+              <div className="flex gap-2 items-center">
+                {taxonomies.slice(0, Math.ceil(taxonomies.length / 2)).map((tax) => (
+                  <button
+                    key={tax}
+                    onClick={() => handleTaxonomyChange(tax)}
+                    className={`px-3 py-2 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
+                      ? "border-badge-border text-fg-heading bg-transparent font-bold"
+                      : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
+                      }`}
+                  >
+                    {tax}
+                  </button>
+                ))}
+              </div>
+              <div className="flex gap-2 items-start">
+                {taxonomies.slice(Math.ceil(taxonomies.length / 2)).map((tax) => (
+                  <button
+                    key={tax}
+                    onClick={() => handleTaxonomyChange(tax)}
+                    className={`px-3 py-2 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
+                      ? "border-badge-border text-fg-heading bg-transparent font-bold"
+                      : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
+                      }`}
+                  >
+                    {tax}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop: Standard Flex Wrap */}
+            <div className="hidden lg:flex flex-wrap items-center gap-2 w-full transition-colors duration-200">
+              {taxonomies.map((tax) => (
+                <button
+                  key={tax}
+                  onClick={() => handleTaxonomyChange(tax)}
+                  className={`px-3 py-2 lowercase rounded-full text-size-body-sm font-utils transition-colors duration-200 border leading-none whitespace-nowrap w-auto ${activeTaxonomy === tax
+                    ? "border-badge-border text-fg-heading bg-transparent font-bold"
+                    : "border-fg-section-separator text-fg-body hover:border-badge-border hover:text-fg-heading bg-transparent"
+                    }`}
+                >
+                  {tax}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="text-fg-body font-utils text-size-body-xs tracking-wider mb-8">
@@ -100,7 +164,7 @@ export function CasesListSection({ title, cases }: Props) {
                   <div className="flex flex-col gap-3 mt-2">
                     {/* Skeleton: Título */}
                     <div className="h-6 w-2/3 bg-fg-section-separator/50 rounded-md animate-pulse" />
-                    
+
                     {/* Skeleton: Parágrafo (2 linhas) */}
                     <div className="flex flex-col gap-1.5">
                       <div className="h-4 w-full bg-fg-section-separator/30 rounded animate-pulse delay-75" />
