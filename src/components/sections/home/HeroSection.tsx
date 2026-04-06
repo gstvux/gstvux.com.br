@@ -38,9 +38,6 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ hero, cvData }: HeroSectionProps) {
-  const bullets = hero.bullets?.filter(
-    (bullet: string | null): bullet is string => Boolean(bullet)
-  );
 
   const contactBar = hero.contactBar;
 
@@ -94,14 +91,6 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
 
           <div className="flex flex-col gap-4 lg:flex-col lg:gap-4">
             {hero.description && <p>{hero.description}</p>}
-            {hero.connector && <p className="text-size-body-xs font-secondary text-fg-body-subtle tracking-wider font-bold">{hero.connector}</p>}
-            {bullets?.length ? (
-              <ul className="list-none lg:flex lg:flex-col lg:gap-2">
-                {bullets.map((bullet: string, index: number) => (
-                  <li key={index} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-bullet-fg">{bullet}</li>
-                ))}
-              </ul>
-            ) : null}
           </div>
 
           <div className="flex flex-col gap-4 lg:flex-row">

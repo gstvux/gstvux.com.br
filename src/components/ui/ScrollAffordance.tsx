@@ -82,7 +82,7 @@ export function ScrollAffordance() {
     >
       <button
         onClick={handleScrollDown}
-        className="bg-page flex flex-col items-center gap-2 text-fg-heading cursor-pointer focus-visible:outline-2 focus-visible:outline-blue-500 p-4 -m-4 rounded-xl transition-opacity hover:opacity-80"
+        className="bg-page/40 backdrop-blur-sm flex flex-col items-center gap-2 text-fg-heading cursor-pointer focus-visible:outline-2 focus-visible:outline-blue-500 p-4 -m-4 rounded-xl transition-opacity hover:opacity-80"
         aria-label="Rolar página para baixo"
         tabIndex={isVisible ? 0 : -1}
       >

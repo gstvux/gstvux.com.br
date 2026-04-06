@@ -102,17 +102,6 @@ export const pageCollection: Collection = {
             },
             {
               type: "string",
-              label: "Connector",
-              name: "connector"
-            },
-            {
-              type: "string",
-              label: "Bullets",
-              name: "bullets",
-              list: true,
-            },
-            {
-              type: "string",
               label: "Primary CTA Label",
               name: "primaryCtaLabel",
             },
@@ -228,6 +217,17 @@ export const pageCollection: Collection = {
               ui: {
                 component: "textarea",
               },
+            },
+            {
+              type: "string",
+              label: "Connector",
+              name: "connector"
+            },
+            {
+              type: "string",
+              label: "Bullets",
+              name: "bullets",
+              list: true,
             },
           ],
         },

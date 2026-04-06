@@ -46,6 +46,8 @@ export default function HomePageClient(props: HomePageClientProps) {
       kicker: home.profile.kicker ?? undefined,
       headline: home.profile.headline ?? undefined,
       body: home.profile.body ?? undefined,
+      connector: home.profile.connector ?? undefined,
+      bullets: home.profile.bullets ?? undefined,
     }
     : undefined;
 

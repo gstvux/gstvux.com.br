@@ -8,12 +8,6 @@
     "title": "Gustavo Luciano",
     "subtitle": "UX Designer, Product Designer, UI Engineer",
     "description": "Sou focado em transformar complexidade técnica em experiências intuitivas. Unindo User-Centered Design à visão de engenharia, desenho sistemas que resolvem problemas reais de negócio e facilitam a vida de quem os opera todos os dias.",
-    "connector": "O que eu trago para o jogo:",
-    "bullets": [
-      "Design Centrado no Usuário: Utilizo pesquisa e usabilidade para garantir que a interface simplifique o fluxo de trabalho, reduzindo a carga cognitiva e o erro operacional.",
-      "Sistemas de Design Escaláveis: Estruturo componentes e padrões que mantêm a consistência da marca enquanto aceleram o ritmo de entrega do time de desenvolvimento.",
-      "Ponte entre Design e Engenharia: Minha base em front-end permite criar soluções tecnicamente viáveis e eficientes, eliminando o retrabalho e o atrito no handoff."
-    ],
     "primaryCtaLabel": "Explorar",
     "primaryCtaHref": "/#cases-selecionados",
     "primaryCtaSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.775 8.825C14.475 8.525 14.025 8.525 13.725 8.825L11.55 11V5C11.55 3.35 10.2 2 8.55 2H0.75C0.3 2 0 2.3 0 2.75C0 3.2 0.3 3.5 0.75 3.5H8.55C9.375 3.5 10.05 4.175 10.05 5V11L7.875 8.825C7.575 8.525 7.125 8.525 6.825 8.825C6.525 9.125 6.525 9.575 6.825 9.875L10.275 13.325C10.425 13.475 10.575 13.55 10.8 13.55C11.025 13.55 11.175 13.475 11.325 13.325L14.775 9.875C15.075 9.575 15.075 9.05 14.775 8.825Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
@@ -42,7 +36,13 @@
     "imageAlt": "Foto de perfil do Gustavo Luciano",
     "kicker": "Posicionamento",
     "headline": "Design que respeita o usuário e entende o negócio.",
-    "body": "Acredito que um bom design nasce da empatia com quem usa e da compreensão técnica de como o produto é construído. Com 15 anos de estrada entre design e código, aprendi que a estética deve sempre servir à função.\n\nMeu foco é o mercado B2B e sistemas de alta densidade de informação. Minha missão é traduzir regras de negócio complexas em fluxos de trabalho fluidos, garantindo que a tecnologia seja uma aliada do usuário, e não uma barreira.\n\nAtuo na interseção onde o design encontra a viabilidade técnica, garantindo que o produto final seja tão robusto quanto o seu protótipo."
+    "body": "",
+    "connector": "O que eu trago para o jogo:",
+    "bullets": [
+      "Design Centrado no Usuário: Utilizo pesquisa e usabilidade para garantir que a interface simplifique o fluxo de trabalho, reduzindo a carga cognitiva e o erro operacional.",
+      "Sistemas de Design Escaláveis: Estruturo componentes e padrões que mantêm a consistência da marca enquanto aceleram o ritmo de entrega do time de desenvolvimento.",
+      "Ponte entre Design e Engenharia: Minha base em front-end permite criar soluções tecnicamente viáveis e eficientes, eliminando o retrabalho e o atrito no handoff."
+    ]
   },
   "cases_overview": {
     "title": "Cases",

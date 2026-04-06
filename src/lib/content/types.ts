@@ -12,6 +12,8 @@ export type HomePageData = {
         kicker?: string;
         headline?: string;
         body?: string;
+        connector?: string;
+        bullets?: string[];
     };
     featuredCases?: FeaturedCase[];
     cta?: {
