@@ -10,7 +10,7 @@ role:
 taxonomy:
   - Information Architecture
   - UI Design
-  - Front-end
+  - Front-End
   - Client-led Discovery
 responsibilities:
   - Arquitetura da informação

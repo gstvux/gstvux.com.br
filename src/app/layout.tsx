@@ -6,6 +6,7 @@ import { Footer } from "@/src/components/layout/Footer";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { ScrollAffordance } from "@/src/components/ui/ScrollAffordance";
 import { EndOfPageParty } from "@/src/components/ui/EndOfPageParty";
+import { InspectBanner } from "@/src/components/ui/InspectBanner";
 
 export const runtime = "nodejs";
 
@@ -64,6 +65,8 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-page text-fg-body">
+        {/* Inspect Banner */}
+        <InspectBanner />
         {gtmId ? <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} /> : null}
 
         <a href="#main" className="skip-link">

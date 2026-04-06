@@ -13,6 +13,7 @@ taxonomy:
   - Performance Optimization
   - Design to Code
   - Stakeholder Management
+  - Front-End
 responsibilities:
   - Liderança de Design e Desenvolvimento ponta-a-ponta
   - Arquitetura de Informação e Estratégia de Conteúdo
