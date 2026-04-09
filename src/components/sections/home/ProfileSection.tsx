@@ -40,7 +40,7 @@ export function ProfileSection({ profile }: Props) {
               )}
 
               {profile.headline && (
-                <h2 className="font-primary text-size-title font-normal leading-title text-fg-heading">
+                <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
                   {profile.headline}
                 </h2>
               )}

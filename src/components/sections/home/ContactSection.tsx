@@ -63,7 +63,7 @@ export function ContactSection({ contact }: Props) {
             {contact.bullets && contact.bullets.length > 0 && (
               <ul className="list-none lg:flex lg:flex-col lg:gap-2">
                 {contact.bullets.map((bullet, idx) => (
-                  <li key={idx} className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-amber-500">
+                  <li key={idx} className="text-fg-body relative pl-5 before:content-[''] before:absolute before:left-0 before:top-[0.785em] before:size-2 before:-translate-y-1/2 before:rounded-r-sm before:bg-bullet-fg">
                     {bullet}
                   </li>
                 ))}
