@@ -1,6 +1,6 @@
 ---
-title: Reestruturação do site institucional da Comunicação Integrada
-slug: reestruturacao-do-site-institucional-da-comunicacao-integrada
+title: 'Comunicação Integrada: Reestruturação do site institucional'
+slug: comunicacao-integrada-reestruturacao-do-site-institucional
 thumbnail: /images/cases/comunicacao-integrada/thumbnail.png
 year: '2021'
 client: Comunicação Integrada
@@ -86,20 +86,26 @@ strategy: |-
   - Escalabilidade
   - SEO técnico
 gallery:
-  - image: /images/cases/comunicacao-integrada/moodboard.png
+  - kind: screenshot
+    embed: ''
+    image: /images/cases/comunicacao-integrada/moodboard.png
     caption: Moodboard
-    kind: screenshot
-  - image: /images/cases/comunicacao-integrada/sitemap.png
+  - embed: ''
+    image: /images/cases/comunicacao-integrada/sitemap.png
     caption: Sitemap
-  - image: /images/cases/comunicacao-integrada/wireframe.png
+  - embed: ''
+    image: /images/cases/comunicacao-integrada/wireframe.png
     caption: Wireframe
-  - image: /images/cases/comunicacao-integrada/components.png
+  - kind: screenshot
+    embed: ''
+    image: /images/cases/comunicacao-integrada/components.png
     alt: Components
     caption: Componentes
-    kind: screenshot
-  - image: /images/cases/comunicacao-integrada/mobile.png
+  - embed: ''
+    image: /images/cases/comunicacao-integrada/mobile.png
     caption: Versão Mobile
-  - image: /images/cases/comunicacao-integrada/rank-page-speed.png
+  - embed: ''
+    image: /images/cases/comunicacao-integrada/rank-page-speed.png
     caption: "Rank Page Speed \U0001F7E2aprovado \U0001F44D"
 ---
 
