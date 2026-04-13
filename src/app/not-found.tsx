@@ -16,7 +16,23 @@ export default async function NotFound() {
   }
 
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-20 text-center">
+    // O Next.js injeta automaticamente o RootLayout aqui.
+    // Garantir que não existam tags <html> ou <body> extras que quebrem o DOM do GTM.
+    <div id="not-found-page" className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-20 text-center">
+      {/* Script para persistência de rastreamento 404 no GTM */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: '404_error',
+              page_path: window.location.pathname,
+              page_title: document.title || '404 - Not Found'
+            });
+          `,
+        }}
+      />
+
       <div className="relative mb-8">
         <Image
           className="media-frame__image"

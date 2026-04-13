@@ -21,6 +21,11 @@ export function EndOfPageParty() {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting && !hasFired.current) {
+          // Evita disparar em páginas 404 identificadas pelo ID
+          if (document.getElementById("not-found-page")) {
+            return;
+          }
+
           hasFired.current = true;
           fireConfetti();
           pushAnalytics();
