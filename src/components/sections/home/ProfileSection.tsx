@@ -1,5 +1,6 @@
 import { MediaFrame } from "@/src/components/ui/media/MediaFrame";
 import type { HomePageData } from "@/src/lib/content/types";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 type Props = {
   profile?: HomePageData["profile"] & { imageSrc?: string; imageAlt?: string };
@@ -47,9 +48,9 @@ export function ProfileSection({ profile }: Props) {
             </div>
 
             {profile.body && (
-              <p className="font-secondary leading-normal">
-                {profile.body}
-              </p>
+              <div className="font-secondary leading-normal rich-text-content">
+                <TinaMarkdown content={profile.body} />
+              </div>
             )}
 
             {profile.connector && (

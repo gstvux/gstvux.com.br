@@ -93,12 +93,9 @@ export const pageCollection: Collection = {
               },
             },
             {
-              type: "string",
+              type: "rich-text",
               label: "Description",
               name: "description",
-              ui: {
-                component: "textarea",
-              },
             },
             {
               type: "string",
@@ -211,12 +208,9 @@ export const pageCollection: Collection = {
               name: "headline",
             },
             {
-              type: "string",
+              type: "rich-text",
               label: "Body",
               name: "body",
-              ui: {
-                component: "textarea",
-              },
             },
             {
               type: "string",
@@ -242,12 +236,9 @@ export const pageCollection: Collection = {
               name: "title",
             },
             {
-              type: "string",
+              type: "rich-text",
               label: "Lede",
               name: "lede",
-              ui: {
-                component: "textarea",
-              },
             },
             {
               type: "string",
@@ -303,12 +294,9 @@ export const pageCollection: Collection = {
               name: "title",
             },
             {
-              type: "string",
+              type: "rich-text",
               label: "Description",
               name: "description",
-              ui: {
-                component: "textarea",
-              },
             },
             {
               type: "object",
@@ -328,12 +316,9 @@ export const pageCollection: Collection = {
                   name: "title",
                 },
                 {
-                  type: "string",
+                  type: "rich-text",
                   label: "Description",
                   name: "description",
-                  ui: {
-                    component: "textarea",
-                  },
                 },
               ],
             },
@@ -384,12 +369,9 @@ export const pageCollection: Collection = {
               name: "connector",
             },
             {
-              type: "string",
+              type: "rich-text",
               label: "Body",
               name: "body",
-              ui: {
-                component: "textarea",
-              },
             },
             
             {

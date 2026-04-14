@@ -294,3 +294,65 @@ h3,p,li {
     display: none;
   }
 }
+
+/**
+ * Rich Text Content Styling
+ * Restores semantic styles for content coming from TinaCMS
+ * that are normally reset by Tailwind.
+ */
+.rich-text-content {
+  color: var(--color-fg-body);
+  font-size: var(--text-size-body);
+  line-height: var(--leading-body);
+}
+
+.rich-text-content p {
+  margin-bottom: 1.25rem;
+}
+
+.rich-text-content p:last-child {
+  margin-bottom: 0;
+}
+
+.rich-text-content strong, 
+.rich-text-content b {
+  font-weight: 700;
+  color: var(--color-fg-heading);
+}
+
+.rich-text-content em, 
+.rich-text-content i {
+  font-style: italic;
+}
+
+.rich-text-content ul {
+  list-style-type: disc;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.rich-text-content ol {
+  list-style-type: decimal;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.rich-text-content li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+.rich-text-content li::marker {
+  color: var(--color-bullet-fg);
+}
+
+.rich-text-content a {
+  color: var(--color-bluepetro-500);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.rich-text-content a:hover {
+  color: var(--color-bluepetro-400);
+}

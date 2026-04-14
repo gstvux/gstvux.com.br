@@ -1,4 +1,5 @@
 import { CaseNarrativeData } from "@/src/types/cases";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 interface Props {
   data: CaseNarrativeData;
@@ -11,9 +12,9 @@ export function CaseNarrative({ data }: Props) {
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4">
         <h2 className="font-primary text-fg-heading text-size-title-sm font-bold">Problema</h2>
-        <p className="text-fg-body text-size-body leading-body whitespace-pre-wrap">
-          {problem || "O site apresentava problemas críticos de performance e organização da informação..."}
-        </p>
+        <div className="rich-text-content">
+          <TinaMarkdown content={problem} />
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -29,16 +30,16 @@ export function CaseNarrative({ data }: Props) {
 
       <div className="flex flex-col gap-4">
         <h2 className="font-primary text-fg-heading text-size-title-sm font-bold">Desafio</h2>
-        <p className="text-fg-body text-size-body leading-body whitespace-pre-wrap">
-          {challenge || "Reestruturar um site com conteúdo denso e desorganizado sem comprometer a integridade..."}
-        </p>
+        <div className="rich-text-content">
+          <TinaMarkdown content={challenge} />
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
         <h2 className="font-primary text-fg-heading text-size-title-sm font-bold">Solução</h2>
-        <p className="text-fg-body text-size-body leading-body whitespace-pre-wrap">
-          {solution || "Foi proposta a reconstrução do site utilizando abordagem de entrega estática, aliada a uma nova arquitetura de informação..."}
-        </p>
+        <div className="rich-text-content">
+          <TinaMarkdown content={solution} />
+        </div>
       </div>
 
       {interventions.length > 0 && (

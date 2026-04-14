@@ -21,16 +21,16 @@ responsibilities:
   - Alinhamento com marketing (SEO e tracking)
 stack: 'headless wordpress, react, gatsby'
 status: published
-context: |-
+context: |
   Empresa de consultoria em comunicação com forte dependência de conteúdo editorial como canal de aquisição e autoridade.
   O site existente operava como hub institucional e blog, mas apresentava limitações estruturais que comprometiam sua função estratégica.
-problem: |-
+problem: |
   O produto digital acumulava falhas críticas:
 
-  - Arquitetura da informação desorganizada e ambígua
-  - Baixa performance devido ao acúmulo de plugins no WordPress
-  - Fragilidade de segurança percebida pela cliente
-  - Estrutura de conteúdo que prejudicava SEO e encontrabilidade
+  * Arquitetura da informação desorganizada e ambígua
+  * Baixa performance devido ao acúmulo de plugins no WordPress
+  * Fragilidade de segurança percebida pela cliente
+  * Estrutura de conteúdo que prejudicava SEO e encontrabilidade
 
   Na prática, o site deixava de cumprir seu papel como canal de geração de autoridade e aquisição.
 constraints:
@@ -38,7 +38,7 @@ constraints:
   - 'Grande volume de conteúdo legado, desestruturado'
   - Branding parcialmente definido (sem sistema claro)
   - Cliente com baixa confiança inicial na qualidade da entrega
-challenge: |-
+challenge: |
   O desafio não era apenas redesenhar o site.
 
   Era equilibrar três forças conflitantes:
@@ -48,43 +48,43 @@ challenge: |-
   reconstruir a lógica estrutural do conteúdo sem perder material legado
 
   Além disso, havia um fator crítico:
-  → necessidade de construir confiança no processo de design.
-solution: |-
+  necessidade de construir confiança no processo de design.
+solution: |
   A solução foi conduzida em três frentes integradas:
 
-  1. Reestruturação da informação
-  - Reorganização completa da arquitetura de conteúdo
-  - Definição de navegação orientada à encontrabilidade
-  - Normalização de páginas, categorias e links
-  2. Alinhamento semiótico (confiança do cliente)
-  - Criação de moodboard estratégico
-  - Definição de direção visual baseada no branding existente
-  - Uso da estética como ferramenta de validação e adesão
+  * Reestruturação da informação
+    * Reorganização completa da arquitetura de conteúdo
+    * Definição de navegação orientada à encontrabilidade
+    * Normalização de páginas, categorias e links
+  * Alinhamento semiótico (confiança do cliente)
+    * Criação de moodboard estratégico
+    * Definição de direção visual baseada no branding existente
+    * Uso da estética como ferramenta de validação e adesão
 
-  → Ponto de virada: desbloqueio da colaboração ativa da cliente
+  **Ponto de virada:** desbloqueio da colaboração ativa da cliente
 
-  3. Implementação orientada a sistema
-  - UI estruturada com consistência entre páginas
-  - Front-end estático (Gatsby)
-  - Integração com WordPress como CMS desacoplado
-  - Suporte a SEO e tracking com marketing
+  * Implementação orientada a sistema
+    * UI estruturada com consistência entre páginas
+    * Front-end estático (Gatsby)
+    * Integração com WordPress como CMS desacoplado
+    * Suporte a SEO e tracking com marketing
 outcomes:
   - Melhoria perceptível na organização e clareza do conteúdo
   - Aumento de performance e estabilidade do site
   - Evolução no posicionamento orgânico (SEO) nos meses seguintes
   - Alta aceitação do cliente e feedback positivo recorrente
-strategy: |-
+strategy: |
   Adotar uma arquitetura headless + static site, separando:
 
-  - WordPress → backoffice editorial
-  - Front-end estático → entrega otimizada
+  * WordPress → backoffice editorial
+  * Front-end estático → entrega otimizada
 
   Essa decisão resolveu simultaneamente:
 
-  - Performance
-  - Segurança
-  - Escalabilidade
-  - SEO técnico
+  * Performance
+  * Segurança
+  * Escalabilidade
+  * SEO técnico
 gallery:
   - kind: screenshot
     embed: ''

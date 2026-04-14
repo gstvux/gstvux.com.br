@@ -285,17 +285,15 @@ export const casesCollection: Collection = {
       options: ["draft", "ready", "published", "archived"],
     },
     {
-      type: "string",
+      type: "rich-text",
       label: "Context",
       name: "context",
-      ui: { component: "textarea" },
       required: true,
     },
     {
-      type: "string",
+      type: "rich-text",
       label: "Problem",
       name: "problem",
-      ui: { component: "textarea" },
       required: true,
     },
     {
@@ -305,16 +303,14 @@ export const casesCollection: Collection = {
       list: true,
     },
     {
-      type: "string",
+      type: "rich-text",
       label: "Challenge",
       name: "challenge",
-      ui: { component: "textarea" },
     },
     {
-      type: "string",
+      type: "rich-text",
       label: "Solution",
       name: "solution",
-      ui: { component: "textarea" },
       required: true,
     },
     {
@@ -324,10 +320,9 @@ export const casesCollection: Collection = {
       list: true,
     },
     {
-      type: "string",
+      type: "rich-text",
       label: "Strategy",
       name: "strategy",
-      ui: { component: "textarea" },
     },
     {
       type: "string",

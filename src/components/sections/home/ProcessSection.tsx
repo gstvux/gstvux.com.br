@@ -1,5 +1,6 @@
 import React from "react";
 import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 type ProcessCard = {
   icon?: string | null;
@@ -46,9 +47,9 @@ export function ProcessSection({ process }: ProcessSectionProps) {
             </h2>
           )}
           {process.description && (
-            <p className="font-secondary text-size-body leading-normal text-fg-body">
-              {process.description}
-            </p>
+            <div className="font-secondary text-size-body leading-normal text-fg-body rich-text-content">
+              <TinaMarkdown content={process.description} />
+            </div>
           )}
         </div>
 
@@ -86,9 +87,9 @@ export function ProcessSection({ process }: ProcessSectionProps) {
                     </p>
                   )}
                   {card.description && (
-                    <p className="font-secondary text-size-body text-fg-body tracking-[-0.32px] w-full block">
-                      {card.description}
-                    </p>
+                    <div className="font-secondary text-size-body text-fg-body tracking-[-0.32px] w-full block rich-text-content">
+                      <TinaMarkdown content={card.description} />
+                    </div>
                   )}
                 </div>
               </div>

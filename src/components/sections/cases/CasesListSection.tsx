@@ -12,7 +12,7 @@ type CaseItem = {
   thumbnail: string;
   taxonomy?: string[] | null;
   responsibilities?: string[] | null;
-  context?: string | null;
+  context?: any | null;
 };
 
 type Props = {

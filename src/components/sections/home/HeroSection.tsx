@@ -3,6 +3,7 @@ import { MediaFrame } from "@/src/components/ui/media/MediaFrame";
 import type { PageQuery } from "@/tina/__generated__/types";
 import { ButtonLink } from "@/src/components/ui/button/ButtonLink";
 import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { HeroLocalTime } from "./HeroLocalTime";
 import { Typewriter } from "@/src/components/ui/typewriter/Typewriter";
 import { formatMonthYearPtBr } from "@/src/utils/cv-publisher";
@@ -89,8 +90,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
 
 
 
-          <div className="flex flex-col gap-4 lg:flex-col lg:gap-4">
-            {hero.description && <p>{hero.description}</p>}
+          <div className="flex flex-col gap-4 lg:flex-col lg:gap-4 rich-text-content">
+            {hero.description && <TinaMarkdown content={hero.description} />}
           </div>
 
           <div className="flex flex-col gap-4 lg:flex-row">

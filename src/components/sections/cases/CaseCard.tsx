@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 export type CaseCardProps = {
   slug: string;
   title: string;
   thumbnail: string;
-  context?: string | null;
+  context?: any | null;
 };
 
 export function CaseCard({ slug, title, thumbnail, context }: CaseCardProps) {
@@ -27,9 +28,9 @@ export function CaseCard({ slug, title, thumbnail, context }: CaseCardProps) {
           </Link>
         </h3>
         {context && (
-          <p className="text-fg-body text-size-body line-clamp-2 leading-body">
-            {context}
-          </p>
+          <div className="text-fg-body text-size-body line-clamp-2 leading-body rich-text-content">
+            <TinaMarkdown content={context} />
+          </div>
         )}
       </div>
     </article>

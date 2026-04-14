@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { PageQuery } from "@/tina/__generated__/types";
 import { Button } from "../../ui/button/Button";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 type PageHome = Extract<PageQuery["page"], { __typename: "PageHome" }>;
 
@@ -31,9 +32,9 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
           </h2>
         )}
         {overview?.lede && (
-          <p className="mt-4 text-center text-fg-body max-w-2xl leading-body">
-            {overview.lede}
-          </p>
+          <div className="mt-4 text-center text-fg-body max-w-2xl leading-body rich-text-content">
+            <TinaMarkdown content={overview.lede} />
+          </div>
         )}
 
         <div className="mt-12 flex flex-col gap-8 lg:flex-row lg:gap-6 w-full">
@@ -70,9 +71,9 @@ export function FeaturedCasesSection({ overview, featuredCases }: Props) {
                       </Link>
                     </h3>
                     {caseData.context && (
-                      <p className="text-fg-body line-clamp-2 leading-body text-size-body">
-                        {caseData.context}
-                      </p>
+                      <div className="text-fg-body line-clamp-2 leading-body text-size-body rich-text-content">
+                        <TinaMarkdown content={caseData.context} />
+                      </div>
                     )}
                   </div>
                 </article>

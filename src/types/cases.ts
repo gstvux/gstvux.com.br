@@ -20,9 +20,9 @@ export interface CaseBaseInfo {
 }
 
 export interface CaseNarrativeData {
-  problem?: string | null;
-  challenge?: string | null;
-  solution?: string | null;
+  problem?: any | null;
+  challenge?: any | null;
+  solution?: any | null;
   constraints?: string[];
   interventions?: string[];
   outcomes?: string[];

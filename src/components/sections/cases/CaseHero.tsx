@@ -2,6 +2,7 @@
 
 import { Search } from "lucide-react";
 import { CaseBaseInfo } from "@/src/types/cases";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 interface CaseHeroProps {
   caseData: CaseBaseInfo;
@@ -43,9 +44,9 @@ export function CaseHero({ caseData, taxonomy, responsibilities, onOpenModal }: 
 
           {/* Context remains if available */}
           {(caseData as any).context && (
-            <p className="text-fg-body text-size-body leading-body whitespace-pre-wrap">
-              {(caseData as any).context}
-            </p>
+            <div className="text-fg-body text-size-body leading-body rich-text-content">
+              <TinaMarkdown content={(caseData as any).context} />
+            </div>
           )}
 
           <div className="flex flex-col gap-1">

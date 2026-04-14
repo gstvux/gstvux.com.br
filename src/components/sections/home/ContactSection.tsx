@@ -1,5 +1,6 @@
 import { MediaFrame } from "@/src/components/ui/media/MediaFrame";
 import type { HomePageData } from "@/src/lib/content/types";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 type Props = {
   contact?: HomePageData["contact"];
@@ -50,9 +51,9 @@ export function ContactSection({ contact }: Props) {
                 )}
 
                 {contact.body && (
-                  <p className="font-secondary leading-normal text-fg-body">
-                    {contact.body}
-                  </p>
+                  <div className="font-secondary leading-normal text-fg-body rich-text-content">
+                    <TinaMarkdown content={contact.body} />
+                  </div>
                 )}
               </div>
 
