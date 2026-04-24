@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMaybeTina } from "@/src/hooks/use-tina-data";
+import { trackCaseView } from "@/src/lib/analytics";
 import type { CasesQuery, CasesQueryVariables } from "@/tina/__generated__/types";
 
 import { CaseHero } from "@/src/components/sections/cases/CaseHero";
@@ -25,6 +26,16 @@ export default function CaseDetailPageClient(props: CaseDetailPageClientProps) {
 
   const caseData = data.cases;
   const [activeImageIdx, setActiveImageIdx] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (caseData) {
+      trackCaseView({
+        title: caseData.title,
+        slug: caseData.slug,
+        category: (caseData.taxonomy as string[])?.[0] || 'general',
+      });
+    }
+  }, [caseData?.slug]);
 
   if (!caseData) return null;
 
