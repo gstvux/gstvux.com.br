@@ -23,10 +23,10 @@ Ele foi pensado como um sistema de comunicação e demonstração de valor, com 
 ## Objetivos do projeto
 
 - consolidar a marca pessoal `gstvux`
-- tratar o portfólio como produto digital, não como vitrine estática
+- tratar o portfólio como produto digital, com seus devidos processos.
 - unir UX, UI Engineering, front-end e pensamento sistêmico em uma mesma experiência
 - manter uma base de código legível, previsível e fácil de evoluir
-- permitir edição de conteúdo via TinaCMS
+- permitir edição de conteúdo via CMS (TinaCMS)
 - estruturar o front-end com tokens, componentes reutilizáveis e separação clara entre conteúdo e apresentação
 
 ---
