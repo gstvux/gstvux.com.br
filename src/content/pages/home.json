@@ -6,8 +6,8 @@
     },
     "imageSrc": "/images/gustavo-luciano-ux-design-product-designer-front-end-dev.png",
     "title": "Gustavo Luciano",
-    "subtitle": "Consultor de Automação Inteligente | Desenho Sistemas Antifrágeis, RPA e IA para Otimização de Processos Extremos",
-    "description": "Projeto e implemento sistemas de automação que eliminam trabalho manual repetitivo, reduzem erros operacionais e escalam sem aumentar headcount. De RPA a IA aplicada — com visão sistêmica e entrega técnica.",
+    "subtitle": "Consultor de Automação & RPA, Integração de Sistemas e IA Aplicada, Processos que escalam",
+    "description": "Automatizo o que trava sua operação — e entendo tanto o processo quanto quem o executa. Background em UX e sistemas B2B aplicado em RPA, integração de dados e IA que gera resultado mensurável.",
     "primaryCtaLabel": "Explorar",
     "primaryCtaHref": "/#cases-selecionados",
     "primaryCtaSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.775 8.825C14.475 8.525 14.025 8.525 13.725 8.825L11.55 11V5C11.55 3.35 10.2 2 8.55 2H0.75C0.3 2 0 2.3 0 2.75C0 3.2 0.3 3.5 0.75 3.5H8.55C9.375 3.5 10.05 4.175 10.05 5V11L7.875 8.825C7.575 8.525 7.125 8.525 6.825 8.825C6.525 9.125 6.525 9.575 6.825 9.875L10.275 13.325C10.425 13.475 10.575 13.55 10.8 13.55C11.025 13.55 11.175 13.475 11.325 13.325L14.775 9.875C15.075 9.575 15.075 9.05 14.775 8.825Z\" fill=\"#EEF2F7\"/>\n</svg>\n",
@@ -34,19 +34,19 @@
   "profile": {
     "imageSrc": "/images/gustavo-luciano-profile.png",
     "imageAlt": "Foto de perfil do Gustavo Luciano",
-    "kicker": "Posicionamento",
-    "headline": "Automação que resolve problema real. Não que impressiona em slide.",
+    "kicker": "Por que faz diferença",
+    "headline": "Quem projeta para pessoas sabe por que processos travam.",
     "body": "",
-    "connector": "O que eu entrego:",
+    "connector": "O que isso muda na prática:",
     "bullets": [
-      "RPA & Automação de Processos: Elimino tarefas manuais repetitivas com robôs auditáveis, confiáveis e que a equipe consegue manter.",
-      "Integração Inteligente de Sistemas: Conecto plataformas que nunca conversaram — via API, webhooks e orquestradores — sem reescrever o que já funciona.",
-      "Visão Sistêmica Aplicada: Da análise do processo à entrega em produção, com documentação operacional que sobrevive à rotatividade de time."
+      "Automatizo com contexto: entendo por que o time resiste certas etapas antes de programar o robô.",
+      "Integro sem bagunçar: conecto sistemas pensando em quem vai operar depois.",
+      "Entrego com documentação real: não só a automação — o manual que garante adoção."
     ]
   },
   "cases_overview": {
     "title": "Cases",
-    "lede": "Cases anteriores de design que mostram como penso e executo sistemas complexos — a mesma abordagem que aplico hoje em automação e RPA.",
+    "lede": "Cases de design B2B. A metodologia é a mesma que aplico hoje em automação — mapeamento, estrutura, entrega.",
     "proof_line": "",
     "cta": {
       "label": "Explorar todos os Cases →",
@@ -65,8 +65,8 @@
     }
   ],
   "process": {
-    "title": "Como eu trabalho",
-    "description": "Do mapeamento do processo à automação em produção. Foco em resultado mensurável e operação que o time consegue manter.",
+    "title": "Do mapeamento ao go-live",
+    "description": "Sem promessa de digitalização mágica. Com processo, rastreabilidade e entrega responsável.",
     "cards": [
       {
         "icon": "<svg width=\"168\" height=\"171\" viewBox=\"0 0 168 171\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M136.231 119.231L128.784 111.784L153.806 85.8752C154.273 85.3918 154.273 84.6082 153.806 84.1248L84.5014 12.3625C84.0346 11.8792 83.2778 11.8792 82.811 12.3625L13.5063 84.1248C13.0395 84.6082 13.0395 85.3918 13.5063 85.8752L82.811 157.637C83.2778 158.121 84.0346 158.121 84.5014 157.637L111.546 129.634L118.886 136.975L87.073 169.519C85.1428 171.494 82.0134 171.494 80.0832 169.519L1.44764 89.0753C-0.482547 87.1007 -0.482547 83.8993 1.44764 81.9247L80.0832 1.48093C82.0134 -0.493643 85.1428 -0.493643 87.073 1.48093L165.709 81.9247C167.639 83.8993 167.639 87.1007 165.709 89.0753L136.231 119.231Z\" fill=\"black\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M113.29 105.283C113.444 105.407 113.594 105.541 113.737 105.685L133.536 125.484C135.684 127.631 135.684 131.114 133.536 133.262C131.388 135.41 127.906 135.41 125.758 133.262L105.959 113.463C105.776 113.28 105.609 113.087 105.457 112.886C99.9442 116.74 93.2361 119 86 119C67.2223 119 52 103.778 52 85C52 66.2223 67.2223 51 86 51C104.778 51 120 66.2223 120 85C120 92.6017 117.505 99.6208 113.29 105.283ZM86 109C99.2548 109 110 98.2548 110 85C110 71.7452 99.2548 61 86 61C72.7452 61 62 71.7452 62 85C62 98.2548 72.7452 109 86 109Z\" fill=\"black\"/>\n</svg>\n",
@@ -149,13 +149,13 @@
   },
   "contact": {
     "imageSrc": "/images/contact-section-gustavo-luciano.png",
-    "headline": "Você tem um processo que consome tempo. Eu sei como automatizar.",
-    "connector": "Disponível para novos projetos",
-    "body": "Trabalho com empresas que querem parar de depender de tarefas manuais repetitivas para manter a operação rodando.",
+    "headline": "Operação travada em processo manual?",
+    "connector": "Vamos ver se faz sentido",
+    "body": "Não faço proposta sem entender o problema. Me conta o que trava — em 30 minutos a gente sabe se automação resolve.",
     "bullets": [
-      "Automação de processos operacionais com RPA",
-      "Integração entre sistemas via API e orquestradores",
-      "IA aplicada à otimização de processos de negócio"
+      "RPA para processos de médio e alto volume",
+      "Integração entre sistemas sem reescrever o que já funciona",
+      "IA onde gera resultado mensurável"
     ]
   },
   "_template": "home"

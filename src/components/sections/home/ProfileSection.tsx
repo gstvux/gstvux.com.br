@@ -1,6 +1,7 @@
 import { MediaFrame } from "@/src/components/ui/media/MediaFrame";
 import type { HomePageData } from "@/src/lib/content/types";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { Reveal } from "@/src/components/ui/Reveal";
 
 type Props = {
   profile?: HomePageData["profile"] & { imageSrc?: string; imageAlt?: string };
@@ -18,7 +19,7 @@ export function ProfileSection({ profile }: Props) {
       <div className="w-full flex flex-col items-center justify-center py-16 lg:py-[64px]">
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-center p-6 md:p-[40px] gap-8 rounded-[8px]">
 
-          <div className="relative shrink-0 w-[320px] h-[320px]">
+          <Reveal direction="left" className="relative shrink-0 w-[320px] h-[320px]">
             {profile.imageSrc ? (
               <MediaFrame
                 imageSrc={profile.imageSrc}
@@ -29,9 +30,9 @@ export function ProfileSection({ profile }: Props) {
             ) : (
               <div className="w-full h-full bg-slate-800 rounded-full animate-pulse" />
             )}
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-6 items-start w-full max-w-[520px]">
+          <Reveal direction="right" delay={100} className="flex flex-col gap-6 items-start w-full max-w-[520px]">
             <div className="flex flex-col">
 
               {profile.kicker && (
@@ -71,7 +72,7 @@ export function ProfileSection({ profile }: Props) {
                 ))}
               </ul>
             ) : null}
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

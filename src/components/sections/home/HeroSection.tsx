@@ -38,6 +38,53 @@ type HeroSectionProps = {
   cvData?: any; // Will be properly typed once Tina generates the Cv types
 };
 
+function TerminalDecoration() {
+  return (
+    <div
+      className="hidden xl:flex flex-col gap-2 font-utils text-size-body-sm rounded-xl p-5 w-fit shrink-0"
+      style={{
+        background: 'color-mix(in oklab, var(--color-deep-black-50) 80%, transparent)',
+        border: '1px solid color-mix(in oklab, var(--color-lime-code) 20%, transparent)',
+        backdropFilter: 'blur(8px)',
+      }}
+      aria-hidden
+    >
+      {/* Window chrome */}
+      <div className="flex items-center gap-1.5 mb-1 opacity-60">
+        <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#FF5F57' }} />
+        <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#FFBD2E' }} />
+        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--color-lime-code)' }} />
+        <span className="ml-3 text-size-body-xs text-fg-body-subtle">processo.py</span>
+      </div>
+
+      <p className="terminal-line" style={{ '--reveal-delay': '0ms' } as React.CSSProperties}>
+        <span style={{ color: 'var(--color-lime-code)' }}>%&gt;</span>{' '}
+        <span className="text-fg-body-subtle">analisar_processo</span>
+        <span className="text-fg-body-subtle">(fluxo_atual)</span>
+      </p>
+      <p className="terminal-line text-fg-body-subtle">
+        <span style={{ color: 'var(--color-lime-code)' }}>%&gt;</span>{' '}
+        <span className="text-fg-body-subtle">mapear_gargalos</span>
+        <span className="text-fg-body-subtle">()</span>
+      </p>
+      <p className="terminal-line text-fg-body-subtle">
+        <span style={{ color: 'var(--color-lime-code)' }}>%&gt;</span>{' '}
+        <span className="text-fg-body-subtle">construir_automacao</span>
+        <span className="text-fg-body-subtle">(robusto=True)</span>
+      </p>
+      <p className="terminal-line">
+        <span style={{ color: 'var(--color-lime-code)' }}>%&gt;</span>{' '}
+        <span style={{ color: 'var(--color-lime-code)' }}>deploy_producao</span>
+        <span className="text-fg-body-subtle"> ✓</span>
+        <span className="terminal-cursor ml-1" />
+      </p>
+      <p className="terminal-line text-size-body-xs mt-1" style={{ color: 'color-mix(in oklab, var(--color-lime-code) 45%, transparent)' }}>
+        # resultado: -47% tempo manual
+      </p>
+    </div>
+  );
+}
+
 export function HeroSection({ hero, cvData }: HeroSectionProps) {
 
   const contactBar = hero.contactBar;
@@ -94,7 +141,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
             {hero.description && <TinaMarkdown content={hero.description} />}
           </div>
 
-          <div className="flex flex-col gap-4 lg:flex-row">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end">
+            <div className="flex flex-col gap-4 lg:flex-row">
             {hero.primaryCtaLabel && hero.primaryCtaHref && (
               <ButtonLink
                 id="hero-primary-cta"
@@ -148,6 +196,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
                 {hero.whatsappLabel}
               </ButtonLink>
             )}
+            </div>
+            <TerminalDecoration />
           </div>
           {(contactBar?.locationText ||
             contactBar?.workmodeText ||

@@ -87,4 +87,14 @@
 
     /* motion */
     --ease-emphatic: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* brand direct-access utilities */
+    --color-brand-lime: var(--color-lime-code);
+    --color-brand-lime-light: var(--color-lime-code-light);
+    --color-brand-lime-dim: var(--color-lime-code-dim);
+    --color-brand-purple: var(--color-purple-mode);
+    --color-brand-purple-light: var(--color-purple-mode-light);
+    --color-brand-cream: var(--color-off-white);
+    --color-brand-cream-muted: var(--color-off-white-muted);
+    --color-brand-black: var(--color-deep-black);
 }
