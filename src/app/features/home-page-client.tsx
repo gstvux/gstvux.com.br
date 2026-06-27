@@ -10,6 +10,7 @@ import { HeroSection } from "@/src/components/sections/home/HeroSection";
 import { ProfileSection } from "@/src/components/sections/home/ProfileSection";
 import { FeaturedCasesSection } from "@/src/components/sections/cases/FeaturedCasesSection";
 import { ProcessSection } from "@/src/components/sections/home/ProcessSection";
+import { TransitionSection } from "@/src/components/sections/home/TransitionSection";
 import { ContactSection } from "@/src/components/sections/home/ContactSection";
 
 type HomePageClientProps = {
@@ -66,6 +67,7 @@ export default function HomePageClient(props: HomePageClientProps) {
           process={home.process}
         />
       )}
+      <TransitionSection />
       {home.contact && <ContactSection contact={home.contact} />}
     </>
   );
