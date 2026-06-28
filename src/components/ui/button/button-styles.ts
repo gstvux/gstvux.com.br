@@ -17,15 +17,15 @@ const base =
   "select-none outline-none transition-[background-color,border-color,color,box-shadow,transform,opacity] " +
   "duration-150 ease-out active:translate-y-px " +
   "focus-visible:ring-2 focus-visible:ring-offset-2 " +
-  "focus-visible:ring-[color:var(--color-ember-300)] " +
-  "focus-visible:ring-offset-[color:var(--color-bluepetro-  900)] " +
+  "focus-visible:ring-[color:var(--color-lime-code)] " +
+  "focus-visible:ring-offset-[color:var(--color-deep-black)] " +
   "disabled:pointer-events-none disabled:opacity-50 " +
   "aria-disabled:pointer-events-none aria-disabled:opacity-50 " +
   "[font-family:var(--font-family-secondary)] font-bold tracking-[0.01em]";
 
 const appearanceMap: Record<ButtonAppearance, string> = {
   primary:
-    "rounded-xl border " +
+    "rounded-xl border-[1.5px] " +
     "border-cta-border-color " +
     "bg-cta-bg " +
     "text-cta-fg " +
@@ -35,7 +35,7 @@ const appearanceMap: Record<ButtonAppearance, string> = {
     "hover:text-cta-fg-hover",
 
   secondary:
-    "rounded-xl border-1 " +
+    "rounded-xl border-[1.5px] " +
     "border-cta-ghost-border " +
     "bg-transparent " +
     "text-cta-ghost-fg " +
@@ -43,7 +43,7 @@ const appearanceMap: Record<ButtonAppearance, string> = {
     "hover:text-cta-ghost-fg-hover",
 
   subtle:
-    "rounded-xl border-1 " +
+    "rounded-xl border-[1.5px] " +
     "border-cta-subtle-border " +
     "bg-transparent " +
     "text-cta-subtle-fg " +

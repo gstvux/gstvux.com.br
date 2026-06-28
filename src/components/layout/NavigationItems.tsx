@@ -27,12 +27,12 @@ export function NavigationItems({ items }: NavigationItemsProps) {
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
                 className={`
-                  relative font-secondary text-lg font-medium transition-colors duration-200
-                  ${isActive 
-                    ? "text-cta-link-fg-hover" 
-                    : "text-fg-body hover:text-cta-link-fg-hover"
+                  relative font-secondary text-base font-semibold tracking-wide transition-colors duration-200
+                  ${isActive
+                    ? "text-brand-lime"
+                    : "text-fg-heading opacity-80 hover:opacity-100 hover:text-brand-lime"
                   }
-                  after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-cta-link-fg-hover after:transition-transform after:duration-300
+                  after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:rounded-full after:bg-brand-lime after:transition-transform after:duration-300 after:ease-out
                   ${isActive ? "after:scale-x-100" : "hover:after:scale-x-100"}
                 `}
               >
