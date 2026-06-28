@@ -68,17 +68,17 @@ h3,p,li {
 }
 
 .hero-surface {
-  --hero-base: var(--color-bluepetro-600);
-  --hero-fade: var(--color-bluepetro-900);
-  --hero-hover: var(--color-bluepetro-500);
+  --hero-base: #111111;
+  --hero-fade: var(--color-deep-black);
+  --hero-hover: #161616;
 
   --hero-bg-duration: 420ms;
   --hero-bg-easing: cubic-bezier(0.22, 1, 0.36, 1);
 
-  --pattern-cell: 16px;
-  --pattern-dot-size: 1.25px;
+  --pattern-cell: 20px;
+  --pattern-dot-size: 1.5px;
   --pattern-dot-offset: 1px;
-  --pattern-dot-color: color-mix(in oklab, white 20%, transparent);
+  --pattern-dot-color: color-mix(in oklab, var(--color-lime-code) 18%, transparent);
 
   --radial-width: 50%;
   --radial-height: 100%;
@@ -347,12 +347,71 @@ h3,p,li {
 }
 
 .rich-text-content a {
-  color: var(--color-bluepetro-500);
+  color: var(--color-lime-code);
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: color 0.2s ease;
 }
 
 .rich-text-content a:hover {
-  color: var(--color-bluepetro-400);
+  color: var(--color-lime-code-light);
+}
+
+/* ─── Scroll Reveal ─────────────────────────────────────── */
+
+[data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 0.65s var(--ease-emphatic),
+    transform 0.65s var(--ease-emphatic);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal='up']    { transform: translateY(28px); }
+[data-reveal='left']  { transform: translateX(-28px); }
+[data-reveal='right'] { transform: translateX(28px); }
+[data-reveal='fade']  { transform: none; }
+
+[data-reveal][data-visible='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ─── Terminal Decoration ────────────────────────────────── */
+
+@keyframes terminal-line-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.terminal-line {
+  opacity: 0;
+  animation: terminal-line-in 0.35s var(--ease-emphatic) both;
+}
+.terminal-line:nth-child(2) { animation-delay: 0.8s; }
+.terminal-line:nth-child(3) { animation-delay: 1.5s; }
+.terminal-line:nth-child(4) { animation-delay: 2.1s; }
+.terminal-line:nth-child(5) { animation-delay: 2.6s; }
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--color-lime-code);
+  vertical-align: text-bottom;
+  animation: terminal-blink 1s step-end infinite;
+  animation-delay: 3s;
+}
+
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }

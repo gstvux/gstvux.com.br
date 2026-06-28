@@ -1,6 +1,7 @@
 import React from "react";
 import { CmsIcon } from "@/src/components/ui/icon/CmsIcon";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { Reveal } from "@/src/components/ui/Reveal";
 
 type ProcessCard = {
   icon?: string | null;
@@ -40,25 +41,28 @@ export function ProcessSection({ process }: ProcessSectionProps) {
       <div className="flex flex-col gap-12 items-center w-full max-w-[1280px] mx-auto px-4 lg:px-8">
 
         {/* Header */}
-        <div className="flex flex-col gap-6 text-center items-center max-w-[640px] mx-auto">
-          {process.title && (
-            <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
-              {process.title}
-            </h2>
-          )}
-          {process.description && (
-            <div className="font-secondary text-size-body leading-normal text-fg-body rich-text-content">
-              <TinaMarkdown content={process.description} />
-            </div>
-          )}
-        </div>
+        <Reveal direction="up">
+          <div className="flex flex-col gap-6 text-center items-center max-w-[640px] mx-auto">
+            {process.title && (
+              <h2 className="font-primary text-size-title font-bold leading-title text-fg-heading">
+                {process.title}
+              </h2>
+            )}
+            {process.description && (
+              <div className="font-secondary text-size-body leading-normal text-fg-body rich-text-content">
+                <TinaMarkdown content={process.description} />
+              </div>
+            )}
+          </div>
+        </Reveal>
 
         {/* Cards Wrapper */}
         <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-12 items-stretch justify-center w-full">
           {process.cards?.map((card, i) => {
             if (!card) return null;
             return (
-              <div key={i} className="flex flex-col gap-6 sm:flex-row items-center sm:items-start overflow-clip w-full md:w-[384px] shrink-0">
+              <Reveal key={i} direction="up" delay={i * 120} className="flex w-full md:w-[384px] shrink-0">
+              <div className="flex flex-col gap-6 sm:flex-row items-center sm:items-start overflow-clip w-full">
                 <div className="relative w-16 h-16 shrink-0 mb-4 sm:mb-0">
                   {/* Squircle SVG Frame Absolute Background */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -66,8 +70,8 @@ export function ProcessSection({ process }: ProcessSectionProps) {
                       <path d="M28.6621 1.53325C30.3773 0.822791 32.3043 0.822791 34.0195 1.53325L50.5244 8.36919C52.2394 9.07964 53.602 10.4423 54.3125 12.1573L61.1484 28.6622C61.8589 30.3774 61.8589 32.3044 61.1484 34.0196L54.3125 50.5245C53.602 52.2394 52.2394 53.6021 50.5244 54.3125L34.0195 61.1485C32.3043 61.8589 30.3773 61.8589 28.6621 61.1485L12.1572 54.3125C10.4422 53.6021 9.07959 52.2394 8.36914 50.5245L1.5332 34.0196C0.822746 32.3044 0.822745 30.3774 1.5332 28.6622L8.36914 12.1573C9.07959 10.4423 10.4422 9.07964 12.1572 8.36919L28.6621 1.53325Z" stroke="url(#paint0_linear_3195_59)" strokeWidth="2" />
                       <defs>
                         <linearGradient id="paint0_linear_3195_59" x1="63.3408" y1="31.3409" x2="-0.65918" y2="31.3409" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#A6577C" />
-                          <stop offset="1" stopColor="#627FA9" />
+                          <stop stopColor="#99A922" />
+                          <stop offset="1" stopColor="#6041A8" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -93,6 +97,7 @@ export function ProcessSection({ process }: ProcessSectionProps) {
                   )}
                 </div>
               </div>
+              </Reveal>
             );
           })}
         </div>

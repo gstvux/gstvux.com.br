@@ -80,61 +80,83 @@
   --size-96: 6rem;
   --size-112: 7rem;
 
+  /* brand palette */
+  --color-deep-black: #0D0D0D;
+  --color-deep-black-50: #1A1A1A;
+  --color-deep-black-100: #252525;
+  --color-lime-code: #99A922;
+  --color-lime-code-light: #B4C428;
+  --color-lime-code-dim: #6E7B19;
+  --color-purple-mode: #6041A8;
+  --color-purple-mode-light: #7855C4;
+  --color-off-white: #DFDACA;
+  --color-off-white-muted: #A8A08E;
+  --color-off-white-dim: #6B6459;
+
   /* semantic tokens */
 
-  --color-body-default: var(--color-bluepetro-50);
-  --color-body-default-subtle: var(--color-bluepetro-300);
-  --color-section-separator: var(--color-bluepetro-500);
-  --color-bullet-fg: var(--color-ember-300);
-  
-  --color-title-fg: var(--color-ember-300);
-  --color-title-fg-subtle: var(--color-ember-50);
+  --color-body-default: var(--color-off-white);
+  --color-body-default-subtle: var(--color-off-white-muted);
+  --color-section-separator: var(--color-deep-black-100);
+  --color-bullet-fg: var(--color-lime-code);
 
-  --hero-min-h-desktop: 54rem; /* 864px */
-  --hero-content-max-w: 45.3125rem; /* 725px */
+  --color-title-fg: var(--color-off-white);
+  --color-title-fg-subtle: var(--color-off-white);
 
-  --header-bg: color-mix(in oklab, var(--color-bluepetro-900) 80%, transparent);
+  --hero-min-h-desktop: 54rem;
+  --hero-content-max-w: 45.3125rem;
 
-  --text-color-body: var(--color-bluepetro-50);
+  --header-bg: color-mix(in oklab, var(--color-deep-black) 85%, transparent);
+  --header-border-bottom-color: var(--color-deep-black-100);
 
-  --bg-color-page: var(--color-bluepetro-900);
-  --bg-color-page-subtle: var(--color-bluepetro-800);
+  --text-color-body: var(--color-off-white);
 
-  --button-primary-bg: var(--color-ember-300);
-  --button-primary-bg-hover: var(--color-ember-200);
-  --button-primary-text: var(--color-bluepetro-900);
-  --button-primary-text-hover: var(--color-bluepetro-700);
+  --bg-color-page: var(--color-deep-black);
+  --bg-color-page-subtle: var(--color-deep-black-50);
+
+  --gradient-default: linear-gradient(0deg, #141414 1%, var(--color-deep-black) 100%);
+  --gradient-default-inverse: linear-gradient(0deg, var(--color-deep-black) 1%, #141414 100%);
+
+  --button-primary-bg: var(--color-lime-code);
+  --button-primary-bg-hover: var(--color-lime-code-light);
+  --button-primary-text: var(--color-deep-black);
+  --button-primary-text-hover: var(--color-deep-black);
   --button-primary-icon-color: var(--button-primary-text);
   --button-primary-radius: var(--size-12);
   --button-primary-height: var(--size-48);
 
   --button-ghost-bg: transparent;
-  --button-ghost-border-color: var(--color-ember-300);
-  --button-ghost-border-color-hover: var(--color-ember-100);
-  --button-ghost-text-color: var(--color-ember-300);
-  --button-ghost-text-color-hover: var(--color-ember-100);
+  --button-ghost-border-color: var(--color-purple-mode);
+  --button-ghost-border-color-hover: var(--color-purple-mode-light);
+  --button-ghost-text-color: var(--color-off-white);
+  --button-ghost-text-color-hover: var(--color-off-white);
   --button-ghost-icon-color: var(--button-ghost-text-color);
 
   --button-subtle-bg: transparent;
-  --button-subtle-border-color: var(--color-bluepetro-300);
-  --button-subtle-border-color-hover: var(--color-bluepetro-400);
-  --button-subtle-text-color: var(--color-bluepetro-300);
-  --button-subtle-text-color-hover: var(--color-bluepetro-400);
+  --button-subtle-border-color: var(--color-off-white-muted);
+  --button-subtle-border-color-hover: var(--color-off-white);
+  --button-subtle-text-color: var(--color-off-white);
+  --button-subtle-text-color-hover: var(--color-off-white);
   --button-subtle-icon-color: var(--button-subtle-text-color);
 
-  --button-link-text-color: var(--color-bluepetro-50);
-  --button-link-text-color-hover: var(--color-ember-100);
-  --button-link-text-color-current: var(--color-ember-300);
+  --button-link-text-color: var(--color-off-white);
+  --button-link-text-color-hover: var(--color-lime-code-light);
+  --button-link-text-color-current: var(--color-lime-code);
 
-  --badge-bg-color: var(--color-bluepetro-900);
-  --badge-text-color: var(--color-bluepetro-50);
-  --badge-border-color: var(--color-bluepetro-500);
+  --badge-bg-color: var(--color-deep-black-50);
+  --badge-text-color: var(--color-off-white);
+  --badge-border-color: var(--color-deep-black-100);
   --badge-icon-color: var(--badge-text-color);
 
-  --badge-secondary-bg-color: var(--color-bluepetro-800);
-  --badge-secondary-text-color: var(--color-ember-500);
-  --badge-secondary-border-color: var(--color-ember-500);
+  --badge-secondary-bg-color: var(--color-deep-black-50);
+  --badge-secondary-text-color: var(--color-lime-code);
+  --badge-secondary-border-color: var(--color-lime-code-dim);
   --badge-secondary-icon-color: var(--badge-secondary-text-color);
+
+  --color-confetti-1: var(--color-lime-code);
+  --color-confetti-2: var(--color-deep-black);
+  --color-confetti-3: var(--color-purple-mode-light);
+  --color-confetti-4: var(--color-off-white);
 
   --sys-size-media-sm: 12rem;
   --sys-size-media-md: 16rem;
@@ -142,68 +164,61 @@
   --sys-size-media-xl: 26rem;
 }
 
-/* Light Theme Overrides */
+/* Light Theme Overrides — cream/off-white base */
 .light {
-  
-  --header-bg: color-mix(in oklab, var(--color-bluepetro-100) 90%, transparent);
-  --header-border-bottom-color: var(--color-bluepetro-200);
 
-  --color-body-default: var(--color-bluepetro-500);
-  --color-body-default-subtle: var(--color-bluepetro-400);
-  --color-section-separator: var(--color-bluepetro-200);
-  --color-bullet-fg: var(--color-bluepetro-300);
-  
-  --color-title-fg: var(--color-bluepetro-900);
-  --color-title-fg-subtle: var(--color-bluepetro-500);
+  --header-bg: color-mix(in oklab, var(--color-off-white) 92%, transparent);
+  --header-border-bottom-color: #C8C0AD;
 
-  --bg-color-page: var(--color-bluepetro-50);
-  --bg-color-page-subtle: var(--color-bluepetro-100);
+  --color-body-default: #2A2520;
+  --color-body-default-subtle: var(--color-off-white-dim);
+  --color-section-separator: #C8C0AD;
+  --color-bullet-fg: var(--color-lime-code-dim);
 
-  --gradient-default: linear-gradient(0deg,
-        var(--color-bluepetro-100) 1%,
-        var(--color-bluepetro-50) 100%);
+  --color-title-fg: var(--color-deep-black);
+  --color-title-fg-subtle: var(--color-deep-black);
 
-  --gradient-default-inverse: linear-gradient(0deg,
-        var(--color-bluepetro-50) 1%,
-        var(--color-bluepetro-100) 100%);
+  --bg-color-page: var(--color-off-white);
+  --bg-color-page-subtle: #E8E3D5;
 
-  --button-primary-bg: var(--color-bluepetro-500);
-  --button-primary-bg-hover: var(--color-bluepetro-400);
-  --button-primary-text: var(--color-ember-200);
-  --button-primary-text-hover: var(--color-ember-100);
+  --gradient-default: linear-gradient(0deg, #E8E3D5 1%, var(--color-off-white) 100%);
+  --gradient-default-inverse: linear-gradient(0deg, var(--color-off-white) 1%, #E8E3D5 100%);
+
+  --button-primary-bg: var(--color-deep-black);
+  --button-primary-bg-hover: var(--color-deep-black-50);
+  --button-primary-text: var(--color-off-white);
+  --button-primary-text-hover: var(--color-off-white);
   --button-primary-icon-color: var(--button-primary-text);
 
   --button-ghost-bg: transparent;
-  --button-ghost-border-color: var(--color-bluepetro-400);
-  --button-ghost-border-color-hover: var(--color-bluepetro-500);
-  --button-ghost-text-color: var(--color-bluepetro-400);
-  --button-ghost-text-color-hover: var(--color-bluepetro-500);
+  --button-ghost-border-color: var(--color-purple-mode);
+  --button-ghost-border-color-hover: var(--color-purple-mode-light);
+  --button-ghost-text-color: var(--color-purple-mode);
+  --button-ghost-text-color-hover: var(--color-purple-mode-light);
   --button-ghost-icon-color: var(--button-ghost-text-color);
 
-  --button-link-text-color: var(--color-bluepetro-500);
-  --button-link-text-color-hover: var(--color-bluepetro-400);
-  --button-link-text-color-current: var(--color-ember-300);
+  --button-link-text-color: var(--color-deep-black);
+  --button-link-text-color-hover: var(--color-purple-mode);
+  --button-link-text-color-current: var(--color-lime-code-dim);
 
-  --badge-bg-color: var(--color-bluepetro-200);
-  --badge-text-color: var(--color-bluepetro-900);
-  --badge-border-color: var(--color-bluepetro-300);
+  --badge-bg-color: #E8E3D5;
+  --badge-text-color: var(--color-deep-black);
+  --badge-border-color: #C8C0AD;
 
-  --badge-secondary-bg-color: var(--color-bluepetro-800);
-  --badge-secondary-text-color: var(--color-ember-500);
-  --badge-secondary-border-color: var(--color-ember-500);
+  --badge-secondary-bg-color: var(--color-deep-black);
+  --badge-secondary-text-color: var(--color-lime-code);
+  --badge-secondary-border-color: var(--color-lime-code-dim);
   --badge-secondary-icon-color: var(--badge-secondary-text-color);
 
-  --color-confetti-1: var(--color-bluepetro-300);
-  --color-confetti-2: var(--color-bluepetro-900);
-  --color-confetti-3: var(--color-bluepetro-200);
-  --color-confetti-4: var(--color-bluepetro-800);
+  --color-confetti-1: var(--color-lime-code);
+  --color-confetti-2: var(--color-deep-black);
+  --color-confetti-3: var(--color-purple-mode);
+  --color-confetti-4: var(--color-off-white-dim);
 
-  .hero-surface{
-    --hero-base: white;
-    --hero-fade: var(--color-bluepetro-50);
-    --hero-hover: var(--color-bluepetro-100);
-    --pattern-dot-color: color-mix(in oklab, var(--color-bluepetro-400), transparent);
-
-
+  .hero-surface {
+    --hero-base: var(--color-off-white);
+    --hero-fade: var(--color-off-white);
+    --hero-hover: #E8E3D5;
+    --pattern-dot-color: color-mix(in oklab, var(--color-lime-code-dim) 25%, transparent);
   }
 }

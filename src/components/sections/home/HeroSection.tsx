@@ -7,6 +7,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { HeroLocalTime } from "./HeroLocalTime";
 import { Typewriter } from "@/src/components/ui/typewriter/Typewriter";
 import { formatMonthYearPtBr } from "@/src/utils/cv-publisher";
+import { HeroTerminal } from "./HeroTerminal";
 
 type IconPosition = "leading" | "trailing";
 
@@ -37,6 +38,7 @@ type HeroSectionProps = {
   hero: HeroData;
   cvData?: any; // Will be properly typed once Tina generates the Cv types
 };
+
 
 export function HeroSection({ hero, cvData }: HeroSectionProps) {
 
@@ -94,7 +96,8 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
             {hero.description && <TinaMarkdown content={hero.description} />}
           </div>
 
-          <div className="flex flex-col gap-4 lg:flex-row">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end">
+            <div className="flex flex-col gap-4 lg:flex-row">
             {hero.primaryCtaLabel && hero.primaryCtaHref && (
               <ButtonLink
                 id="hero-primary-cta"
@@ -148,6 +151,10 @@ export function HeroSection({ hero, cvData }: HeroSectionProps) {
                 {hero.whatsappLabel}
               </ButtonLink>
             )}
+            </div>
+            <div className="hidden lg:block w-full">
+              <HeroTerminal />
+            </div>
           </div>
           {(contactBar?.locationText ||
             contactBar?.workmodeText ||
